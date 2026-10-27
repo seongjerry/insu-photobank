@@ -1,0 +1,61 @@
+{
+  "_": "insu_magazine 운영 규칙. 생성기와 스케줄 작업이 이 파일을 읽는다. 2026-10-27 확정.",
+  "account": "insu_magazine",
+  "post_time": "19:00",
+  "weekly": {
+    "mon": {"format": "reel",     "type": "tag",       "label": "태그형 릴스 · 이런 사람 꼭 있다",      "voice": "ko-KR-SunHiNeural"},
+    "tue": {"format": "carousel", "type": "fact",      "label": "팩트 캐러셀 · 설계사 리그램용 숫자·제도"},
+    "wed": {"format": "carousel", "type": "vote",      "label": "투표형 캐러셀 · A vs B 댓글 유도"},
+    "thu": {"format": "reel",     "type": "parents",   "label": "효도형 릴스 · 부모님께 보내는 콘텐츠",   "voice": "ko-KR-InJoonNeural"},
+    "fri": {"format": "reel",     "type": "funny",     "label": "웃김 릴스 · 건강 착각·자기합리화",      "voice": "ko-KR-SunHiNeural"},
+    "sat": {"format": "carousel", "type": "checklist", "label": "체크리스트 캐러셀 · 저장용"},
+    "sun": {"format": "carousel", "type": "serious",   "label": "진지 캐러셀 · 숫자 하나로 머리 때리기"}
+  },
+  "voices": {
+    "female": "ko-KR-SunHiNeural",
+    "male": "ko-KR-InJoonNeural",
+    "rate": "+32%",
+    "rule": "가벼운 톤(태그·웃김)은 여성, 효도형·진지 톤은 남성. 캐러셀은 음성 없음"
+  },
+  "reel": {
+    "max_seconds": 30,
+    "scenes": "5~6장면",
+    "hook": "첫 장면 1초 안에 '나 얘기 / 쟤 얘기'가 되는 문장. 헤드라인 2줄도 같은 훅",
+    "lead": 0.12, "tail": 0.3,
+    "sfx": true,
+    "bgm": "영상에 굽지 않음. 인스타 업로드 시 트렌딩 오디오 선택"
+  },
+  "carousel": {
+    "slides": "6~7장",
+    "photo_slides": "1장(커버)·중간 1장은 포토뱅크 사진 패널",
+    "pin_emoji": false
+  },
+  "cta": {
+    "comment_dm": false,
+    "comment_dm_note": "댓글에 'OO' 남기면 DM 유도는 본부장 요청 시에만. 기본은 끔",
+    "default": ["태그(이 사람한테 보내세요)", "공유(부모님·가족·친구)", "저장", "@insu_magazine 팔로우"],
+    "by_type": {
+      "tag": "같이 ~할 사람 태그 / 이런 사람 태그",
+      "fact": "고객·가족에게 공유 (설계사 리그램 유도)",
+      "vote": "댓글로 A/B 투표",
+      "parents": "부모님께 보내기 · 스토리 공유",
+      "funny": "뜨끔한 사람 태그",
+      "checklist": "저장해두고 병원 가기 전 확인",
+      "serious": "가족 단톡방 공유"
+    }
+  },
+  "topic_rules": [
+    "질병명이 아니라 행동·상황·사람 유형으로 잡는다 (1초 안에 '나 얘기네')",
+    "숫자 하나 또는 반전 하나가 반드시 있어야 한다",
+    "공포 조장 대신 '몰랐던 사실' 프레임",
+    "특정 보험상품·보험사·설계사 언급 0. 공공기관·학술 출처만 사용, 마지막 장에 출처와 일반정보 고지",
+    "사진 속 인물을 질병 당사자로 단정하는 캡션 금지 (Pixabay 라이선스 조건)",
+    "직전 14일 발행 주제와 중복 금지 (log.json 확인)"
+  ],
+  "metrics": {
+    "primary": ["shares", "saves"],
+    "secondary": ["comments", "follows"],
+    "ignore": ["views"],
+    "review": "매주 월 인사이트 입력 → 공유·저장 상위 2개 유형으로 비중 이동"
+  }
+}
