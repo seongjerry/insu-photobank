@@ -1,0 +1,25 @@
+{
+  "_comment": "slug: 폴더명 / ko: 한글 태그(생성기가 매칭) / queries: Pexels 검색어 / per_query: 검색어당 장수",
+  "per_query": 8,
+  "orientation": "landscape",
+  "topics": [
+    {"slug": "flu",        "ko": ["독감", "감기", "열", "기침", "마스크"],        "queries": ["sick person tissue", "thermometer fever", "flu vaccine syringe", "woman coughing mask", "child fever bed"]},
+    {"slug": "vaccine",    "ko": ["백신", "예방접종", "주사", "보건소"],           "queries": ["vaccination arm nurse", "vaccine vial syringe", "doctor injection elderly asian"]},
+    {"slug": "sleep",      "ko": ["수면", "불면", "잠", "침대", "밤"],             "queries": ["asian woman sleeping bed", "insomnia night awake", "bedroom night lamp", "alarm clock bed night"]},
+    {"slug": "walk",       "ko": ["걷기", "산책", "운동", "공원"],                 "queries": ["asian woman walking park evening", "elderly couple walking park", "walking sneakers path autumn", "man jogging river dusk"]},
+    {"slug": "elderly",    "ko": ["노인", "어르신", "부모님", "할머니", "시니어"],   "queries": ["asian elderly woman smiling", "korean grandmother", "senior man hospital", "elderly hands"]},
+    {"slug": "hospital",   "ko": ["병원", "진료", "의사", "검진"],                 "queries": ["asian doctor patient consultation", "hospital corridor", "doctor stethoscope", "medical checkup asian"]},
+    {"slug": "medicine",   "ko": ["약", "처방", "약국", "복용"],                   "queries": ["pills hand", "pharmacy shelf", "medicine bottle table", "taking pill water"]},
+    {"slug": "heart",      "ko": ["심장", "혈압", "뇌졸중", "혈관"],               "queries": ["blood pressure monitor arm", "chest pain man", "heart health stethoscope", "ecg monitor hospital"]},
+    {"slug": "diabetes",   "ko": ["당뇨", "혈당", "설탕"],                         "queries": ["glucose meter finger", "sugar cubes spoon", "diabetes test strip"]},
+    {"slug": "cancer",     "ko": ["암", "항암", "종양", "검사"],                   "queries": ["hospital bed patient window", "ct scan machine", "doctor explaining xray asian"]},
+    {"slug": "food",       "ko": ["식단", "음식", "채소", "다이어트"],              "queries": ["healthy korean meal", "vegetables bowl", "salad fresh table", "korean side dishes"]},
+    {"slug": "exercise",   "ko": ["헬스", "근력", "스트레칭", "요가"],              "queries": ["asian senior stretching", "dumbbell home workout", "yoga mat morning", "gym asian woman"]},
+    {"slug": "stress",     "ko": ["스트레스", "우울", "피로", "번아웃"],            "queries": ["tired office worker desk", "stressed asian man", "headache woman", "exhausted night laptop"]},
+    {"slug": "eye_dental", "ko": ["눈", "치아", "치과", "시력"],                   "queries": ["eye exam", "dentist chair", "toothbrush close up"]},
+    {"slug": "season",     "ko": ["환절기", "가을", "겨울", "추위", "미세먼지"],    "queries": ["autumn leaves park korea", "cold winter breath", "mask city haze", "rainy window"]},
+    {"slug": "family",     "ko": ["가족", "아이", "자녀", "집"],                   "queries": ["korean family home", "mother child asian", "kids school classroom asian"]},
+    {"slug": "dementia",   "ko": ["치매", "기억", "간병", "요양"],                 "queries": ["elderly confused window", "caregiver elderly asian", "old hands puzzle", "nursing home"]},
+    {"slug": "money",      "ko": ["돈", "병원비", "비용", "지갑"],                 "queries": ["hospital bill calculator", "wallet empty", "korean won money", "medical cost paper"]}
+  ]
+}
