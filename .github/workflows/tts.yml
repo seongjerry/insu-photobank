@@ -20,4 +20,5 @@ jobs:
           git config user.email bot@users.noreply.github.com
           git add tts/out tts/requests
           git diff --cached --quiet || git commit -m "tts: $(date +%F-%H%M)"
+          git pull --rebase --autostash origin main
           git push
