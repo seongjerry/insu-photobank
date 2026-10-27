@@ -1,0 +1,25 @@
+name: photobank
+on:
+  schedule:
+    - cron: "0 20 * * 0"   # 매주 월요일 05:00 KST
+  workflow_dispatch:        # Actions 탭에서 수동 실행 가능
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pillow
+      - run: python scripts/fetch_photos.py
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+      - run: |
+          git config user.name photobank-bot
+          git config user.email bot@users.noreply.github.com
+          git add photos index.json
+          git diff --cached --quiet || git commit -m "photobank: $(date +%F)"
+          git push
