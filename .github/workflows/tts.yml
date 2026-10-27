@@ -1,0 +1,23 @@
+name: tts
+# Claude가 tts/requests/<id>.json 을 push하면 edge-tts(마이크로소프트 무료 한국어 음성)로 나레이션 mp3를 만들어 tts/out/<id>/ 에 커밋한다.
+on:
+  push:
+    paths: ["tts/requests/**"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  speak:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install edge-tts
+      - run: python scripts/tts_batch.py
+      - run: |
+          git config user.name tts-bot
+          git config user.email bot@users.noreply.github.com
+          git add tts/out tts/requests
+          git diff --cached --quiet || git commit -m "tts: $(date +%F-%H%M)"
+          git push
