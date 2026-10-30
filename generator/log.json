@@ -1,7 +1,40 @@
 {
  "_": "발행 로그. 생성기가 중복 주제 방지에 사용, 월요일 인사이트 입력 시 수치 채움",
  "posts": [
-  {"date": "2026-10-27", "id": "2026-10-27_carousel_flu", "format": "carousel", "type": "fact", "topic": "이른 독감 유행·작년 백신 무효", "shares": null, "saves": null, "comments": null, "follows": null},
-  {"date": "2026-10-27", "id": "2026-10-27_reel_walk_sleep", "format": "reel", "type": "tag", "topic": "새벽에 깨는 사람·걷기와 수면", "voice": "male", "shares": null, "saves": null, "comments": null, "follows": null}
+  {
+   "date": "2026-10-27",
+   "id": "2026-10-27_carousel_flu",
+   "format": "carousel",
+   "type": "fact",
+   "topic": "이른 독감 유행·작년 백신 무효",
+   "shares": null,
+   "saves": null,
+   "comments": null,
+   "follows": null
+  },
+  {
+   "date": "2026-10-27",
+   "id": "2026-10-27_reel_walk_sleep",
+   "format": "reel",
+   "type": "tag",
+   "topic": "새벽에 깨는 사람·걷기와 수면",
+   "voice": "male",
+   "shares": null,
+   "saves": null,
+   "comments": null,
+   "follows": null
+  },
+  {
+   "date": "2026-10-30",
+   "id": "2026-10-30_reel_phone_sleep",
+   "format": "reel",
+   "type": "funny",
+   "topic": "딱 5분만 폰 보고 잘게·밤 10시 이후 폰과 수면",
+   "voice": "female",
+   "shares": null,
+   "saves": null,
+   "comments": null,
+   "follows": null
+  }
  ]
 }
