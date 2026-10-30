@@ -15,6 +15,9 @@ OUT = ROOT / "photos"; OUT.mkdir(exist_ok=True)
 IDX = ROOT / "index.json"
 index = json.loads(IDX.read_text(encoding="utf-8")) if IDX.exists() else {"photos": []}
 have = {p["id"] for p in index["photos"]}
+BLK = ROOT / "blocked.json"  # 주제와 무관해서 지운 사진은 다시 받지 않음
+if BLK.exists():
+    have |= set(json.loads(BLK.read_text(encoding="utf-8")).get("ids", []))
 MAX_W = 1600
 
 PEXELS = os.environ.get("PEXELS_API_KEY", "")

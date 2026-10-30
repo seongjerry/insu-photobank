@@ -5,7 +5,7 @@ on:
   workflow_dispatch:        # Actions 탭에서 수동 실행 가능
   push:                     # keywords.json 수정 시 즉시 수집
     branches: [main]
-    paths: [keywords.json]
+    paths: [keywords.json, blocked.json]
 concurrency:
   group: photobank
   cancel-in-progress: false

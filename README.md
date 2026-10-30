@@ -18,4 +18,5 @@ Claude 콘텐츠 생성기(insu_magazine)가 이 저장소를 읽어 캐러셀·
 - 나레이션: edge-tts(무료). BGM은 `bgm/` 폴더에 무료 음원 mp3를 넣으면 생성기가 사용
 
 ## 키워드 조정
-`keywords.json`의 `queries`를 바꾸면 다음 주 수집부터 반영. 당장 받으려면 Actions에서 Run workflow.
+`keywords.json`의 `queries`를 바꿔서 main에 올리면 바로 수집이 돌아갑니다 (매주 월요일 정기 수집도 그대로).
+주제와 안 맞는 사진은 파일·`index.json`에서 지우고 id를 `blocked.json`에 넣으면 다시 받지 않습니다.
