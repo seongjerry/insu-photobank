@@ -42122,8 +42122,190 @@
    "page": "https://pixabay.com/photos/summer-travel-vacation-holiday-2880261/",
    "provider": "pixabay",
    "added": "2026-10-30"
+  },
+  {
+   "id": "pixabay_614213",
+   "slug": "stress",
+   "ko": [
+    "스트레스",
+    "우울",
+    "피로",
+    "번아웃"
+   ],
+   "query": "tired office worker desk",
+   "path": "photos/stress/pixabay_614213.jpg",
+   "w": 1280,
+   "h": 850,
+   "alt": "laptop, iphone, workspace, hands, coffee, binders, facebook, social media, social networking, working, notebook, desk, work, office, business, macbook, connection, networking, technology, wireless, facebook, facebook, social media, social media, social media, social media, social media",
+   "credit": "Firmbee",
+   "page": "https://pixabay.com/photos/laptop-iphone-workspace-hands-614213/",
+   "provider": "pixabay",
+   "added": "2026-10-30"
+  },
+  {
+   "id": "pixabay_5901611",
+   "slug": "stress",
+   "ko": [
+    "스트레스",
+    "우울",
+    "피로",
+    "번아웃"
+   ],
+   "query": "stressed asian man",
+   "path": "photos/stress/pixabay_5901611.jpg",
+   "w": 1280,
+   "h": 1280,
+   "alt": "man, model, asian, portrait, asian man, asian model, male model, male portrait, fashion, style, outfit, men's fashion, stylish man, eyeglasses, studio photography, modeling, pose, posing, sit, sitting, chair, stool, asian man, asian man, asian man, asian man, asian man, stool, stool",
+   "credit": "Lucfier",
+   "page": "https://pixabay.com/photos/man-model-asian-portrait-asian-man-5901611/",
+   "provider": "pixabay",
+   "added": "2026-10-30"
+  },
+  {
+   "id": "pixabay_1867550",
+   "slug": "season",
+   "ko": [
+    "환절기",
+    "가을",
+    "겨울",
+    "추위",
+    "미세먼지"
+   ],
+   "query": "rainy window",
+   "path": "photos/season/pixabay_1867550.jpg",
+   "w": 1280,
+   "h": 720,
+   "alt": "buildings, nature, droplets, drops, glass, lamppost, liquid, rain, raindrops, rainy, silhouette, water, wet, window, gloomy, glass window",
+   "credit": "Pexels",
+   "page": "https://pixabay.com/photos/buildings-droplets-drops-glass-1867550/",
+   "provider": "pixabay",
+   "added": "2026-10-30"
+  },
+  {
+   "id": "pixabay_3282666",
+   "slug": "energy",
+   "ko": [
+    "전기요금",
+    "가스요금",
+    "에너지",
+    "절약",
+    "계량기"
+   ],
+   "query": "light bulb energy saving",
+   "path": "photos/energy/pixabay_3282666.jpg",
+   "w": 1280,
+   "h": 894,
+   "alt": "energy saving lamp, led, characters, fun, bulbs, lamp, lighting, light, energy, energy saving, lighting means, lightbulb, led, led, led, led, led, energy saving, energy saving, energy saving, energy saving",
+   "credit": "Alexas_Fotos",
+   "page": "https://pixabay.com/photos/energy-saving-lamp-led-characters-3282666/",
+   "provider": "pixabay",
+   "added": "2026-10-30"
+  },
+  {
+   "id": "pixabay_1048981",
+   "slug": "energy",
+   "ko": [
+    "전기요금",
+    "가스요금",
+    "에너지",
+    "절약",
+    "계량기"
+   ],
+   "query": "energy bill paper",
+   "path": "photos/energy/pixabay_1048981.jpg",
+   "w": 1280,
+   "h": 809,
+   "alt": "windmills, clouds, fog, wind power, wind park, nature, wind energy, alternative energy, renewable energy, wind turbines, sky",
+   "credit": "Oimheidi",
+   "page": "https://pixabay.com/photos/windmills-clouds-fog-wind-power-1048981/",
+   "provider": "pixabay",
+   "added": "2026-10-30"
+  },
+  {
+   "id": "pixabay_7887613",
+   "slug": "travel",
+   "ko": [
+    "여행",
+    "나들이",
+    "단풍",
+    "휴가",
+    "캠핑"
+   ],
+   "query": "mountain hiking autumn",
+   "path": "photos/travel/pixabay_7887613.jpg",
+   "w": 1280,
+   "h": 799,
+   "alt": "norway, landscape, valley, mountains, nature, scandinavia, fall, cabin, travel, hiking, holiday, adventure, solitude, norway, norway, norway, norway, norway, valley, valley, nature, nature, adventure, adventure",
+   "credit": "Peaktural_photo",
+   "page": "https://pixabay.com/photos/norway-landscape-valley-mountains-7887613/",
+   "provider": "pixabay",
+   "added": "2026-10-30"
+  },
+  {
+   "id": "pixabay_4911487",
+   "slug": "japan_travel",
+   "ko": [
+    "일본",
+    "일본여행",
+    "도쿄",
+    "오사카",
+    "교토",
+    "후쿠오카",
+    "삿포로"
+   ],
+   "query": "sapporo snow",
+   "path": "photos/japan_travel/pixabay_4911487.jpg",
+   "w": 1280,
+   "h": 850,
+   "alt": "japan, hokkaido, sapporo, train, tourism, building, asia, station, travel, city, landmark, cityscape, hotel, urban, tower, trip, city center, railway, subway, lookout, north entrance, taxi stand, bus terminal, sapporo, sapporo, sapporo, sapporo, sapporo",
+   "credit": "May_hokkaido",
+   "page": "https://pixabay.com/photos/japan-hokkaido-sapporo-train-4911487/",
+   "provider": "pixabay",
+   "added": "2026-10-30"
+  },
+  {
+   "id": "pixabay_4669449",
+   "slug": "currency",
+   "ko": [
+    "환전",
+    "엔화",
+    "환율",
+    "외화",
+    "달러",
+    "해외결제"
+   ],
+   "query": "money exchange counter",
+   "path": "photos/currency/pixabay_4669449.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "christmas background, christmas wallpaper, gift, new year's eve, congratulation, christmas, holiday, winter, joy, happiness, christmas tree, surprise",
+   "credit": "ua_Bob_Dmyt_ua",
+   "page": "https://pixabay.com/photos/christmas-background-4669449/",
+   "provider": "pixabay",
+   "added": "2026-10-30"
+  },
+  {
+   "id": "pixabay_1130742",
+   "slug": "travel_prep",
+   "ko": [
+    "여행준비",
+    "짐싸기",
+    "캐리어",
+    "여권",
+    "여행자보험",
+    "체크리스트"
+   ],
+   "query": "tourist map planning",
+   "path": "photos/travel_prep/pixabay_1130742.jpg",
+   "w": 1280,
+   "h": 960,
+   "alt": "notebook, camera, map, pencil, travel, old, retro, antique, vintage, classic, notes, vacation, paper, trip, desk, write, concept, notepad, page, glasses, planning, empty notebook, planner, journal, pages, open notebook, composition, notebook, camera, camera, camera, camera, camera, map, pencil, pencil, pencil, pencil, planner, journal, journal, journal",
+   "credit": "DariuszSankowski",
+   "page": "https://pixabay.com/photos/notebook-camera-map-pencil-travel-1130742/",
+   "provider": "pixabay",
+   "added": "2026-10-30"
   }
  ],
- "updated": "2026-10-30 00:34",
- "count": 2108
+ "updated": "2026-10-30 00:38",
+ "count": 2117
 }
