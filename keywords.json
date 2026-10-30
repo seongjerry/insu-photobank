@@ -38,6 +38,15 @@
     {"slug": "holiday", "ko": ["명절", "크리스마스", "연말", "선물", "새해"], "queries": ["christmas tree lights home", "new year calendar", "gift box wrapping", "family dinner table", "year end party", "festive lights city"]},
     {"slug": "housing", "ko": ["집", "아파트", "이사", "인테리어", "전세"], "queries": ["apartment building korea", "moving boxes home", "house keys hand", "living room interior", "bedroom interior cozy", "home renovation paint"]},
     {"slug": "pet", "ko": ["반려동물", "강아지", "고양이"], "queries": ["dog home sofa", "cat window home", "dog walking park", "pet food bowl"]},
-    {"slug": "kids_school", "ko": ["아이", "학교", "수능", "육아", "공부"], "queries": ["student studying desk", "exam pencil paper", "kids playing park", "school backpack", "parent child reading"]}
+    {"slug": "kids_school", "ko": ["아이", "학교", "수능", "육아", "공부"], "queries": ["student studying desk", "exam pencil paper", "kids playing park", "school backpack", "parent child reading"]},
+    {"slug": "japan_travel", "ko": ["일본", "일본여행", "도쿄", "오사카", "교토", "후쿠오카", "삿포로"], "queries": ["tokyo street shibuya", "osaka dotonbori night", "kyoto temple autumn", "japan street lanterns", "mount fuji", "fukuoka city", "sapporo snow", "japan train station", "tokyo tower night", "japanese ramen shop"]},
+    {"slug": "japan_shopping", "ko": ["일본쇼핑", "돈키호테", "드럭스토어", "일본과자", "기념품", "편의점"], "queries": ["japanese drugstore", "japanese snacks", "tokyo shopping street", "japanese convenience store", "japan souvenir shop", "harajuku shopping", "japanese cosmetics", "akihabara shops"]},
+    {"slug": "airport", "ko": ["공항", "출국", "입국", "탑승", "인천공항", "비행기", "항공권"], "queries": ["airport terminal", "airport check in counter", "passport boarding pass", "airport departure board", "airplane window wing", "luggage airport", "airplane takeoff", "airport waiting lounge"]},
+    {"slug": "duty_free", "ko": ["면세", "면세점", "면세쇼핑", "향수", "명품"], "queries": ["duty free shop", "airport shopping", "perfume bottles store", "luxury boutique", "cosmetics store shelf", "liquor store shelf"]},
+    {"slug": "shopping", "ko": ["쇼핑", "쇼핑몰", "백화점", "세일", "구매", "블랙프라이데이"], "queries": ["shopping bags woman", "department store interior", "shopping mall", "sale sign store", "online shopping laptop", "clothing store rack", "black friday sale"]},
+    {"slug": "currency", "ko": ["환전", "엔화", "환율", "외화", "달러", "해외결제"], "queries": ["japanese yen banknotes", "yen coins", "currency exchange", "foreign currency money", "us dollar bills", "credit card payment travel"]},
+    {"slug": "overseas_travel", "ko": ["해외여행", "동남아", "유럽", "휴양지", "베트남", "태국"], "queries": ["bangkok temple", "vietnam beach", "da nang beach", "paris eiffel tower", "europe old town street", "tropical resort pool", "taiwan taipei", "guam beach"]},
+    {"slug": "hotel", "ko": ["호텔", "숙소", "료칸", "리조트", "온천"], "queries": ["hotel room bed", "hotel lobby", "japanese ryokan room", "hot spring onsen", "resort room view", "hotel breakfast buffet"]},
+    {"slug": "travel_prep", "ko": ["여행준비", "짐싸기", "캐리어", "여권", "여행자보험", "체크리스트"], "queries": ["packing suitcase", "passport map travel", "suitcase clothes bed", "travel checklist", "travel adapter phone charger", "tourist map planning"]}
   ]
 }

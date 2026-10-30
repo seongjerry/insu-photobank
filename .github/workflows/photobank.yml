@@ -3,6 +3,12 @@ on:
   schedule:
     - cron: "0 20 * * 0"   # 매주 월요일 05:00 KST
   workflow_dispatch:        # Actions 탭에서 수동 실행 가능
+  push:                     # keywords.json 수정 시 즉시 수집
+    branches: [main]
+    paths: [keywords.json]
+concurrency:
+  group: photobank
+  cancel-in-progress: false
 permissions:
   contents: write
 jobs:
