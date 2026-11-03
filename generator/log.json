@@ -80,6 +80,17 @@
    "saves": null,
    "comments": null,
    "follows": null
+  },
+  {
+   "date": "2026-11-04",
+   "id": "2026-11-04_carousel_handwash_vote",
+   "format": "carousel",
+   "type": "vote",
+   "topic": "화장실 손씻기 86%·비누 30초 이상 11.4%(질병관리청 감염병 예방행태 실태조사)",
+   "shares": null,
+   "saves": null,
+   "comments": null,
+   "follows": null
   }
  ]
 }
