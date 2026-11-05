@@ -23,7 +23,9 @@ TABLE = "bsn_leads"
 if not (SB and KEY):
     print("SUPABASE_URL / SUPABASE_SERVICE_KEY 미설정: 건너뜀"); sys.exit(0)
 
-H = {"apikey": KEY, "Authorization": f"Bearer {KEY}", "Content-Type": "application/json"}
+H = {"apikey": KEY, "Content-Type": "application/json"}
+if not KEY.startswith("sb_"):  # 예전 JWT 형식 키일 때만 Bearer 필요
+    H["Authorization"] = f"Bearer {KEY}"
 now = lambda: datetime.datetime.now(datetime.timezone.utc).isoformat()
 
 
