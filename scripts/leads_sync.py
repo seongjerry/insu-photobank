@@ -14,10 +14,10 @@ import os, sys, json, datetime
 import requests
 
 SB = os.environ.get("SUPABASE_URL", "").strip().rstrip("/")
-KEY = os.environ.get("SUPABASE_SERVICE_KEY", "").strip()
+KEY = "".join(os.environ.get("SUPABASE_SERVICE_KEY", "").split())  # 붙여넣을 때 들어간 줄바꿈·공백 제거
 TG_TOKEN = os.environ.get("TELEGRAM_TOKEN", "").strip()
 TG_CHAT = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
-SHEET = os.environ.get("SHEET_WEBHOOK_URL", "").strip()
+SHEET = "".join(os.environ.get("SHEET_WEBHOOK_URL", "").split())
 TABLE = "bsn_leads"
 
 if not (SB and KEY):
