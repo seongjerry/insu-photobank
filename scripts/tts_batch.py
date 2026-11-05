@@ -17,7 +17,10 @@ import json, os, pathlib, subprocess, time, urllib.request, urllib.parse
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 REQ = ROOT / "tts/requests"; OUT = ROOT / "tts/out"
 TM_TOKEN = os.environ.get("TTSMAKER_TOKEN") or "ttsmaker_demo_token"
-TM_API = "https://api.ttsmaker.com/v1"
+TM_BASES = [os.environ.get("TTSMAKER_API") or "https://api.ttsmaker.com/v1", "https://api.ttsmaker.cn/v1",
+            "https://ttsmaker.com/api/v1", "https://api.ttsmaker.com/v2"]
+TM_API = None  # 첫 성공한 주소로 고정
+TM_LOG = []
 
 
 def http_json(url, payload=None):
@@ -29,12 +32,24 @@ def http_json(url, payload=None):
 
 
 def tm_voices(lang):
+    global TM_API
     q = urllib.parse.urlencode({"token": TM_TOKEN, "language": lang})
-    return http_json(f"{TM_API}/get-voice-list?{q}")
+    for base in TM_BASES:
+        for method in ("GET", "POST"):
+            try:
+                res = http_json(f"{base}/get-voice-list?{q}") if method == "GET" else \
+                      http_json(f"{base}/get-voice-list", {"token": TM_TOKEN, "language": lang})
+                TM_LOG.append({"base": base, "method": method, "ok": True, "status": res.get("status")})
+                if res.get("status") == "success" or res.get("voices_detailed_list"):
+                    TM_API = base
+                    return res
+            except Exception as e:
+                TM_LOG.append({"base": base, "method": method, "error": str(e)[:200]})
+    raise RuntimeError("voice list failed: " + json.dumps(TM_LOG, ensure_ascii=False))
 
 
 def tm_speak(text, voice_id, path, speed=1.0, volume=0):
-    res = http_json(f"{TM_API}/create-tts-order", {
+    res = http_json(f"{TM_API or TM_BASES[0]}/create-tts-order", {
         "token": TM_TOKEN, "text": text, "voice_id": int(voice_id), "audio_format": "mp3",
         "audio_speed": float(speed), "audio_volume": volume, "text_paragraph_pause_time": 0})
     url = res.get("audio_file_url")
@@ -69,7 +84,7 @@ def run_ttsmaker(r, d):
                 made.append(vid)
             except Exception as e:  # 한 음성 실패해도 계속
                 errors.append({"voice_id": vid, "error": str(e)[:300]})
-        return {"samples": made, "errors": errors}
+        return {"api": TM_API, "samples": made, "errors": errors[:10], "log": TM_LOG}
     for seg in r["segments"]:
         mp3 = d / f"{seg['n']:02d}.mp3"
         tm_speak(seg["text"], r["voice_id"], mp3, r.get("speed", 1.0))
