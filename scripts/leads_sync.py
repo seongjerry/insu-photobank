@@ -13,11 +13,11 @@ Supabase bsn_leads 에서 아직 처리 안 된 신청을 읽어
 import os, sys, json, datetime
 import requests
 
-SB = os.environ.get("SUPABASE_URL", "").rstrip("/")
-KEY = os.environ.get("SUPABASE_SERVICE_KEY", "")
-TG_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
-TG_CHAT = os.environ.get("TELEGRAM_CHAT_ID", "")
-SHEET = os.environ.get("SHEET_WEBHOOK_URL", "")
+SB = os.environ.get("SUPABASE_URL", "").strip().rstrip("/")
+KEY = os.environ.get("SUPABASE_SERVICE_KEY", "").strip()
+TG_TOKEN = os.environ.get("TELEGRAM_TOKEN", "").strip()
+TG_CHAT = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
+SHEET = os.environ.get("SHEET_WEBHOOK_URL", "").strip()
 TABLE = "bsn_leads"
 
 if not (SB and KEY):
