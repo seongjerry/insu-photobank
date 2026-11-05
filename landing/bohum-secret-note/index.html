@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>보험비밀노트 · 무료 보장점검 신청</title>
+<meta name="description" content="보험설계사의 비밀노트. 내 보험이 진짜 괜찮은지, 무료로 점검받아 보세요.">
+<meta property="og:title" content="보험비밀노트 · 무료 보장점검">
+<meta property="og:description" content="설계사 노트에 적어둔 체크포인트로 내 보험을 점검해 드려요.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap">
+<style>
+:root{--ink:#1A1A1A;--sub:#5B5B5B;--blue:#1F4FD8;--red:#E23B3B;--yel:#FFE45C;--note:#FFF27A;--pink:#FFB3C7;--sky:#BFD7FF;--grid:#E7ECF3;--paper:#FBFAF6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,sans-serif;color:var(--ink);background:var(--paper);letter-spacing:-0.02em;
+ background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;-webkit-font-smoothing:antialiased;word-break:keep-all}
+.wrap{max-width:480px;margin:0 auto;padding:0 20px 120px}
+.pen{font-family:'Nanum Pen Script',cursive;letter-spacing:0}
+.mk{background:linear-gradient(transparent 55%,var(--yel) 55%,var(--yel) 92%,transparent 92%);padding:0 3px}
+.mkp{background:linear-gradient(transparent 55%,var(--pink) 55%,var(--pink) 92%,transparent 92%);padding:0 3px}
+.mkb{background:linear-gradient(transparent 55%,var(--sky) 55%,var(--sky) 92%,transparent 92%);padding:0 3px}
+/* top */
+.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0 10px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo i{width:34px;height:34px;background:var(--note);border:2px solid var(--ink);border-radius:6px;transform:rotate(-6deg);display:grid;place-items:center;font-style:normal;font-size:18px;box-shadow:2px 2px 0 var(--ink)}
+.logo b{font-size:19px;font-weight:900;letter-spacing:-0.04em;display:block;line-height:1.1}
+.logo small{display:block;font-size:11px;color:var(--sub);font-weight:600;letter-spacing:0}
+.top a.tel{font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);border-radius:20px;padding:6px 12px;background:#fff}
+/* hero */
+.hero{padding:22px 0 8px;position:relative}
+.hero .pen{font-size:27px;color:var(--blue);transform:rotate(-2deg);display:inline-block}
+.hero h1{font-size:38px;line-height:1.22;font-weight:900;letter-spacing:-0.05em;margin-top:8px}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p.lead{font-size:16px;line-height:1.6;color:var(--sub);margin-top:14px;font-weight:500}
+.note{background:var(--note);box-shadow:0 8px 18px rgba(0,0,0,.12);padding:20px 22px;position:relative}
+.note:before{content:"";position:absolute;top:-12px;left:50%;width:84px;height:24px;margin-left:-42px;background:rgba(255,255,255,.6);transform:rotate(-3deg)}
+.hero .note{margin:22px 40px 0 6px;transform:rotate(-1.5deg)}
+.hero .note .pen{font-size:25px;color:var(--ink);line-height:1.35;transform:none}
+.hero .redpen{position:absolute;right:-6px;bottom:175px;font-family:'Nanum Pen Script';color:var(--red);font-size:30px;line-height:1;transform:rotate(8deg);text-align:center}
+.btn{display:block;width:100%;border:0;border-radius:14px;background:var(--ink);color:#fff;font:800 18px Pretendard;padding:18px;cursor:pointer;text-align:center;text-decoration:none;letter-spacing:-0.03em;box-shadow:0 4px 0 #000}
+.btn:active{transform:translateY(2px);box-shadow:0 2px 0 #000}
+.hero .btn{margin-top:26px}
+.mini{font-size:13px;color:var(--sub);text-align:center;margin-top:10px;font-weight:600}
+/* card */
+.card{background:#fff;border:2px solid var(--ink);border-radius:18px;padding:24px 20px;margin-top:34px;position:relative;box-shadow:4px 4px 0 var(--ink)}
+.card .tape{position:absolute;top:-13px;left:24px;background:var(--yel);border:2px solid var(--ink);border-radius:6px;font-size:13px;font-weight:800;padding:3px 10px;transform:rotate(-3deg)}
+.card h2{font-size:24px;font-weight:900;letter-spacing:-0.04em;line-height:1.3}
+.card h2 + p{font-size:14px;color:var(--sub);margin-top:6px;line-height:1.5}
+label.f{display:block;font-size:14px;font-weight:800;margin:20px 0 8px}
+label.f span{color:var(--red)}
+input.in{width:100%;font:600 17px Pretendard;padding:15px 14px;border:2px solid #D5D9E0;border-radius:12px;background:#fff;outline:none;color:var(--ink)}
+input.in:focus{border-color:var(--ink)}
+input.in.err{border-color:var(--red);background:#FFF5F5}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid #D5D9E0;background:#fff;border-radius:22px;padding:9px 13px;font:700 14px Pretendard;color:var(--ink);cursor:pointer}
+.chip.on{border-color:var(--ink);background:var(--note);box-shadow:2px 2px 0 var(--ink)}
+.agree{margin-top:22px;border-top:1.5px dashed #D5D9E0;padding-top:16px}
+.agree .row{display:flex;align-items:center;gap:10px;padding:7px 0;font-size:14px;font-weight:600}
+.agree .row.all{font-weight:900;font-size:15px;padding-bottom:10px}
+.agree input{width:22px;height:22px;accent-color:var(--ink);flex:none}
+.agree .row label{flex:1;cursor:pointer}
+.agree .row a{font-size:12px;color:var(--sub);text-decoration:underline;cursor:pointer;flex:none}
+.agree .req{color:var(--red);font-weight:800}
+.msg{color:var(--red);font-size:13px;font-weight:700;margin-top:8px;min-height:18px}
+.card .btn{margin-top:14px}
+.hp{position:absolute;left:-9999px}
+/* done */
+.done{display:none;text-align:center;padding:10px 0}
+.done .pen{font-size:34px;color:var(--blue)}
+.done h3{font-size:24px;font-weight:900;margin-top:6px}
+.done p{font-size:15px;color:var(--sub);line-height:1.6;margin-top:10px}
+.done .check{width:76px;height:76px;margin:0 auto 6px}
+.kakao{display:none;margin-top:18px;background:#FEE500;color:#191919;box-shadow:0 4px 0 #C9B400}
+/* notes section */
+.sec{margin-top:48px}
+.sec > .pen{font-size:26px;color:var(--blue);display:inline-block;transform:rotate(-2deg)}
+.sec h2{font-size:27px;font-weight:900;letter-spacing:-0.05em;line-height:1.3;margin-top:4px}
+.notes{display:grid;gap:22px;margin-top:22px}
+.notes .note:nth-child(1){transform:rotate(-1deg)}
+.notes .note:nth-child(2){transform:rotate(1.2deg);background:#FFE1EA}
+.notes .note:nth-child(3){transform:rotate(-.6deg);background:#DCEBFF}
+.notes h3{font-size:19px;font-weight:900;letter-spacing:-0.04em}
+.notes ul{list-style:none;margin-top:10px}
+.notes li{font-family:'Nanum Pen Script';font-size:23px;line-height:1.3}
+.notes button{margin-top:12px;border:2px solid var(--ink);background:#fff;border-radius:10px;font:800 14px Pretendard;padding:9px 12px;cursor:pointer}
+/* checklist */
+.ck{list-style:none;margin-top:18px;background:#fff;border:2px solid var(--ink);border-radius:16px;padding:8px 18px}
+.ck li{display:flex;gap:12px;align-items:center;padding:13px 0;border-bottom:1.5px dashed #D5D9E0;font-size:16px;font-weight:700}
+.ck li:last-child{border-bottom:0}
+.ck svg{flex:none}
+/* steps */
+.steps{margin-top:18px;display:grid;gap:12px}
+.step{display:flex;gap:14px;align-items:flex-start;background:#fff;border:2px solid var(--ink);border-radius:16px;padding:16px}
+.step b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:900}
+.step h4{font-size:16px;font-weight:900}
+.step p{font-size:14px;color:var(--sub);margin-top:3px;line-height:1.5}
+/* footer */
+footer{margin-top:52px;font-size:11.5px;line-height:1.65;color:#777;border-top:1.5px solid #D5D9E0;padding-top:18px}
+footer b{color:#444}
+footer p+p{margin-top:8px}
+/* sticky */
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 20px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--paper) 30%);z-index:20;transition:transform .25s}
+.sticky.hide{transform:translateY(120%)}
+.sticky .btn{max-width:440px;margin:0 auto}
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:flex-end;justify-content:center;z-index:40}
+.modal.on{display:flex}
+.sheet{background:#fff;width:100%;max-width:480px;max-height:80vh;overflow:auto;border-radius:20px 20px 0 0;padding:24px 22px 30px}
+.sheet h3{font-size:18px;font-weight:900;margin-bottom:12px}
+.sheet table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.55}
+.sheet th,.sheet td{border:1px solid #E1E4EA;padding:9px 10px;text-align:left;vertical-align:top}
+.sheet th{background:#F6F7F9;width:32%;font-weight:800}
+.sheet p{font-size:13px;color:var(--sub);margin-top:10px;line-height:1.55}
+.sheet .btn{margin-top:18px;padding:14px;font-size:16px}
+</style>
+<!-- Meta 픽셀 / GTM: 아래 CONFIG에 ID를 넣으면 자동으로 켜집니다 -->
+</head>
+<body>
+<div class="wrap">
+ <header class="top">
+  <a class="logo" href="#"><i>✎</i><span><b>보험비밀노트</b><small>보험설계사의 비밀노트</small></span></a>
+ </header>
+
+ <section class="hero">
+  <span class="pen" id="heroPen">설계사 노트에만 적어둔 체크포인트</span>
+  <h1 id="heroTitle">내 보험, <span class="mk">진짜 괜찮은지</span><br><em>1분</em> 만에 점검 신청</h1>
+  <p class="lead" id="heroLead">영상에서 본 체크리스트 그대로, 지금 가입한 보험을 하나씩 확인해 드려요.</p>
+  <div class="note"><div class="pen" id="heroNote">☐ 보장 범위 빠진 곳<br>☐ 감액·면책 조건<br>☐ 갱신 구조와 보험료<br>☐ 중복되거나 새는 돈</div></div>
+  <div class="redpen">상담<br>무료!</div>
+  <a class="btn" href="#apply">무료 보장점검 신청하기 ↓</a>
+  <p class="mini">상담 무료 · 가입 강요 없음 · 점검만 받아도 OK</p>
+ </section>
+
+ <section class="card" id="apply">
+  <span class="tape">무료 보장점검</span>
+  <div id="formBox">
+   <h2>어떤 보험이 궁금하세요?</h2>
+   <p>남겨주시면 담당 설계사가 순서대로 연락드려요.</p>
+   <form id="leadForm" name="consult" method="POST" data-netlify="true" netlify-honeypot="company" novalidate>
+    <input type="hidden" name="form-name" value="consult">
+    <p class="hp"><label>회사 <input name="company" tabindex="-1" autocomplete="off"></label></p>
+    <input type="hidden" name="topic">
+    <input type="hidden" name="call_time">
+    <input type="hidden" name="marketing_agree">
+    <input type="hidden" name="page_topic"><input type="hidden" name="utm_source"><input type="hidden" name="utm_medium">
+    <input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="utm_term">
+    <input type="hidden" name="referrer"><input type="hidden" name="submitted_at">
+
+    <label class="f">상담 주제 <span>*</span></label>
+    <div class="chips" id="topicChips" data-field="topic" data-multi="1">
+     <button type="button" class="chip" data-v="부모님 치매·장기요양">부모님 치매·장기요양</button>
+     <button type="button" class="chip" data-v="간병인보험">간병인보험</button>
+     <button type="button" class="chip" data-v="암·3대질병">암·3대질병</button>
+     <button type="button" class="chip" data-v="실손보험">실손보험</button>
+     <button type="button" class="chip" data-v="20대 첫 보험">20대 첫 보험</button>
+     <button type="button" class="chip" data-v="전체 점검·리모델링">전체 점검·리모델링</button>
+    </div>
+
+    <label class="f" for="nm">이름 <span>*</span></label>
+    <input class="in" id="nm" name="name" autocomplete="name" placeholder="홍길동" maxlength="20">
+
+    <label class="f" for="ph">휴대폰 번호 <span>*</span></label>
+    <input class="in" id="ph" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="010-0000-0000" maxlength="13">
+
+    <label class="f">연락 편한 시간</label>
+    <div class="chips" id="timeChips" data-field="call_time">
+     <button type="button" class="chip" data-v="오전">오전</button>
+     <button type="button" class="chip" data-v="오후">오후</button>
+     <button type="button" class="chip" data-v="저녁">저녁</button>
+     <button type="button" class="chip on" data-v="상관없음">상관없음</button>
+    </div>
+
+    <div class="agree">
+     <div class="row all"><input type="checkbox" id="agAll"><label for="agAll">전체 동의하기</label></div>
+     <div class="row"><input type="checkbox" id="agReq"><label for="agReq"><span class="req">[필수]</span> 개인정보 수집·이용 동의</label><a data-modal="mReq">보기</a></div>
+     <div class="row"><input type="checkbox" id="agMkt"><label for="agMkt">[선택] 마케팅 정보 수신 동의</label><a data-modal="mMkt">보기</a></div>
+    </div>
+    <div class="msg" id="msg"></div>
+    <button class="btn" type="submit" id="submitBtn">무료 점검 신청하기 →</button>
+    <p class="mini">입력하신 정보는 상담 목적 외에 사용하지 않아요</p>
+   </form>
+  </div>
+  <div class="done" id="doneBox">
+   <svg class="check" viewBox="0 0 80 80"><circle cx="40" cy="40" r="34" fill="#FFF27A" stroke="#1A1A1A" stroke-width="3"/><path d="M24 41 L36 53 L58 28" fill="none" stroke="#E23B3B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+   <div class="pen">신청 완료!</div>
+   <h3>점검 신청이 접수됐어요</h3>
+   <p id="doneText">담당 설계사가 순서대로 연락드릴게요.<br>모르는 번호로 전화가 와도 꼭 받아주세요.</p>
+   <a class="btn kakao" id="kakaoBtn" href="#" target="_blank" rel="noopener">카카오톡 채널 추가하기</a>
+  </div>
+ </section>
+
+ <section class="sec">
+  <span class="pen">비밀노트에 적어둔 내용</span>
+  <h2>영상에서 본 그 체크리스트,<br><span class="mkp">내 보험</span>에도 대입해 보세요</h2>
+  <div class="notes">
+   <div class="note"><h3>부모님 치매보험</h3><ul><li>☐ 경도 치매부터 보장되나</li><li>☐ 진단비 한 번으로 끝나진 않나</li><li>☐ 재가·시설급여 지원금 있나</li><li>☐ 보장 시작일은 언제인가</li></ul><button type="button" data-pick="부모님 치매·장기요양">이 주제로 점검받기</button></div>
+   <div class="note"><h3>간병인보험</h3><ul><li>☐ 요양병원 특약도 있나</li><li>☐ 감액 조건 확인했나</li><li>☐ 가족 간병도 인정되나</li><li>☐ 갱신·체증 구조는</li></ul><button type="button" data-pick="간병인보험">이 주제로 점검받기</button></div>
+   <div class="note"><h3>20대 보험</h3><ul><li>☐ 암·뇌·심장 보장 범위</li><li>☐ 갱신형인지 비갱신형인지</li><li>☐ 해지환급금 구조</li><li>☐ 건강체 할인 조건</li></ul><button type="button" data-pick="20대 첫 보험">이 주제로 점검받기</button></div>
+  </div>
+ </section>
+
+ <section class="sec">
+  <span class="pen">이런 분이라면</span>
+  <h2>지금 한 번 <span class="mk">점검</span>해 보세요</h2>
+  <ul class="ck">
+   <li><svg width="26" height="26" viewBox="0 0 26 26"><rect x="2" y="2" width="22" height="22" rx="5" fill="#fff" stroke="#1A1A1A" stroke-width="2"/><path d="M7 13 L11.5 17.5 L20 8" fill="none" stroke="#E23B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>보험 가입한 지 5년이 넘었다</li>
+   <li><svg width="26" height="26" viewBox="0 0 26 26"><rect x="2" y="2" width="22" height="22" rx="5" fill="#fff" stroke="#1A1A1A" stroke-width="2"/><path d="M7 13 L11.5 17.5 L20 8" fill="none" stroke="#E23B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>부모님 보험이 뭐가 있는지 모른다</li>
+   <li><svg width="26" height="26" viewBox="0 0 26 26"><rect x="2" y="2" width="22" height="22" rx="5" fill="#fff" stroke="#1A1A1A" stroke-width="2"/><path d="M7 13 L11.5 17.5 L20 8" fill="none" stroke="#E23B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>갱신 때마다 보험료가 올라 부담된다</li>
+   <li><svg width="26" height="26" viewBox="0 0 26 26"><rect x="2" y="2" width="22" height="22" rx="5" fill="#fff" stroke="#1A1A1A" stroke-width="2"/><path d="M7 13 L11.5 17.5 L20 8" fill="none" stroke="#E23B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>보험이 여러 개라 겹치는지 헷갈린다</li>
+  </ul>
+ </section>
+
+ <section class="sec">
+  <span class="pen">진행은 이렇게</span>
+  <h2>신청부터 점검까지 <span class="mkb">3단계</span></h2>
+  <div class="steps">
+   <div class="step"><b>1</b><div><h4>1분 신청</h4><p>궁금한 주제와 연락처만 남겨주세요.</p></div></div>
+   <div class="step"><b>2</b><div><h4>담당 설계사 연락</h4><p id="stepContact">편한 시간에 맞춰 연락드리고, 가입한 보험을 같이 확인해요.</p></div></div>
+   <div class="step"><b>3</b><div><h4>보장 점검 결과 설명</h4><p>빠진 보장과 새는 보험료를 노트처럼 정리해서 알려드려요.</p></div></div>
+  </div>
+  <a class="btn" href="#apply" style="margin-top:22px">무료 점검 신청하기 →</a>
+ </section>
+
+ <footer id="footer"></footer>
+</div>
+
+<div class="sticky hide" id="sticky"><a class="btn" href="#apply">무료 보장점검 신청하기</a></div>
+
+<div class="modal" id="mReq"><div class="sheet">
+ <h3>개인정보 수집·이용 동의 (필수)</h3>
+ <table>
+  <tr><th>수집 주체</th><td class="cfgCollector"></td></tr>
+  <tr><th>수집 목적</th><td>보험 상담 신청 접수, 보장 점검 및 상담 안내 연락</td></tr>
+  <tr><th>수집 항목</th><td>이름, 휴대폰 번호, 상담 주제, 연락 희망 시간</td></tr>
+  <tr><th>보유 기간</th><td class="cfgRetention"></td></tr>
+ </table>
+ <p>개인정보 수집·이용에 동의하지 않을 권리가 있으며, 동의하지 않으면 상담 신청이 제한됩니다. 수집한 정보는 제3자에게 제공하지 않으며, 동의 후에도 언제든 철회를 요청할 수 있고 요청 시 지체 없이 파기합니다.</p>
+ <button class="btn" type="button" data-close>확인</button>
+</div></div>
+<div class="modal" id="mMkt"><div class="sheet">
+ <h3>마케팅 정보 수신 동의 (선택)</h3>
+ <table>
+  <tr><th>이용 목적</th><td>보험 상품·제도 변경 소식, 보장 점검 이벤트 안내</td></tr>
+  <tr><th>이용 항목</th><td>이름, 휴대폰 번호</td></tr>
+  <tr><th>수신 방법</th><td>문자, 전화</td></tr>
+  <tr><th>보유 기간</th><td>동의 철회 시 또는 동의일로부터 1년</td></tr>
+ </table>
+ <p>동의하지 않아도 상담 신청은 그대로 진행됩니다. 수신을 원하지 않으면 언제든 철회할 수 있습니다.</p>
+ <button class="btn" type="button" data-close>확인</button>
+</div></div>
+
+<script>
+/* ===================== 설정 (여기만 바꾸면 됩니다) ===================== */
+const CONFIG = {
+  brand: "보험비밀노트",
+  phone: "010-4579-5688",            // 전화상담 버튼·문의처
+  kakaoChannelUrl: "",               // 예: https://pf.kakao.com/_xxxx  (비우면 버튼 숨김)
+  contactTime: "영업일 기준 1~2일 안에", // 연락 안내 문구
+  collector: "보험설계사의 비밀노트",
+  retention: "상담 종료 후 3개월 (관계 법령에 따라 보관이 필요한 경우 해당 기간)",
+  company: "인카금융서비스(주) 법인보험대리점",
+  agencyRegNo: "",                   // 대리점 등록번호
+  plannerName: "전성재",
+  plannerRegNo: "",                  // 설계사 등록번호
+  reviewNo: "",                      // 준법감시인 심의필 번호 (예: 제 26-11-0000호)
+  reviewPeriod: "",                  // 심의 유효기간 (예: 2026.11.10 ~ 2027.11.09)
+  metaPixelId: "",                   // Meta 픽셀 ID (넣으면 PageView·Lead 자동 전송)
+  gtmId: "",                         // 구글 태그매니저 ID (선택)
+  supabase: { url: "", anonKey: "", table: "leads" }  // 선택: 넣으면 Supabase에도 동시 저장
+};
+/* 주제별 문구: 링크 끝에 ?t=dementia 처럼 붙이면 바뀝니다 */
+const TOPICS = {
+  dementia:  { chip:"부모님 치매·장기요양", pen:"부모님 보험 점검하다 제일 많이 본 것",
+    title:'부모님 치매보험,<br><span class="mk">진단비만</span> 있으면<br><em>후회</em>해요',
+    lead:"경도 치매 보장, 생활자금, 재가·시설급여 지원금까지. 부모님 보험에 빠진 게 없는지 확인해 드려요.",
+    note:"☐ 경도 치매부터 보장<br>☐ 진단비 + 생활자금<br>☐ 재가·시설급여 지원금<br>☐ 보장 시작일" },
+  caregiver: { chip:"간병인보험", pen:"상담하면서 제일 많이 본 실수",
+    title:'간병인보험,<br><span class="mk">"이렇게"</span> 가입하면<br><em>후회</em>해요',
+    lead:"요양병원 특약, 감액 조건, 가족 간병 인정, 갱신·체증 구조까지 내 간병보험을 점검해 드려요.",
+    note:"☐ 요양병원 특약<br>☐ 감액 조건<br>☐ 가족 간병 인정 여부<br>☐ 갱신·체증 구조" },
+  "20s":     { chip:"20대 첫 보험", pen:"20대 고객님들이 제일 많이 물어보는 것",
+    title:'20대 보험,<br><span class="mk">이 4가지</span>만<br><em>먼저</em> 보세요',
+    lead:"처음 드는 보험이라면 진단비 범위, 갱신 여부, 환급금 구조, 건강체 할인부터 확인해야 해요.",
+    note:"☐ 진단비 범위<br>☐ 갱신 여부<br>☐ 환급금 구조<br>☐ 건강체 할인" },
+  cancer:    { chip:"암·3대질병", pen:"진단비만 보고 가입하면 생기는 일",
+    title:'암보험,<br><span class="mk">치료비</span>까지<br><em>챙겼나요?</em>',
+    lead:"진단비는 한 번, 치료는 몇 년씩 이어질 수 있어요. 지금 보험으로 어디까지 되는지 확인해 드려요.",
+    note:"☐ 진단비 범위<br>☐ 치료비 반복 보장<br>☐ 갱신 여부<br>☐ 중복 가입" },
+  silson:    { chip:"실손보험", pen:"갈아타기 전에 꼭 보는 것",
+    title:'실손보험,<br><span class="mk">갈아타기 전</span><br><em>이것</em>부터',
+    lead:"지금 실손을 유지할지, 바꿀지. 내 병원 이용 패턴과 보험료로 따져봐야 해요.",
+    note:"☐ 지금 실손 세대<br>☐ 보험료 변화<br>☐ 자기부담금 차이<br>☐ 병원 이용 패턴" }
+};
+/* ===================================================================== */
+
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const qs=new URLSearchParams(location.search);
+const t=TOPICS[qs.get('t')];
+if(t){ $('#heroPen').textContent=t.pen; $('#heroTitle').innerHTML=t.title; $('#heroLead').textContent=t.lead; $('#heroNote').innerHTML=t.note; }
+
+// 설정 반영
+$('.cfgCollector').textContent=CONFIG.collector;
+$('.cfgRetention').textContent=CONFIG.retention;
+$('#stepContact').textContent=`${CONFIG.contactTime} 편한 시간에 맞춰 연락드리고, 가입한 보험을 같이 확인해요.`;
+$('#doneText').innerHTML=`담당 설계사가 ${CONFIG.contactTime} 연락드릴게요.<br>모르는 번호로 전화가 와도 꼭 받아주세요.`;
+if(CONFIG.kakaoChannelUrl){ const k=$('#kakaoBtn'); k.href=CONFIG.kakaoChannelUrl; k.style.display='block'; }
+const ph=(v,label)=>v?v:`<span style="color:#E23B3B">[${label} 입력 필요]</span>`;
+$('#footer').innerHTML=`
+ <p><b>${CONFIG.brand}</b> · 보험설계사의 비밀노트</p>
+ <p>상기 내용은 보험설계사 개인의 의견이며, 계약 체결에 따른 이익 또는 손실은 보험계약자 등에게 귀속됩니다. 보험사 및 상품별로 보장내용, 보험료, 가입조건이 다를 수 있으므로 계약 체결 전 상품설명서 및 약관을 반드시 확인하시기 바랍니다.</p>
+ <p>보험계약자가 기존 보험계약을 해지하고 새로운 보험계약을 체결하는 과정에서 질병이력, 연령증가 등으로 가입이 거절되거나 보험료가 인상될 수 있으며, 가입 상품에 따라 새로운 면책기간 적용 및 보장 제한 등 기타 불이익이 발생할 수 있습니다.</p>
+ <p>본 광고는 광고심의기준을 준수하였으며, 유효기간은 심의일로부터 1년입니다.</p>`;
+
+// 추적 태그
+if(CONFIG.metaPixelId){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',CONFIG.metaPixelId);fbq('track','PageView');}
+if(CONFIG.gtmId){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',CONFIG.gtmId);}
+
+// 칩 선택
+const form=$('#leadForm');
+function syncChips(box){ const vals=[...box.querySelectorAll('.chip.on')].map(c=>c.dataset.v); form[box.dataset.field].value=vals.join(', '); }
+$$('.chips').forEach(box=>{
+  box.addEventListener('click',e=>{ const c=e.target.closest('.chip'); if(!c) return;
+    if(box.dataset.multi){ c.classList.toggle('on'); } else { box.querySelectorAll('.chip').forEach(x=>x.classList.remove('on')); c.classList.add('on'); }
+    syncChips(box); });
+  syncChips(box);
+});
+function pickTopic(v){ const c=$$('#topicChips .chip').find(x=>x.dataset.v===v); if(c&&!c.classList.contains('on')){c.classList.add('on'); syncChips($('#topicChips'));} }
+if(t) pickTopic(t.chip);
+$$('[data-pick]').forEach(b=>b.addEventListener('click',()=>{ pickTopic(b.dataset.pick); $('#apply').scrollIntoView({behavior:'smooth'}); }));
+
+// 전화번호 자동 하이픈
+const phone=$('#ph');
+phone.addEventListener('input',()=>{ let d=phone.value.replace(/\D/g,'').slice(0,11);
+  phone.value=d.length<4?d:d.length<8?d.slice(0,3)+'-'+d.slice(3):d.slice(0,3)+'-'+d.slice(3,d.length-4)+'-'+d.slice(-4); });
+
+// 동의
+const agAll=$('#agAll'),agReq=$('#agReq'),agMkt=$('#agMkt');
+agAll.addEventListener('change',()=>{agReq.checked=agMkt.checked=agAll.checked;});
+[agReq,agMkt].forEach(x=>x.addEventListener('change',()=>{agAll.checked=agReq.checked&&agMkt.checked;}));
+$$('[data-modal]').forEach(a=>a.addEventListener('click',()=>$('#'+a.dataset.modal).classList.add('on')));
+$$('.modal').forEach(m=>m.addEventListener('click',e=>{ if(e.target===m||e.target.hasAttribute('data-close')) m.classList.remove('on'); }));
+
+// UTM·유입 정보
+['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(k=>form[k].value=qs.get(k)||'');
+form.page_topic.value=qs.get('t')||'';
+form.referrer.value=document.referrer||'';
+
+// 제출
+const msg=$('#msg');
+function fail(text,el){ msg.textContent=text; if(el){el.classList.add('err'); el.focus();} return false; }
+form.addEventListener('submit',async e=>{
+  e.preventDefault(); msg.textContent=''; $$('.in').forEach(x=>x.classList.remove('err'));
+  const name=form.elements.name.value.trim(), tel=phone.value.replace(/\D/g,'');
+  if(!form.topic.value) return fail('상담 주제를 하나 이상 골라주세요.');
+  if(name.length<2) return fail('이름을 입력해주세요.',form.elements.name);
+  if(!/^01[016789]\d{7,8}$/.test(tel)) return fail('휴대폰 번호를 정확히 입력해주세요.',phone);
+  if(!agReq.checked) return fail('개인정보 수집·이용에 동의해야 신청할 수 있어요.');
+  if(form.company.value) return; // 스팸
+  form.marketing_agree.value=agMkt.checked?'동의':'미동의';
+  form.submitted_at.value=new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'});
+  const btn=$('#submitBtn'); btn.disabled=true; btn.textContent='접수 중...';
+  const data=new FormData(form); const body=new URLSearchParams(data).toString();
+  let ok=false;
+  try{
+    const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body});
+    ok=r.ok;
+  }catch(err){}
+  if(CONFIG.supabase.url&&CONFIG.supabase.anonKey){
+    try{
+      const row=Object.fromEntries([...data].filter(([k])=>!['form-name','company'].includes(k)));
+      const r2=await fetch(`${CONFIG.supabase.url}/rest/v1/${CONFIG.supabase.table}`,{method:'POST',
+        headers:{'apikey':CONFIG.supabase.anonKey,'Authorization':'Bearer '+CONFIG.supabase.anonKey,'Content-Type':'application/json','Prefer':'return=minimal'},
+        body:JSON.stringify(row)});
+      ok=ok||r2.ok;
+    }catch(err){}
+  }
+  if(!ok && /netlify\.app$|\.netlify\.com$/.test(location.hostname)===false && !CONFIG.supabase.url){
+    console.warn('미리보기 환경: Netlify에 배포하면 신청 내용이 저장됩니다.'); ok=true; // 미리보기에서는 완료 화면만 표시
+  }
+  if(!ok){ btn.disabled=false; btn.textContent='무료 점검 신청하기 →'; return fail(`접수가 잠시 안 되고 있어요. ${CONFIG.phone?CONFIG.phone+'로 연락 주세요.':''}`); }
+  if(window.fbq) fbq('track','Lead',{content_name:form.topic.value});
+  if(window.dataLayer) dataLayer.push({event:'lead_submit',topic:form.topic.value});
+  $('#formBox').style.display='none'; $('#doneBox').style.display='block';
+  $('#apply').scrollIntoView({behavior:'smooth',block:'center'});
+  $('#sticky').classList.add('hide'); stickyOff=true;
+});
+
+// 하단 고정 버튼: 첫 화면 지나고, 신청 폼이 안 보일 때만
+let stickyOff=false;
+const io=new IntersectionObserver(es=>{ es.forEach(en=>{ if(stickyOff) return; $('#sticky').classList.toggle('hide',en.isIntersecting||window.scrollY<300); }); },{threshold:0.15});
+io.observe($('#apply'));
+addEventListener('scroll',()=>{ if(stickyOff) return; const r=$('#apply').getBoundingClientRect(); const vis=r.top<innerHeight&&r.bottom>0; $('#sticky').classList.toggle('hide',vis||scrollY<300); },{passive:true});
+</script>
+</body>
+</html>
