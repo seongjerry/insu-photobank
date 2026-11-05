@@ -23,6 +23,9 @@ TABLE = "bsn_leads"
 if not (SB and KEY):
     print("SUPABASE_URL / SUPABASE_SERVICE_KEY 미설정: 건너뜀"); sys.exit(0)
 
+if not KEY.isascii() or any(c.isspace() for c in KEY) or "•" in KEY:
+    print("SUPABASE_SERVICE_KEY 형식 오류: 가려진 값(•)이나 공백·한글이 섞여 있음. 복사 버튼으로 다시 복사해 등록하세요. "
+          f"(길이 {len(KEY)}, sb_secret_ 시작 {KEY.startswith('sb_secret_')})"); sys.exit(1)
 H = {"apikey": KEY, "Content-Type": "application/json"}
 if not KEY.startswith("sb_"):  # 예전 JWT 형식 키일 때만 Bearer 필요
     H["Authorization"] = f"Bearer {KEY}"
