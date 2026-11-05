@@ -15,6 +15,8 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install edge-tts
       - run: python scripts/tts_batch.py
+        env:
+          TTSMAKER_TOKEN: ${{ secrets.TTSMAKER_TOKEN }}
       - run: |
           git config user.name tts-bot
           git config user.email bot@users.noreply.github.com
