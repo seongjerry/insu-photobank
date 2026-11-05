@@ -8,5 +8,5 @@ Claude가 코드로 직접 작곡·합성한 곡입니다 (generator/shorts/bgm_
 - bgm_02_bright_pluck.mp3  밝은 플럭 아르페지오 · 100bpm · 팁·체크리스트형
 - bgm_03_warm_piano.mp3    따뜻한 피아노 · 70bpm · 드럼 없음 · 부모님·효도·진지한 주제
 
-쇼츠에 깔 때: generator/shorts/bgm_mix.sh 음성.wav 배경음 출력.wav  (기본 -37 LUFS, 말할 때 자동으로 더 작아짐)
+쇼츠에 깔 때: generator/shorts/bgm_mix.sh 음성.wav 배경음 출력.wav  (기본: 배경음 -33 LUFS, 나레이션 -1.5dB. 말할 때 배경음 자동으로 더 작아짐)
 외부 무료 음원(Pixabay Music 등)을 추가로 넣을 때는 파일명 앞에 ext_ 를 붙이고 출처를 이 파일에 적어주세요.
