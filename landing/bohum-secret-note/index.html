@@ -268,7 +268,7 @@ const CONFIG = {
   reviewPeriod: "",                  // 심의 유효기간 (예: 2026.11.10 ~ 2027.11.09)
   metaPixelId: "",                   // Meta 픽셀 ID (넣으면 PageView·Lead 자동 전송)
   gtmId: "",                         // 구글 태그매니저 ID (선택)
-  supabase: { url: "", anonKey: "", table: "leads" }  // 선택: 넣으면 Supabase에도 동시 저장
+  supabase: { url: "https://flwhadygkzrfphypqzyh.supabase.co", anonKey: "sb_publishable_tmF2DGZoQjwpYJ6_Frg8jw_C8_vWGTc", table: "bsn_leads" }  // 선택: 넣으면 Supabase에도 동시 저장
 };
 /* 주제별 문구: 링크 끝에 ?t=dementia 처럼 붙이면 바뀝니다 */
 const TOPICS = {
@@ -371,7 +371,7 @@ form.addEventListener('submit',async e=>{
     try{
       const row=Object.fromEntries([...data].filter(([k])=>!['form-name','company'].includes(k)));
       const r2=await fetch(`${CONFIG.supabase.url}/rest/v1/${CONFIG.supabase.table}`,{method:'POST',
-        headers:{'apikey':CONFIG.supabase.anonKey,'Authorization':'Bearer '+CONFIG.supabase.anonKey,'Content-Type':'application/json','Prefer':'return=minimal'},
+        headers:Object.assign({'apikey':CONFIG.supabase.anonKey,'Content-Type':'application/json','Prefer':'return=minimal'},CONFIG.supabase.anonKey.startsWith('sb_')?{}:{'Authorization':'Bearer '+CONFIG.supabase.anonKey}),
         body:JSON.stringify(row)});
       ok=ok||r2.ok;
     }catch(err){}
