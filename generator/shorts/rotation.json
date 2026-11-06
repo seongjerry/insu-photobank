@@ -1,0 +1,46 @@
+{
+  "_설명": "보험비밀노트 쇼츠 A/B 로테이션 규칙. 새 영상을 만들 때 아래 축에서 하나씩 골라 조합하고, experiments.csv 에 기록한다. 한 번에 1~2개 축만 바꿔야 무엇이 효과였는지 알 수 있다.",
+  "axes": {
+    "format": {
+      "note": "노트 손필기 (모눈·형광펜·포스트잇)",
+      "lock": "잠금화면 알림",
+      "chat": "메신저 대화 상황극",
+      "dashcam": "블랙박스 1인칭",
+      "quiz": "OX 퀴즈·투표",
+      "receipt": "사고 청구서·영수증"
+    },
+    "voice": {
+      "injoon": "ko-KR-InJoonNeural (남, 차분)",
+      "hyunsu": "ko-KR-HyunsuMultilingualNeural (남, 자연스러움)",
+      "florian": "de-DE-FlorianMultilingualNeural",
+      "remy": "fr-FR-RemyMultilingualNeural",
+      "giuseppe": "it-IT-GiuseppeMultilingualNeural",
+      "sunhi": "ko-KR-SunHiNeural (여)"
+    },
+    "edit": {
+      "fast": "1.2배속, 문장 사이 공백 0.3초",
+      "faster": "1.3배속, 공백 0.15초, 장면 2~3초",
+      "beat": "배경음 박자에 장면 전환 맞춤"
+    },
+    "hook": {
+      "situation": "내 일 같은 상황으로 시작",
+      "myth": "오해·통념 뒤집기 (○○라고?)",
+      "money": "금액·숫자로 시작",
+      "question": "OX·질문형"
+    },
+    "bgm": {
+      "lofi": "bgm_01_lofi_calm",
+      "bright": "bgm_02_bright_pluck",
+      "piano": "bgm_03_warm_piano"
+    }
+  },
+  "rules": [
+    "기본 길이 30~50초, 템포는 빠르게",
+    "하단 자막 박스 없음, 상단 브랜드·하단 안내문구·심의필은 넣지 않음 (본인이 직접 추가)",
+    "효과음은 작게, 핵심 동작에만",
+    "CTA는 항상 프로필 링크 문의",
+    "같은 조합은 연속 2회까지만, 성과 좋은 조합은 다음 편에서 1축만 바꿔 재검증",
+    "실사처럼 보이는 재연 화면은 '재연' 표시, 실제 기관명은 ○○ 처리"
+  ],
+  "metrics": ["3초 유지율", "평균 시청 시간", "완주율", "저장", "공유", "프로필 방문", "랜딩 신청 수(utm_content)"]
+}
