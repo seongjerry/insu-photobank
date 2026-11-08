@@ -1,0 +1,7 @@
+[insu_magazine] [월 · 태그형 릴스] 주말만 되면 밥때가 무너지는 사람
+오늘 19:00 게시 추천
+주제 선정 이유: 행동(주말 늦은 첫 끼)으로 1초 만에 '나 얘기'가 되고, 남성 +14%·관상동맥 +21%라는 숫자가 있으며 여성은 연관 없음이라는 반전이 있음
+출처: Communications Medicine 2026.9 (프랑스 NutriNet-Santé 약 10.5만 명, 관찰연구) / https://www.inrae.fr/en/news/eating-jetlag-and-risk-cardiovascular-disease
+업로드 때 트렌딩 오디오 선택
+나레이션 미적용: edge-tts 서버(speech.platform.bing.com)가 이 세션 네트워크에서 차단됨. 효과음만 포함, 장면당 4.5초 총 27초
+참고: 원 발표가 2026-09-01이라 1~2주 기준보다 오래됨. 최근 1~2주 신규 연구를 검색 도구로 충분히 찾지 못함
