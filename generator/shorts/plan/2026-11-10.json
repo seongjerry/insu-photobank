@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-10",
+  "status": "proposed",
+  "proposed_at": "2026-11-10T08:30:00+09:00",
+  "note": "requests.md 반영: 13:00 ep11, 15:00 ep05 확정. 18:00 1개만 새로 제안(다크노트 우선)",
+  "slots": [
+    {"slot": "13:00", "ep": "ep11", "fixed": true, "topic": "운전자보험 가입 연도별 보장 변화", "format": "note_light", "voice": "ko-KR-InJoonNeural", "approved": true},
+    {"slot": "15:00", "ep": "ep05", "fixed": true, "topic": "산후조리원 보험 140만원", "format": "kakao", "voice": "de-DE-SeraphinaMultilingualNeural", "approved": true},
+    {
+      "slot": "18:00",
+      "ep": "ep12",
+      "category": 2,
+      "topic": "보험금 깎이기 전에, 손해사정사는 내가 고를 수 있다 (보험회사 몰래 적어둔 노트 #2)",
+      "hook": "보험금 심사하는 사람, 보험사가 고른 사람이라는 거 아셨어요?",
+      "outline": [
+        "훅: 보험금 심사(손해사정)하는 사람, 보통 보험사가 정한 사람이에요",
+        "노트1: 소비자도 손해사정사를 직접 고를 수 있어요 (소비자 선임권)",
+        "노트2: 보험사가 동의하면 그 비용은 보험사가 내요. 실손뿐 아니라 운전자·배상책임 등 손해보험 전반으로 넓어졌어요",
+        "노트3: 선임 의사는 손해사정 시작 전에, 보통 10영업일 안에 알려야 해요. 보험사가 거절하면 이유를 설명해야 해요",
+        "노트4: 정액형(진단비 등)은 대상이 아닌 경우가 많아요. 내 보험사 홈페이지의 동의 기준부터 확인",
+        "마무리: 큰 금액 청구 전에 이 노트 저장해 두세요. 팔로우하면 노트 #3도 보여드릴게요"
+      ],
+      "format": "note_dark",
+      "voice": "ko-KR-SunHiNeural",
+      "bgm": "bgm_04_upbeat_pluck",
+      "cta": "저장·팔로우",
+      "research_note": "보험금 거절 대처법·손해사정사 선임 콘텐츠가 최근 블로그·쇼츠에서 꾸준히 노출. 2025년 상반기 5대 손보사 독립 손해사정사 선임 요청 721건으로 전년 대비 2배(98.6%↑). ep06(청구 3가지), ep08(현장조사 서명 금지 #1)과 겹치지 않게 '심사하는 사람을 내가 고른다'로 각색. 포맷: 최근 kakao→lock→note_light→kakao 이후 note_dark. 목소리: 직전 ep05 여성이나 여성 비율(3/11)이 40%보다 낮아 SunHi.",
+      "sources": [
+        "https://fsc.go.kr/no010101/73438",
+        "https://www.hankyung.com/amp/2018120557256",
+        "https://www.heraldk.com/article/2025112900151848623",
+        "https://wikidocs.net/blog/@Insight_Lab/24531/"
+      ],
+      "approved": null,
+      "modify": ""
+    }
+  ]
+}
