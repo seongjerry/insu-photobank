@@ -13,7 +13,7 @@ document.querySelectorAll('path[data-ell]').forEach(e=>{const [cx,cy,rx,ry]=e.da
  for(let i=0;i<=60;i++){const a=(-110+i*(395/60))*Math.PI/180,k=1+0.05*Math.sin(i/9)-(i/60)*0.07;d+=(i?'L':'M')+(cx+rx*k*Math.cos(a)).toFixed(1)+' '+(cy+ry*k*Math.sin(a)).toFixed(1)}
  e.setAttribute('d',d)});
 // 번호 장면 체크리스트
-const items=window.NOTE_ITEMS||[];  // 번호 장면 체크리스트: 본문 앞 <script>window.NOTE_ITEMS=[...]</script>
+const items=window.NOTE_ITEMS||[]; // 번호 장면 체크리스트 항목은 본문 앞에서 window.NOTE_ITEMS 로 지정
 document.querySelectorAll('.scene[data-num]').forEach(s=>{const n=+s.dataset.num;const box=s.querySelector('.chk');
  box.innerHTML=items.map((t,i)=>{const done=i<n-1,cur=i===n-1;
   return `<div style="position:relative;${done?'opacity:.45':''}">${done?(window.NOTE_DONE||'☑'):'☐'} ${cur?`<span class="mk a" data-in="0.75" data-fx="mark">${t}</span>`:t}${cur?`<svg class="d" style="left:4px;top:4px" width="70" height="70"><path class="a" data-in="0.95" data-fx="draw" data-d="0.3" pathLength="1" d="M12 36 L30 56 L62 12" fill="none" stroke="#1F4FD8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>`:''}</div>`}).join('')});
