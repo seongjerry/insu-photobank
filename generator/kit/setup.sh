@@ -9,4 +9,6 @@ python3 -c "import playwright, numpy, scipy" 2>/dev/null || pip install -q --bre
 python3 -c "from playwright.sync_api import sync_playwright as s; p=s().start(); p.chromium.launch().close(); p.stop()" 2>/dev/null || python3 -m playwright install chromium >/dev/null
 command -v ffmpeg >/dev/null || (apt-get install -y -qq ffmpeg >/dev/null 2>&1 || echo "ffmpeg 설치 필요")
 cp "$KIT"/templates/* "$BUILD"/
+mkdir -p "$BUILD/fonts" && cp "$KIT"/fonts/*.ttf "$KIT"/fonts/fonts.css "$BUILD/fonts/"
+[ -f "$BUILD/fonts/EF_cucumbersalad.ttf" ] || echo "참고: 오이냉체 폰트 없음 (나눔펜으로 대체)"
 echo "kit ready: $BUILD"
