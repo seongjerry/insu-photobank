@@ -8,3 +8,10 @@
 @font-face{font-family:'Paperlogy';src:url('Paperlogy-8ExtraBold.ttf');font-weight:800}
 @font-face{font-family:'Paperlogy';src:url('Paperlogy-9Black.ttf');font-weight:900}
 @font-face{font-family:'Cucumber';src:url('EF_cucumbersalad.ttf')}
+/* 깍두기 도면체(KkakdugiDrafting): SIL OFL 1.1 → 저장소에 포함. 설계도 느낌: 숫자·라벨·체크리스트 항목용 */
+@font-face{font-family:'Kkakdugi';src:url('KkakdugiDrafting-Light.ttf');font-weight:300}
+@font-face{font-family:'Kkakdugi';src:url('KkakdugiDrafting-Regular.ttf');font-weight:400}
+@font-face{font-family:'Kkakdugi';src:url('KkakdugiDrafting-Bold.ttf');font-weight:700}
+/* 차이 라이징체(Rising CHAI): 영상 사용 가능, 라이선스 원문 미확인 → 저장소에 넣지 않음(로컬 전용) */
+@font-face{font-family:'RisingCHAI';src:url('Rising_CHAI_Light.ttf');font-weight:300}
+@font-face{font-family:'RisingCHAI';src:url('Rising_CHAI_Extra_Bold.ttf');font-weight:800}
