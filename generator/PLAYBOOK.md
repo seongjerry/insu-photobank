@@ -43,6 +43,8 @@
 
 ## 3. 아침 주제 제안 (매일)
 1. 오늘 plan 파일이 이미 있으면 중단.
+   - `generator/shorts/requests.md` 의 본부장님 요청을 먼저 읽고 반영한다.
+   - `publish/queue` 에 오늘 13:00 또는 18:00 으로 이미 approved 된 영상이 있으면 그 슬롯은 새로 제안하지 않는다(plan 의 해당 슬롯에 ep 와 "fixed": true 로 기록하고 보고에 "확정"으로 표시). 포맷·목소리 로테이션 계산에도 그 영상을 포함한다.
 2. 리서치 → 2개 주제 확정 (규칙 1 전부 적용). 다음 ep 번호는 experiments.csv 마지막 번호 +1.
 3. plan 파일 저장(status=proposed, proposed_at) 후 텔레그램 전송. 형식:
 ```
@@ -64,7 +66,7 @@
 ```
 
 ## 4. 승인 확인·제작 (09~12시 매시 실행)
-1. 오늘 plan 이 없거나 status 가 produced/skipped 면 중단. (partial 이면 남은 슬롯만 확인)
+1. 오늘 plan 이 없거나 status 가 produced/skipped 면 중단. (partial 이면 남은 슬롯만 확인. "fixed": true 슬롯은 제작하지 않는다)
 2. tg poll 실행 → proposed_at 이후 메시지만 해석.
    - "승인/ㅇㅋ/오케이/좋아/진행/고고" → 두 슬롯 승인. "1번 승인" → 해당 슬롯만.
    - "N번 … 바꿔/수정" → 그 내용대로 주제·포맷을 고친 뒤 승인으로 처리.
