@@ -4,7 +4,7 @@
 
 ## 0. 작업 공간 준비 (모든 예약 작업 공통)
 1. 저장소 `seongjerry/insu-photobank` 가 `/home/claude/insu-photobank` 에 없으면 add_repo(owner=seongjerry, repo=insu-photobank, access=push) 후 안내대로 clone. 있으면 `git pull`.
-2. 영상 제작이 필요한 작업만: `bash generator/kit/setup.sh` (작업 폴더 /home/claude/build).
+2. 영상 제작이 필요한 작업만: 비공개 폰트 저장소도 받는다. add_repo(owner=seongjerry, repo=insu-assets, access=read) 후 안내대로 `/home/claude/insu-assets` 에 clone. 그다음 `bash generator/kit/setup.sh` (작업 폴더 /home/claude/build). insu-assets 의 파일은 절대 이 공개 저장소에 복사·커밋하지 않는다.
 3. 커밋은 `git -c user.name=Claude -c user.email=noreply@anthropic.com commit` 으로, 메시지 끝에 시스템이 안내한 Co-Authored-By 줄을 붙인다.
 4. GitHub API는 `gh api` REST만 사용 (GraphQL 불가). 워크플로 실행: `gh api -X POST repos/seongjerry/insu-photobank/actions/workflows/<파일>/dispatches -f ref=main [-f 'inputs[x]=y']`.
 5. 공개 저장소다. 개인정보·비밀값을 파일이나 로그에 남기지 않는다.
@@ -32,7 +32,7 @@
   - 카톡형 말풍선 본문은 실제 앱처럼 Pretendard 유지, 카드 제목·자막만 Paperlogy.
   - 잠금화면형 카드 라벨·감성 문구: **오이냉체(Cucumber)** (`class="hand"` 또는 `.big .lb`). 가는 글씨라 44px 이상에서만 쓴다.
   - 숫자·금액·STEP 라벨·체크리스트 항목: **깍두기 도면체(Kkakdugi)** 400/700. 설계도 느낌이라 '비밀노트' 컨셉과 맞는다. 한 화면에 한두 군데만 포인트로 쓰고, 긴 문장에는 쓰지 않는다. (OFL, 저장소 포함)
-  - 후킹 한 줄·강조 문구: **차이 라이징체(RisingCHAI)** 800. 로컬 전용(저장소 미포함)이라 자동 제작 환경에는 없을 수 있다. 그때는 Paperlogy 900으로 대체되도록 `font-family:RisingCHAI,Paperlogy` 로 지정한다.
+  - 후킹 한 줄·강조 문구: **차이 라이징체(RisingCHAI)** 800. 비공개 저장소 insu-assets 에 있다. 받지 못했을 때를 대비해 Paperlogy 900으로 대체되도록 `font-family:RisingCHAI,Paperlogy` 로 지정한다.
   - 한 영상에 폰트는 최대 3종까지.
   - 노트형 손글씨(파란 펜·빨간 펜)는 나눔펜 유지.
   - 오이냉체 파일은 재배포 금지 라이선스라 저장소에 없다. 작업 폴더에 없으면 Pretendard로 대체되니 그대로 진행한다.

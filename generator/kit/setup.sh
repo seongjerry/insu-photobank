@@ -10,5 +10,8 @@ python3 -c "from playwright.sync_api import sync_playwright as s; p=s().start();
 command -v ffmpeg >/dev/null || (apt-get install -y -qq ffmpeg >/dev/null 2>&1 || echo "ffmpeg 설치 필요")
 cp "$KIT"/templates/* "$BUILD"/
 mkdir -p "$BUILD/fonts" && cp "$KIT"/fonts/*.ttf "$KIT"/fonts/fonts.css "$BUILD/fonts/"
-[ -f "$BUILD/fonts/EF_cucumbersalad.ttf" ] || echo "참고: 오이냉체 폰트 없음 (나눔펜으로 대체)"
+# 비공개 폰트(오이냉체·차이 라이징체): 비공개 저장소 insu-assets 가 옆에 있으면 복사
+ASSETS=${ASSETS:-/home/claude/insu-assets}
+[ -d "$ASSETS/fonts" ] && cp "$ASSETS"/fonts/*.ttf "$BUILD/fonts/"
+[ -f "$BUILD/fonts/EF_cucumbersalad.ttf" ] || echo "참고: 오이냉체 없음 → insu-assets 저장소를 먼저 받을 것 (없으면 나눔펜 대체)"
 echo "kit ready: $BUILD"

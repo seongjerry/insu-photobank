@@ -1,6 +1,6 @@
 /* 보험비밀노트 영상 폰트
    Paperlogy(페이퍼로지): SIL OFL 1.1, 재배포 가능 → 저장소에 포함
-   Cucumber(얼리폰트 오이냉체 EF_cucumbersalad): 영상 사용 가능, 파일 재배포 불가 → 저장소에 넣지 않음.
+   Cucumber(얼리폰트 오이냉체): 재배포 불가 → 비공개 저장소 insu-assets 에만 둔다.
    작업 폴더 fonts/EF_cucumbersalad.ttf 가 있을 때만 적용되고, 없으면 나눔펜으로 대체된다. */
 @font-face{font-family:'Paperlogy';src:url('Paperlogy-5Medium.ttf');font-weight:500}
 @font-face{font-family:'Paperlogy';src:url('Paperlogy-6SemiBold.ttf');font-weight:600}
@@ -12,6 +12,6 @@
 @font-face{font-family:'Kkakdugi';src:url('KkakdugiDrafting-Light.ttf');font-weight:300}
 @font-face{font-family:'Kkakdugi';src:url('KkakdugiDrafting-Regular.ttf');font-weight:400}
 @font-face{font-family:'Kkakdugi';src:url('KkakdugiDrafting-Bold.ttf');font-weight:700}
-/* 차이 라이징체(Rising CHAI): 영상 사용 가능, 라이선스 원문 미확인 → 저장소에 넣지 않음(로컬 전용) */
+/* 차이 라이징체(Rising CHAI): 영상 사용 허락. 파일은 비공개 저장소 insu-assets 에만 둔다 */
 @font-face{font-family:'RisingCHAI';src:url('Rising_CHAI_Light.ttf');font-weight:300}
 @font-face{font-family:'RisingCHAI';src:url('Rising_CHAI_Extra_Bold.ttf');font-weight:800}
