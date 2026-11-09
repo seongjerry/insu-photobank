@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="node_modules/pretendard/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="node_modules/@fontsource/nanum-pen-script/index.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#FBFAF6}
+body{font-family:Pretendard,sans-serif;letter-spacing:-0.02em;color:#222;position:relative}
+#paper{position:absolute;inset:0;background-image:linear-gradient(#E7ECF3 2px,transparent 2px),linear-gradient(90deg,#E7ECF3 2px,transparent 2px);background-size:60px 60px}
+.scene{position:absolute;left:0;right:0;top:85px;bottom:-85px;display:none;transform-origin:50% 40%}
+.abs{position:absolute}
+.pen{font-family:'Nanum Pen Script',cursive;letter-spacing:0;color:#1F4FD8}
+.red{font-family:'Nanum Pen Script',cursive;letter-spacing:0;color:#E23B3B}
+.ttl{font-weight:900;letter-spacing:-0.05em;line-height:1.18}
+.mk,.mkp,.mkb{background-repeat:no-repeat;background-position:0 0;background-size:0% 100%;padding:0 6px}
+.mk{background-image:linear-gradient(transparent 55%,#FFE45C 55%,#FFE45C 92%,transparent 92%)}
+.mkp{background-image:linear-gradient(transparent 55%,#FFB3C7 55%,#FFB3C7 92%,transparent 92%)}
+.mkb{background-image:linear-gradient(transparent 55%,#BFD7FF 55%,#BFD7FF 92%,transparent 92%)}
+.note{position:absolute;background:#FFF27A;box-shadow:0 12px 26px rgba(0,0,0,.13);padding:36px 42px}
+.note:before{content:"";position:absolute;top:-22px;left:50%;width:150px;height:44px;margin-left:-75px;background:rgba(255,255,255,.55);transform:rotate(-3deg)}
+.cap{position:absolute;left:70px;right:70px;top:1360px;text-align:center;font-size:52px;font-weight:800;line-height:1.38;color:#1A1A1A;letter-spacing:-0.04em}
+svg.d{position:absolute;overflow:visible}
+svg.d path,svg.d rect{vector-effect:non-scaling-stroke}
+.lbl{font-family:'Nanum Pen Script';fill:#222}
+</style></head><body>
+<div id="paper"></div>
+
+
+<!-- S1 훅 -->
+<div class="scene" data-dur="4">
+ <div class="abs pen a" data-in="0" data-fx="write" data-d="0.5" style="left:90px;top:250px;font-size:80px;transform:rotate(-3deg);white-space:nowrap">해지 버튼 누르기 전에</div>
+ <div class="abs ttl a" data-in="0.2" data-fx="up" style="left:90px;top:390px;font-size:136px"><span class="mk a" data-in="0.5" data-fx="mark">보험 해지</span>,<br><span style="color:#E23B3B">이것부터</span><br>보세요</div>
+ <div class="note a" data-in="0.8" data-fx="drop" data-rot="-2" style="left:100px;top:960px;width:600px;padding:32px 40px">
+  <div class="pen" style="font-size:66px;line-height:1.22;color:#222">☐ 특약 삭제<br>☐ 감액완납<br>☐ 납입유예<br>☐ 보험계약대출</div>
+ </div>
+ <div class="abs red a" data-in="1.3" data-fx="pop" style="left:740px;top:1030px;font-size:84px;line-height:1.05;transform-origin:center"><div style="transform:rotate(8deg)">아직<br>늦지 않았어요!</div></div>
+ <div class="cap">보험료 부담돼서 해지하려고요?<br>해지 전에 이 4가지부터 꼭 보세요.</div>
+</div>
+
+<!-- S2 해지하면 손해 -->
+<div class="scene" data-dur="4">
+ <div class="abs ttl a" data-in="0" data-fx="up" style="left:90px;top:250px;font-size:96px">해지하면<br><span class="mkp a" data-in="0.3" data-fx="mark">손해인 이유</span></div>
+ <svg class="d" style="left:110px;top:560px" width="860" height="480" viewBox="0 0 860 480">
+  <path d="M20 420 Q430 416 840 422" fill="none" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+  <path class="a rough" data-in="0.4" data-fx="draw" data-d="0.35" pathLength="1" data-rect="120,60,200,360" fill="#BFD7FF" stroke="#222" stroke-width="5"/>
+  <path class="a rough" data-in="0.8" data-fx="draw" data-d="0.35" pathLength="1" data-rect="520,290,200,130" fill="rgba(226,59,59,.75)" stroke="#222" stroke-width="5"/>
+  <text class="lbl a" data-in="1.0" data-fx="fade" x="620" y="260" text-anchor="middle" font-size="64" fill="#E23B3B">이것뿐?!</text>
+  <g class="lbl" font-size="50"><text x="220" y="470" text-anchor="middle">낸 보험료</text><text x="620" y="470" text-anchor="middle">해지환급금</text></g>
+ </svg>
+ <div class="note a" data-in="1.4" data-fx="drop" data-rot="2" style="left:120px;top:1080px;width:820px;padding:24px 34px"><div class="pen" style="font-size:54px;line-height:1.2;color:#222">다시 가입하면 나이·병력 때문에<br>더 비싸지거나 거절될 수도!</div></div>
+ <div class="cap" style="font-size:44px">낸 보험료보다 훨씬 적게 돌려받는 경우가 많고,<br>재가입은 더 비싸지거나 거절될 수도 있어요.</div>
+</div>
+
+<!-- S3 첫째 -->
+<div class="scene" data-dur="3" data-num="1">
+ <div class="abs pen a" data-in="0" data-fx="write" data-d="0.4" style="left:90px;top:280px;font-size:90px;transform:rotate(-3deg)">방법 첫 번째</div>
+ <div class="abs ttl a" data-in="0.15" data-fx="up" style="left:90px;top:420px;font-size:124px">① <span class="mk a" data-in="0.45" data-fx="mark">특약</span>만<br>골라서 삭제</div>
+ <div class="note a" data-in="0.3" data-fx="drop" data-rot="2" style="left:200px;top:820px;width:680px"><div class="pen chk" style="font-size:70px;line-height:1.25;color:#222"></div></div>
+ <div class="cap">첫째, 특약 삭제예요.</div>
+</div>
+
+<!-- S4 특약 정리 -->
+<div class="scene" data-dur="4">
+ <div class="abs ttl a" data-in="0" data-fx="up" style="left:90px;top:250px;font-size:96px">전체 말고<br><span class="mk a" data-in="0.3" data-fx="mark">겹치는 것만 빼기</span></div>
+ <div class="note a" data-in="0.4" data-fx="drop" data-rot="-1" style="left:120px;top:580px;width:840px;padding:34px 44px;background:#fff;border:5px solid #222">
+  <div style="font-size:54px;font-weight:800;line-height:1.75">
+   <div>✔ 주계약 <span style="color:#1F4FD8">유지</span></div>
+   <div style="position:relative">✔ 암·뇌·심장 진단비 <span style="color:#1F4FD8">유지</span></div>
+   <div style="position:relative;color:#999">✕ 중복된 실손형 특약<svg class="d" style="left:0;top:40px" width="760" height="20"><path class="a" data-in="1.0" data-fx="draw" data-d="0.3" pathLength="1" d="M0 10 L620 10" stroke="#E23B3B" stroke-width="8" stroke-linecap="round"/></svg></div>
+   <div style="position:relative;color:#999">✕ 안 쓰는 소액 특약<svg class="d" style="left:0;top:40px" width="760" height="20"><path class="a" data-in="1.4" data-fx="draw" data-d="0.3" pathLength="1" d="M0 10 L560 10" stroke="#E23B3B" stroke-width="8" stroke-linecap="round"/></svg></div>
+  </div>
+ </div>
+ <div class="abs red a" data-in="1.9" data-fx="pop" style="left:560px;top:1120px;font-size:80px;line-height:1.05;transform-origin:center"><div style="transform:rotate(-4deg)">보험료 ↓</div></div>
+ <div class="cap" style="font-size:46px">중복되거나 필요 없는 특약만 빼면<br>보장은 지키면서 보험료를 줄일 수 있어요.</div>
+</div>
+
+<!-- S5 둘째 -->
+<div class="scene" data-dur="3" data-num="2">
+ <div class="abs pen a" data-in="0" data-fx="write" data-d="0.4" style="left:90px;top:280px;font-size:90px;transform:rotate(-3deg)">방법 두 번째</div>
+ <div class="abs ttl a" data-in="0.15" data-fx="up" style="left:90px;top:420px;font-size:124px">② <span class="mkb a" data-in="0.45" data-fx="mark">감액완납</span></div>
+ <div class="note a" data-in="0.3" data-fx="drop" data-rot="-2" style="left:200px;top:820px;width:680px"><div class="pen chk" style="font-size:70px;line-height:1.25;color:#222"></div></div>
+ <div class="cap">둘째, 감액완납이에요.</div>
+</div>
+
+<!-- S6 감액완납 -->
+<div class="scene" data-dur="4">
+ <div class="abs ttl a" data-in="0" data-fx="up" style="left:90px;top:250px;font-size:96px">보험료는 <span class="mkb a" data-in="0.3" data-fx="mark">이제 그만</span><br>보장기간은 그대로</div>
+ <svg class="d" style="left:90px;top:560px" width="900" height="460" viewBox="0 0 900 460">
+  <g font-family="Pretendard" font-weight="900" text-anchor="middle">
+   <text x="220" y="50" font-size="48">지금</text><text x="680" y="50" font-size="48">감액완납 후</text></g>
+  <path class="a rough" data-in="0.4" data-fx="draw" data-d="0.35" pathLength="1" data-rect="120,90,200,300" fill="#BFD7FF" stroke="#222" stroke-width="5"/>
+  <path class="a rough" data-in="0.9" data-fx="draw" data-d="0.35" pathLength="1" data-rect="580,230,200,160" fill="#BFD7FF" stroke="#222" stroke-width="5"/>
+  <path class="a" data-in="1.2" data-fx="draw" data-d="0.3" pathLength="1" d="M370 240 L520 240 M495 215 L522 240 L495 265" fill="none" stroke="#1F4FD8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <g class="lbl" font-size="50"><text x="220" y="445" text-anchor="middle">보장금액</text><text x="680" y="445" text-anchor="middle">줄어든 보장</text></g>
+  <text class="lbl a" data-in="1.4" data-fx="fade" x="680" y="200" text-anchor="middle" font-size="58" fill="#1F4FD8">납입 끝!</text>
+ </svg>
+ <div class="note a" data-in="1.8" data-fx="drop" data-rot="2" style="left:140px;top:1080px;width:800px;padding:24px 34px"><div class="pen" style="font-size:54px;line-height:1.2;color:#222">보장기간은 그대로!<br>단, 특약은 없어질 수 있어요</div></div>
+ <div class="cap" style="font-size:44px">쌓인 환급금으로 보장금액만 줄이고<br>앞으로 보험료는 안 내도 되게 만드는 방법이에요.</div>
+</div>
+
+<!-- S7 셋째 -->
+<div class="scene" data-dur="3" data-num="3">
+ <div class="abs pen a" data-in="0" data-fx="write" data-d="0.4" style="left:90px;top:280px;font-size:90px;transform:rotate(-3deg)">방법 세 번째</div>
+ <div class="abs ttl a" data-in="0.15" data-fx="up" style="left:90px;top:420px;font-size:124px">③ <span class="mk a" data-in="0.45" data-fx="mark">납입유예</span></div>
+ <div class="note a" data-in="0.3" data-fx="drop" data-rot="2" style="left:200px;top:820px;width:680px"><div class="pen chk" style="font-size:70px;line-height:1.25;color:#222"></div></div>
+ <div class="cap">셋째, 납입유예예요.</div>
+</div>
+
+<!-- S8 납입유예 -->
+<div class="scene" data-dur="4">
+ <div class="abs ttl a" data-in="0" data-fx="up" style="left:90px;top:250px;font-size:96px">잠깐 <span class="mk a" data-in="0.3" data-fx="mark">멈춤</span>,<br>보장은 계속</div>
+ <svg class="d" style="left:70px;top:580px" width="940" height="420" viewBox="0 0 940 420">
+  <text x="20" y="80" font-family="Pretendard" font-weight="900" font-size="46">납입</text>
+  <g class="a" data-in="0.3" data-fx="fade"><rect x="170" y="40" width="60" height="60" rx="10" fill="#222"/><rect x="250" y="40" width="60" height="60" rx="10" fill="#222"/><rect x="330" y="40" width="60" height="60" rx="10" fill="#222"/></g>
+  <g class="a" data-in="0.6" data-fx="pop"><rect x="430" y="30" width="200" height="80" rx="40" fill="#FFE45C" stroke="#222" stroke-width="5"/><text x="530" y="85" text-anchor="middle" font-family="Pretendard" font-weight="900" font-size="46">⏸ 멈춤</text></g>
+  <g class="a" data-in="0.9" data-fx="fade"><rect x="670" y="40" width="60" height="60" rx="10" fill="#222"/><rect x="750" y="40" width="60" height="60" rx="10" fill="#222"/><rect x="830" y="40" width="60" height="60" rx="10" fill="#222"/></g>
+  <text x="20" y="250" font-family="Pretendard" font-weight="900" font-size="46">보장</text>
+  <path class="a" data-in="1.1" data-fx="draw" data-d="0.8" pathLength="1" d="M170 235 Q530 228 890 236" fill="none" stroke="#1F4FD8" stroke-width="14" stroke-linecap="round"/>
+  <text class="lbl a" data-in="1.6" data-fx="fade" x="530" y="330" text-anchor="middle" font-size="60" fill="#1F4FD8">끊기지 않아요</text>
+ </svg>
+ <div class="note a" data-in="2.0" data-fx="drop" data-rot="-2" style="left:120px;top:1060px;width:820px;padding:24px 34px"><div class="pen" style="font-size:54px;line-height:1.2;color:#222">적립금에서 빠져나가요<br>가능 여부·기간은 꼭 확인!</div></div>
+ <div class="cap" style="font-size:44px">형편이 어려울 때 납입을 멈추고 보장은 유지해요.<br>대신 적립금에서 빠져나가니 꼭 확인하세요.</div>
+</div>
+
+<!-- S9 넷째 -->
+<div class="scene" data-dur="3" data-num="4">
+ <div class="abs pen a" data-in="0" data-fx="write" data-d="0.4" style="left:90px;top:280px;font-size:90px;transform:rotate(-3deg)">방법 네 번째</div>
+ <div class="abs ttl a" data-in="0.15" data-fx="up" style="left:90px;top:420px;font-size:124px">④ <span class="mkp a" data-in="0.45" data-fx="mark">보험계약대출</span></div>
+ <div class="note a" data-in="0.3" data-fx="drop" data-rot="-2" style="left:200px;top:820px;width:680px"><div class="pen chk" style="font-size:70px;line-height:1.25;color:#222"></div></div>
+ <div class="cap">넷째, 보험계약대출이에요.</div>
+</div>
+
+<!-- S10 계약대출 -->
+<div class="scene" data-dur="4">
+ <div class="abs ttl a" data-in="0" data-fx="up" style="left:90px;top:250px;font-size:96px">목돈 필요하면<br><span class="mkp a" data-in="0.3" data-fx="mark">해지 말고 대출</span></div>
+ <svg class="d" style="left:110px;top:580px" width="860" height="420" viewBox="0 0 860 420">
+  <path class="a rough" data-in="0.3" data-fx="draw" data-d="0.4" pathLength="1" data-rect="20,20,820,170" fill="#fff" stroke="#222" stroke-width="6"/>
+  <g class="a" data-in="0.6" data-fx="fade" font-family="Pretendard" font-weight="900" text-anchor="middle">
+   <text x="430" y="95" font-size="50">내 해지환급금</text><text x="430" y="160" font-size="50" fill="#1F4FD8">범위 안에서 대출</text></g>
+  <g class="a" data-in="1.0" data-fx="fade"><text class="lbl" x="40" y="290" font-size="60">✔ 보험은 그대로 유지</text></g>
+  <g class="a" data-in="1.3" data-fx="fade"><text class="lbl" x="40" y="380" font-size="60">✔ 필요할 때 갚으면 돼요</text></g>
+ </svg>
+ <div class="abs red a" data-in="1.9" data-fx="pop" style="left:110px;top:1090px;font-size:68px;line-height:1.1;transform-origin:center"><div style="transform:rotate(-3deg)">이자 계속 안 내면 해지될 수도!</div></div>
+ <div class="cap" style="font-size:46px">해지 대신 환급금 범위 안에서 대출받을 수 있어요.<br>다만 이자를 계속 안 내면 해지될 수 있어요.</div>
+</div>
+
+<!-- S11 CTA -->
+<div class="scene" data-dur="4.5">
+ <div class="abs pen a" data-in="0" data-fx="write" data-d="0.5" style="left:90px;top:300px;font-size:90px;transform:rotate(-3deg)">해지는 맨 마지막에!</div>
+ <div class="note a" data-in="0.2" data-fx="drop" data-rot="-2" style="left:110px;top:440px;width:620px"><div class="pen" style="font-size:66px;line-height:1.25;color:#222">☑ 특약 삭제<br>☑ 감액완납<br>☑ 납입유예<br>☑ 보험계약대출</div></div>
+ <div class="abs ttl a" data-in="0.6" data-fx="up" style="left:90px;top:900px;font-size:110px">내 보험엔<br><span class="mk a" data-in="0.9" data-fx="mark">뭐가 맞을까?</span></div>
+ <div class="abs red a" data-in="1.3" data-fx="pop" style="left:600px;top:1185px;font-size:72px;line-height:1.05;transform-origin:center"><div style="transform:rotate(-4deg)">프로필 링크로<br>문의하세요!</div></div>
+ <div class="cap">해지 전에, 내 보험엔 어떤 방법이 맞는지<br>프로필 링크로 먼저 문의하세요.</div>
+</div>
+
+<script>
+const scenes=[...document.querySelectorAll('.scene')];
+const clamp=x=>Math.max(0,Math.min(1,x));
+const eOut=x=>1-Math.pow(1-x,3);
+const eBack=x=>{const c=1.7,c3=c+1;return 1+c3*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const eIO=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+// 결정적 난수 (매 렌더 동일)
+let seed=7;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280-0.5};
+function rough(x,y,w,h){const j=()=>rnd()*7;const p=[[x+j(),y+j()],[x+w+j(),y+j()],[x+w+j(),y+h+j()],[x+j(),y+h+j()]];
+ return `M${p[0]} Q${x+w/2},${y+rnd()*8} ${p[1]} Q${x+w+rnd()*8},${y+h/2} ${p[2]} Q${x+w/2},${y+h+rnd()*8} ${p[3]} Q${x+rnd()*8},${y+h/2} ${p[0][0]+4},${p[0][1]-3}`}
+document.querySelectorAll('path[data-rect]').forEach(e=>{const [x,y,w,h]=e.dataset.rect.split(',').map(Number);e.setAttribute('d',rough(x,y,w,h))});
+document.querySelectorAll('path[data-ell]').forEach(e=>{const [cx,cy,rx,ry]=e.dataset.ell.split(',').map(Number);let d='';
+ for(let i=0;i<=60;i++){const a=(-110+i*(395/60))*Math.PI/180,k=1+0.05*Math.sin(i/9)-(i/60)*0.07;d+=(i?'L':'M')+(cx+rx*k*Math.cos(a)).toFixed(1)+' '+(cy+ry*k*Math.sin(a)).toFixed(1)}
+ e.setAttribute('d',d)});
+// 번호 장면 체크리스트
+const items=['특약 삭제','감액완납','납입유예','보험계약대출'];
+document.querySelectorAll('.scene[data-num]').forEach(s=>{const n=+s.dataset.num;const box=s.querySelector('.chk');
+ box.innerHTML=items.map((t,i)=>{const done=i<n-1,cur=i===n-1;
+  return `<div style="position:relative;${done?'opacity:.45':''}">${done?'☑':'☐'} ${cur?`<span class="mk a" data-in="0.75" data-fx="mark">${t}</span>`:t}${cur?`<svg class="d" style="left:4px;top:4px" width="70" height="70"><path class="a" data-in="0.95" data-fx="draw" data-d="0.3" pathLength="1" d="M12 36 L30 56 L62 12" fill="none" stroke="#1F4FD8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>`:''}</div>`}).join('')});
+function render(si,t){
+  scenes.forEach((s,i)=>s.style.display=i===si?'block':'none');
+  const sc=scenes[si],D=+sc.dataset.dur;
+  sc.style.transform=`scale(${1+0.025*clamp(t/D)})`;
+  sc.querySelectorAll('.a').forEach(el=>{
+    const t0=+el.dataset.in||0,fx=el.dataset.fx,d=+(el.dataset.d||0.35),p=clamp((t-t0)/d);
+    if(fx==='pop'){el.style.opacity=clamp(p*3);el.style.transform=`scale(${p<=0?0.01:eBack(p)})`}
+    else if(fx==='up'){el.style.opacity=p;el.style.transform=`translateY(${(1-eOut(p))*50}px)`}
+    else if(fx==='fade'){el.style.opacity=p}
+    else if(fx==='write'){const r=el.dataset.rot||'';el.style.clipPath=`inset(-20% ${100-eIO(p)*100}% -20% -5%)`}
+    else if(fx==='mark'){el.style.backgroundSize=`${eIO(p)*100}% 100%`}
+    else if(fx==='drop'){const r=+(el.dataset.rot||0);el.style.opacity=clamp(p*2.5);el.style.transform=`translateY(${(1-eBack(p))*-90}px) rotate(${r+(1-eOut(p))*6}deg)`}
+    else if(fx==='draw'){el.style.strokeDasharray=1;el.style.strokeDashoffset=1-eIO(p);
+      if(el.getAttribute('fill')&&el.getAttribute('fill')!=='none'){el.style.fillOpacity=clamp((p-0.6)/0.4)}}
+  });
+  const cap=sc.querySelector('.cap');if(cap){const p=clamp(t/0.2);cap.style.opacity=p}
+}
+window.SCENES=scenes.map(s=>+s.dataset.dur);
+window.setDurs=a=>a.forEach((d,i)=>scenes[i].dataset.dur=d);
+</script>
+</body></html>

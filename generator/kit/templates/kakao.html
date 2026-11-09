@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="node_modules/pretendard/dist/web/static/pretendard.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#BACEE0}
+.hdrbg{position:absolute;left:0;right:0;top:0;height:250px;background:#BACEE0}
+.below{position:absolute;left:0;right:0;top:1680px;bottom:0;background:#fff}
+body{font-family:Pretendard,sans-serif;letter-spacing:-0.03em;color:#151515;position:relative}
+#stage{position:absolute;inset:0}
+.hdr{position:absolute;left:0;right:0;top:250px;height:120px;display:flex;align-items:center;padding:0 110px;gap:26px}
+.hdr .bk{font-size:64px;font-weight:300;margin-top:-8px}
+.hdr .tt{font-size:46px;font-weight:800}
+.hdr .cnt{font-size:38px;font-weight:600;color:#6E7F8F}
+.hdr .ic{margin-left:auto;display:flex;gap:40px}
+.scene{position:absolute;inset:0;display:none}
+.chat{position:absolute;left:110px;right:110px;top:400px;height:880px;display:flex;flex-direction:column;justify-content:center;gap:28px}
+.day{align-self:center;background:rgba(0,0,0,.12);color:#fff;font-size:28px;font-weight:600;padding:10px 26px;border-radius:30px}
+.row{display:flex;align-items:flex-end;gap:14px}
+.row.r{justify-content:flex-end}
+.row.c{justify-content:center}
+.pf{width:100px;height:100px;border-radius:38px;background:#A7BFD6;flex:none;align-self:flex-start;display:grid;place-items:center;overflow:hidden}
+.nm{font-size:30px;font-weight:600;color:#45525E;margin:0 0 10px 4px}
+.bb{background:#fff;border-radius:34px;padding:24px 32px;font-size:44px;font-weight:600;line-height:1.38;max-width:600px}
+.bb.y{background:#FEE500}
+.tm{font-size:24px;color:#556270;white-space:nowrap;display:flex;flex-direction:column;align-items:flex-end;line-height:1.3}
+.tm b{color:#E8C400;font-weight:800}
+.card{background:#fff;border-radius:34px;overflow:hidden;width:700px;box-shadow:0 6px 20px rgba(40,60,90,.12)}
+.card .top{background:linear-gradient(150deg,#FFE7EE,#FFF4DC);padding:38px 40px 34px}
+.card .bot{padding:26px 40px 30px}
+.card .src{font-size:28px;color:#8A949E;font-weight:600;margin-top:8px}
+.red{color:#E23B5A}
+.mk{background-repeat:no-repeat;background-size:0% 100%;background-image:linear-gradient(transparent 60%,#FEE500 60%,#FEE500 94%,transparent 94%);padding:0 6px}
+.cv{display:flex;align-items:center;gap:20px;padding:22px 0;border-top:3px solid #F1F1F1;font-size:40px;font-weight:800;white-space:nowrap}
+.cv:first-child{border-top:0}
+.cv .em{font-size:46px;width:60px;text-align:center}
+.cv .v{margin-left:auto;color:#E23B5A;font-weight:900}
+.cap{position:absolute;left:110px;right:110px;top:1300px;height:210px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:56px;font-weight:900;line-height:1.36;letter-spacing:-0.05em}
+.cap em{font-style:normal;background:linear-gradient(transparent 58%,#FEE500 58%,#FEE500 94%,transparent 94%);padding:0 6px}
+.inp{position:absolute;left:0;right:0;top:1560px;height:120px;background:#fff;display:flex;align-items:center;gap:24px;padding:0 110px}
+.inp .pl{width:64px;height:64px;border:4px solid #8A949E;border-radius:16px;display:grid;place-items:center;font-size:52px;color:#8A949E;font-weight:300}
+.inp .fd{flex:1;height:76px;border-radius:40px;background:#F3F3F3}
+.btn{display:block;text-align:center;background:#151515;color:#fff;border-radius:26px;padding:24px;font-size:42px;font-weight:900;margin-top:22px}
+</style></head><body>
+<div class="hdr"><span class="bk">‹</span><span class="tt">여보 💛</span><span class="cnt">2</span>
+ <span class="ic"><svg width="52" height="52" viewBox="0 0 52 52"><circle cx="22" cy="22" r="15" fill="none" stroke="#151515" stroke-width="5"/><path d="M33 33 L46 46" stroke="#151515" stroke-width="5" stroke-linecap="round"/></svg>
+ <svg width="52" height="52" viewBox="0 0 52 52"><path d="M6 12H46M6 26H46M6 40H46" stroke="#151515" stroke-width="5" stroke-linecap="round"/></svg></span></div>
+<div id="stage">
+
+<!-- S1 훅 -->
+<div class="scene">
+ <div class="chat">
+  <div class="day">2026년 11월 6일 금요일</div>
+  <div class="row r a" data-in="0.2" data-fx="msg"><span class="tm"><b>1</b>오후 2:35</span><div class="bb y">여보 이거 봤어?</div></div>
+  <div class="row c a" data-in="0.9" data-fx="msg"><div class="card"><div class="top"><div style="font-size:34px;font-weight:800;color:#C2405D">👶 신혼부부 · 임신 준비 부부 주목</div>
+    <div style="font-size:62px;font-weight:900;line-height:1.22;margin-top:14px">월 1만원대로<br>산후조리원 비용<br><span class="red">최대 140만원</span></div></div>
+    <div class="bot"><div style="font-size:36px;font-weight:800">이런 보험이 있다고?</div><div class="src">보험비밀노트</div></div></div></div>
+  <div class="row l a" data-in="2.6" data-fx="msg"><div class="pf"><svg width="70" height="70" viewBox="0 0 70 70"><circle cx="35" cy="25" r="14" fill="#fff"/><path d="M8 70 C8 48 62 48 62 70Z" fill="#fff"/></svg></div><div><div class="nm">남편</div><div class="bb">진짜? 만 원대로??</div></div><span class="tm">오후 2:36</span></div>
+ </div>
+ <div class="cap a" data-in="0" data-fx="fade"><div>월 <em>1만원대</em>로<br>산후조리원 비용 받는 보험?</div></div>
+</div>
+
+<!-- S2 비용 -->
+<div class="scene">
+ <div class="chat">
+  <div class="row l a" data-in="0.1" data-fx="msg"><div class="pf"><svg width="70" height="70" viewBox="0 0 70 70"><circle cx="35" cy="25" r="14" fill="#fff"/><path d="M8 70 C8 48 62 48 62 70Z" fill="#fff"/></svg></div><div><div class="nm">남편</div><div class="bb">근데 조리원 2주에 얼마 해?</div></div><span class="tm">오후 2:36</span></div>
+  <div class="row c a" data-in="0.9" data-fx="msg"><div class="card"><div class="top" style="text-align:center"><div style="font-size:36px;font-weight:800;color:#555">산후조리원 2주 평균 비용</div>
+    <div style="font-size:120px;font-weight:900;line-height:1.1;margin-top:10px" class="red"><span class="cnt-up" data-to="287" data-in="1.1">0</span>만원</div></div>
+    <div class="bot"><div class="src" style="margin-top:0">보건복지부 2024 산후조리 실태조사</div></div></div></div>
+  <div class="row l a" data-in="2.4" data-fx="msg"><div class="pf"><svg width="70" height="70" viewBox="0 0 70 70"><circle cx="35" cy="25" r="14" fill="#fff"/><path d="M8 70 C8 48 62 48 62 70Z" fill="#fff"/></svg></div><div><div class="bb">헐… 생각보다 비싸다</div></div><span class="tm">오후 2:37</span></div>
+ </div>
+ <div class="cap a" data-in="0" data-fx="fade"><div>산후조리원 2주,<br>평균 <em>287만 원</em></div></div>
+</div>
+
+<!-- S3 140만원 -->
+<div class="scene">
+ <div class="chat">
+  <div class="row r a" data-in="0.1" data-fx="msg"><span class="tm"><b>1</b>오후 2:37</span><div class="bb y">그래서 보험으로 준비하는 거야</div></div>
+  <div class="row c a" data-in="0.7" data-fx="msg"><div class="card"><div class="top" style="text-align:center;padding:50px 40px">
+    <div style="font-size:40px;font-weight:800">🏥 산후조리원 비용</div>
+    <div style="font-size:96px;font-weight:900;line-height:1.15;margin-top:14px;white-space:nowrap"><span class="mk a" data-in="1.4" data-fx="mark" data-d="0.5">최대 <span class="red">140만원</span></span></div>
+    <div style="font-size:40px;font-weight:800;margin-top:10px">보장</div></div></div></div>
+  <div class="row l a" data-in="2.6" data-fx="msg"><div class="pf"><svg width="70" height="70" viewBox="0 0 70 70"><circle cx="35" cy="25" r="14" fill="#fff"/><path d="M8 70 C8 48 62 48 62 70Z" fill="#fff"/></svg></div><div><div class="nm">남편</div><div class="bb">오 거의 절반이네!</div></div><span class="tm">오후 2:38</span></div>
+ </div>
+ <div class="cap a" data-in="0" data-fx="fade"><div>산후조리원 비용<br><em>최대 140만 원</em> 보장</div></div>
+</div>
+
+<!-- S4 보장 -->
+<div class="scene">
+ <div class="chat">
+  <div class="row r a" data-in="0.1" data-fx="msg"><span class="tm"><b>1</b>오후 2:38</span><div class="bb y">이것도 같이 챙길 수 있대</div></div>
+  <div class="row c a" data-in="0.6" data-fx="msg"><div class="card" style="width:800px"><div class="top" style="padding:28px 40px"><div style="font-size:40px;font-weight:900">📋 주요 보장 내용</div></div>
+    <div class="bot" style="padding:8px 40px 14px">
+     <div class="cv a" data-in="0.9" data-fx="pop"><span class="em">🏥</span>산후조리원 비용<span class="v">최대 140만원</span></div>
+     <div class="cv a" data-in="1.6" data-fx="pop"><span class="em">🎁</span>임신축하금<span class="v">10만원</span></div>
+     <div class="cv a" data-in="2.4" data-fx="pop"><span class="em">🩺</span>제왕절개 수술비<span class="v">10만원</span></div>
+     <div class="cv a" data-in="3.2" data-fx="pop"><span class="em">💉</span>독감(인플루엔자) 진단비<span class="v">10만원</span></div>
+    </div></div></div>
+ </div>
+ <div class="cap a" data-in="0" data-fx="fade"><div>임신축하금 · 제왕절개 · 독감까지<br><em>함께</em> 준비</div></div>
+</div>
+
+<!-- S5 예시 보험료 -->
+<div class="scene">
+ <div class="chat">
+  <div class="row l a" data-in="0.1" data-fx="msg"><div class="pf"><svg width="70" height="70" viewBox="0 0 70 70"><circle cx="35" cy="25" r="14" fill="#fff"/><path d="M8 70 C8 48 62 48 62 70Z" fill="#fff"/></svg></div><div><div class="nm">남편</div><div class="bb">보험료는 얼마인데?</div></div><span class="tm">오후 2:39</span></div>
+  <div class="row c a" data-in="0.8" data-fx="msg"><div class="card"><div class="top"><div style="font-size:36px;font-weight:900;color:#C2405D">예시 플랜</div>
+    <div style="font-size:42px;font-weight:800;line-height:1.5;margin-top:12px">33세 여성 · 건강체<br>상해 1급 · 20년납 100세만기</div></div>
+    <div class="bot" style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:40px;font-weight:800">월 보험료</span>
+     <span class="a" data-in="1.8" data-fx="pop" style="font-size:84px;font-weight:900"><span class="red">약 1만원</span></span></div></div></div>
+  <div class="row l a" data-in="3.0" data-fx="msg"><div class="pf"><svg width="70" height="70" viewBox="0 0 70 70"><circle cx="35" cy="25" r="14" fill="#fff"/><path d="M8 70 C8 48 62 48 62 70Z" fill="#fff"/></svg></div><div><div class="bb">커피 몇 잔 값이네</div></div><span class="tm">오후 2:39</span></div>
+ </div>
+ <div class="cap a" data-in="0" data-fx="fade"><div>33세 여성 예시 기준<br>월 <em>1만 원</em> 수준</div></div>
+</div>
+
+<!-- S6 가입 시점 -->
+<div class="scene">
+ <div class="chat">
+  <div class="row l a" data-in="0.1" data-fx="msg"><div class="pf"><svg width="70" height="70" viewBox="0 0 70 70"><circle cx="35" cy="25" r="14" fill="#fff"/><path d="M8 70 C8 48 62 48 62 70Z" fill="#fff"/></svg></div><div><div class="nm">남편</div><div class="bb">임신하고 나서 가입하면 되지?</div></div><span class="tm">오후 2:40</span></div>
+  <div class="row r a" data-in="1.2" data-fx="msg"><span class="tm"><b>1</b>오후 2:40</span><div class="bb y">가입 시점에 따라<br><span class="mk a" data-in="1.9" data-fx="mark" data-d="0.5">보장 조건이 달라질 수 있대</span></div></div>
+  <div class="row r a" data-in="3.0" data-fx="msg"><span class="tm"><b>1</b>오후 2:40</span><div class="bb y">임신 준비 중이면 미리 확인!</div></div>
+ </div>
+ <div class="cap a" data-in="0" data-fx="fade"><div>임신 준비 중이라면<br><em>미리</em> 확인하세요</div></div>
+</div>
+
+<!-- S7 CTA -->
+<div class="scene">
+ <div class="chat">
+  <div class="row l a" data-in="0.1" data-fx="msg"><div class="pf"><svg width="70" height="70" viewBox="0 0 70 70"><circle cx="35" cy="25" r="14" fill="#fff"/><path d="M8 70 C8 48 62 48 62 70Z" fill="#fff"/></svg></div><div><div class="nm">남편</div><div class="bb">우리도 되는지 물어보자</div></div><span class="tm">오후 2:41</span></div>
+  <div class="row c a" data-in="0.9" data-fx="msg"><div class="card"><div class="top"><div style="font-size:34px;font-weight:800;color:#C2405D">✎ 보험비밀노트</div>
+    <div style="font-size:54px;font-weight:900;line-height:1.25;margin-top:12px">우리 부부도<br>가입 가능할까?</div></div>
+    <div class="bot"><span class="btn pulse">프로필 링크에서 문의하기 ›</span></div></div></div>
+ </div>
+ <div class="cap a" data-in="0" data-fx="fade"><div>가입 가능 여부는<br><em>프로필 링크</em>로 문의하세요</div></div>
+</div>
+
+</div>
+<div class="below"></div><div class="inp"><div class="pl">+</div><div class="fd"></div></div>
+<script>
+const scenes=[...document.querySelectorAll('.scene')];
+const clamp=x=>Math.max(0,Math.min(1,x)), eOut=x=>1-Math.pow(1-x,3), eIO=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const eBack=x=>{const c=1.6,c3=c+1;return 1+c3*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+function render(si,t){
+  scenes.forEach((s,i)=>s.style.display=i===si?'block':'none');
+  const sc=scenes[si];
+  sc.querySelectorAll('.a').forEach(el=>{
+    const t0=+el.dataset.in||0,fx=el.dataset.fx,d=+(el.dataset.d||0.35),p=clamp((t-t0)/d);
+    if(fx==='msg'){el.style.opacity=clamp(p*2.5);el.style.transform=`translateY(${(1-eOut(p))*50}px) scale(${0.92+0.08*eBack(p)})`;el.style.transformOrigin=el.classList.contains('r')?'right bottom':el.classList.contains('c')?'center bottom':'left bottom'}
+    else if(fx==='pop'){el.style.opacity=clamp(p*3);el.style.transform=`scale(${p<=0?0.7:0.7+0.3*eBack(p)})`}
+    else if(fx==='fade'){el.style.opacity=p}
+    else if(fx==='mark'){el.style.backgroundSize=`${eIO(p)*100}% 100%`}
+  });
+  sc.querySelectorAll('.cnt-up').forEach(el=>{const p=clamp((t-(+el.dataset.in))/0.9);el.textContent=Math.round(+el.dataset.to*eOut(p))});
+  sc.querySelectorAll('.pulse').forEach(el=>{const q=Math.max(0,t-1.6);el.style.transform=`scale(${1+0.04*Math.sin(q*6)*(q>0?1:0)})`});
+}
+</script>
+</body></html>

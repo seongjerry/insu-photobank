@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="node_modules/pretendard/dist/web/static/pretendard.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0E0C1F}
+body{font-family:Pretendard,sans-serif;letter-spacing:-0.03em;color:#fff;position:relative}
+#bg{position:absolute;inset:-60px;background:linear-gradient(170deg,#3A2F6B,#1B1736 60%,#0E0C1F)}
+.bok{position:absolute;border-radius:50%;filter:blur(40px);opacity:.55}
+#stage{position:absolute;inset:0}
+.scene{position:absolute;inset:0;display:none}
+.abs{position:absolute}
+.date{position:absolute;left:0;right:0;top:150px;text-align:center;font-size:40px;font-weight:600;opacity:.85}
+.clock{position:absolute;left:0;right:0;top:195px;text-align:center;font-size:230px;font-weight:300;letter-spacing:-0.04em;line-height:1.1}
+.noti{position:absolute;left:50px;right:50px;background:rgba(255,255,255,.17);border-radius:40px;padding:28px 32px;display:flex;gap:24px;align-items:flex-start;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.noti .ic{width:84px;height:84px;border-radius:22px;flex:none;display:grid;place-items:center;font-size:44px}
+.noti .tx{flex:1}
+.noti .hd{display:flex;justify-content:space-between;font-size:28px;font-weight:700;opacity:.75}
+.noti p{font-size:40px;font-weight:700;margin-top:6px;line-height:1.35}
+.cap{position:absolute;left:60px;right:60px;top:1540px;text-align:center;font-size:50px;font-weight:800;line-height:1.38;text-shadow:0 3px 16px rgba(0,0,0,.6)}
+.cap em{font-style:normal;color:#FFD84D}
+.home{position:absolute;left:390px;width:300px;height:12px;border-radius:6px;background:rgba(255,255,255,.7);top:1870px}
+.dim{position:absolute;inset:0;background:rgba(5,4,15,.72)}
+.big{position:absolute;left:70px;right:70px;background:#FBFAF6;color:#151515;border-radius:44px;padding:50px 48px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.big .lb{font-size:32px;font-weight:800;color:#6B5CE7}
+.big h2{font-size:76px;font-weight:900;line-height:1.22;margin-top:14px;letter-spacing:-0.05em}
+.mk{background-repeat:no-repeat;background-size:0% 100%;background-image:linear-gradient(transparent 58%,#FFE45C 58%,#FFE45C 92%,transparent 92%);padding:0 6px}
+.x{font-style:normal;color:#9A9A9A;text-decoration:line-through;text-decoration-color:#E23B3B;text-decoration-thickness:8px}
+.app{background:#FFE45C;color:#151515;font-weight:900}
+.chip{display:inline-block;border:5px solid #E23B3B;color:#E23B3B;border-radius:24px;font-size:54px;font-weight:900;padding:14px 30px;margin:0 8px}
+</style></head><body>
+<div id="bg">
+ <div class="bok" style="left:120px;top:300px;width:360px;height:360px;background:#7B5CFF"></div>
+ <div class="bok" style="left:620px;top:900px;width:420px;height:420px;background:#FF4FA3;opacity:.35"></div>
+ <div class="bok" style="left:200px;top:1350px;width:300px;height:300px;background:#2EC5FF;opacity:.3"></div>
+</div>
+<div id="stage">
+
+<!-- S1 경찰서 문자 -->
+<div class="scene" data-shake="0.35">
+ <div class="date">11월 6일 목요일</div><div class="clock">7:58</div>
+ <div class="noti a" data-in="0.35" data-fx="drop" style="top:600px"><div class="ic" style="background:#34C759">💬</div><div class="tx"><div class="hd"><span>문자</span><span>지금</span></div><p>○○경찰서 교통조사계입니다. 사고 관련 조사 일정 안내드립니다.</p></div></div>
+ <div class="abs a" data-in="0" data-fx="fade" style="left:50px;top:1440px;font-size:26px;opacity:.6">※ 재연 화면</div>
+ <div class="cap a" data-in="0.1" data-fx="fade">사고 다음 날,<br>이런 문자가 온다면?</div>
+</div>
+
+<!-- S2 막막함 -->
+<div class="scene">
+ <div class="date">11월 6일 목요일</div><div class="clock">7:59</div>
+ <div class="noti" style="top:600px;opacity:.55;transform:scale(.96)"><div class="ic" style="background:#34C759">💬</div><div class="tx"><div class="hd"><span>문자</span><span>1분 전</span></div><p>○○경찰서 교통조사계입니다. 사고 관련 조사 일정 안내드립니다.</p></div></div>
+ <div class="noti a" data-in="0.15" data-fx="drop" data-buzz="1" style="top:880px"><div class="ic" style="background:#FF9F0A">👩</div><div class="tx"><div class="hd"><span>엄마</span><span>지금</span></div><p>괜찮아? 변호사 알아봐야 하는 거 아니니</p></div></div>
+ <div class="noti a" data-in="1.2" data-fx="drop" data-buzz="1" style="top:1120px"><div class="ic" style="background:#0A84FF">🙋</div><div class="tx"><div class="hd"><span>민수</span><span>지금</span></div><p>변호사 선임하면 몇 백은 든다던데…</p></div></div>
+ <div class="cap a" data-in="0" data-fx="fade">변호사는 어디서 구하고,<br><em>비용은 얼마나</em> 들까?</div>
+</div>
+
+<!-- S3 팩트 -->
+<div class="scene">
+ <div class="date">11월 6일 목요일</div><div class="clock">7:59</div>
+ <div class="dim a" data-in="0" data-fx="fade" data-d="0.3"></div>
+ <div class="big a" data-in="0.2" data-fx="pop" style="top:420px">
+  <div class="lb">✎ 보험비밀노트</div>
+  <h2>이제는 보험사가<br><span class="mk a" data-in="1.2" data-fx="mark" data-d="0.5">변호사를 직접</span><br>보내줘요</h2>
+  <div class="a" data-in="1.8" data-fx="fade" style="margin-top:26px;font-size:34px;font-weight:700;color:#666">변호사 직접 연결형 운전자보험</div>
+ </div>
+ <div class="cap a" data-in="0" data-fx="fade">보험사가 <em>변호사를 보내주는</em><br>운전자보험이 있어요</div>
+</div>
+
+<!-- S4 접수만 -->
+<div class="scene">
+ <div class="dim" style="background:rgba(5,4,15,.5)"></div>
+ <div class="noti a" data-in="0.1" data-fx="drop" style="top:250px"><div class="ic app">✎</div><div class="tx"><div class="hd"><span>보험비밀노트</span><span>포인트 1</span></div><p>사고 나면 접수만 하세요</p></div></div>
+ <div class="big a" data-in="0.35" data-fx="up" style="top:560px;padding:50px 30px">
+  <svg width="880" height="348" viewBox="0 0 960 380">
+   <g font-family="Pretendard" font-weight="900" text-anchor="middle">
+    <g class="a" data-in="0.6" data-fx="fade"><circle cx="130" cy="140" r="100" fill="#F1EEFF"/><text x="130" y="165" font-size="80">📞</text><text x="130" y="320" font-size="40" fill="#151515">사고 접수</text></g>
+    <path class="a" data-in="1.0" data-fx="draw" data-d="0.4" pathLength="1" d="M250 140 L370 140 M345 115 L372 140 L345 165" stroke="#6B5CE7" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <g class="a" data-in="1.3" data-fx="fade"><circle cx="480" cy="140" r="100" fill="#F1EEFF"/><text x="480" y="165" font-size="80">🏢</text><text x="480" y="320" font-size="40" fill="#151515">보험사</text></g>
+    <path class="a" data-in="1.7" data-fx="draw" data-d="0.4" pathLength="1" d="M600 140 L720 140 M695 115 L722 140 L695 165" stroke="#6B5CE7" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <g class="a" data-in="2.0" data-fx="pop"><circle cx="830" cy="140" r="110" fill="#6B5CE7"/><text x="830" y="168" font-size="84">⚖️</text><text x="830" y="320" font-size="40" fill="#6B5CE7">변호사 연결</text></g>
+   </g>
+  </svg>
+ </div>
+ <div class="cap a" data-in="0" data-fx="fade">보험사에 <em>접수만</em> 하면<br>제휴 변호사를 바로 연결해줘요</div>
+</div>
+
+<!-- S5 단계별 지원 -->
+<div class="scene">
+ <div class="dim" style="background:rgba(5,4,15,.5)"></div>
+ <div class="noti a" data-in="0.1" data-fx="drop" style="top:250px"><div class="ic app">✎</div><div class="tx"><div class="hd"><span>보험비밀노트</span><span>포인트 2</span></div><p>경찰 조사부터 재판까지</p></div></div>
+ <div class="big a" data-in="0.35" data-fx="up" style="top:560px;padding:50px 40px">
+  <svg width="860" height="280" viewBox="0 0 920 300">
+   <path d="M60 110 L860 110" stroke="#DDD" stroke-width="14" stroke-linecap="round"/>
+   <path class="a" data-in="0.8" data-fx="draw" data-d="1.0" pathLength="1" d="M60 110 L860 110" stroke="#6B5CE7" stroke-width="14" stroke-linecap="round"/>
+   <g font-family="Pretendard" font-weight="900" font-size="38" text-anchor="middle" fill="#151515">
+    <circle cx="70" cy="110" r="28" fill="#6B5CE7"/><text x="70" y="200">경찰조사</text>
+    <circle class="a" data-in="1.1" data-fx="fade" cx="330" cy="110" r="28" fill="#6B5CE7"/><text x="330" y="200">1심</text>
+    <circle class="a" data-in="1.4" data-fx="fade" cx="590" cy="110" r="28" fill="#6B5CE7"/><text x="590" y="200">2심</text>
+    <circle class="a" data-in="1.7" data-fx="fade" cx="850" cy="110" r="28" fill="#6B5CE7"/><text x="850" y="200">3심</text>
+   </g>
+  </svg>
+  <div class="a" data-in="2.1" data-fx="pop" style="margin-top:10px;text-align:center"><span style="display:inline-block;background:#FFE45C;border-radius:24px;padding:16px 34px;font-size:46px;font-weight:900">변호사비 먼저 낼 필요 없음</span></div>
+ </div>
+ <div class="cap a" data-in="0" data-fx="fade"><em>단계별로</em> 지원하고<br>변호사비를 먼저 낼 필요도 없어요</div>
+</div>
+
+<!-- S6 비교 -->
+<div class="scene">
+ <div class="dim" style="background:rgba(5,4,15,.5)"></div>
+ <div class="noti a" data-in="0.1" data-fx="drop" style="top:250px"><div class="ic app">✎</div><div class="tx"><div class="hd"><span>보험비밀노트</span><span>비교</span></div><p>기존 상품은 이렇게 달라요</p></div></div>
+ <div class="big a" data-in="0.3" data-fx="up" style="top:540px;left:60px;right:560px;padding:40px 34px;background:#ECECEC">
+  <div class="lb" style="color:#777">기존 방식</div>
+  <div style="font-size:40px;font-weight:900;line-height:1.6;margin-top:12px;color:#444">① 변호사 직접 찾기<br>② 선임·비용 결제<br>③ 보험금 청구</div>
+ </div>
+ <div class="big a" data-in="0.9" data-fx="pop" style="top:540px;left:560px;right:60px;padding:40px 34px;border:6px solid #6B5CE7">
+  <div class="lb">직접 연결형</div>
+  <div style="font-size:40px;font-weight:900;line-height:1.6;margin-top:12px">① 사고 접수<br>② 변호사 연결<br><span style="color:#6B5CE7">끝!</span></div>
+ </div>
+ <div class="cap a" data-in="0" data-fx="fade">기존 상품은 <em>내가 직접</em><br>찾고, 내고, 청구해야 해요</div>
+</div>
+
+<!-- S7 CTA -->
+<div class="scene">
+ <div class="date">11월 6일 목요일</div><div class="clock">8:00</div>
+ <div class="noti a" data-in="0.2" data-fx="drop" data-buzz="1" style="top:600px"><div class="ic app">✎</div><div class="tx"><div class="hd"><span>보험비밀노트</span><span>지금</span></div><p>내 운전자보험은 내가 직접 하는 보험? 보험사가 알아서 해주는 보험? 프로필 링크에서 확인하세요</p></div></div>
+ <div class="abs a" data-in="0.8" data-fx="fade" style="left:140px;right:140px;top:1260px;height:110px;border-radius:60px;background:rgba(255,255,255,.18);overflow:hidden">
+  <div class="abs" style="left:0;right:0;top:32px;text-align:center;font-size:38px;font-weight:700;opacity:.85">밀어서 확인하기  ›</div>
+  <div class="abs slider" style="left:10px;top:10px;width:90px;height:90px;border-radius:50%;background:#FFE45C;color:#151515;display:grid;place-items:center;font-size:44px;font-weight:900">›</div>
+ </div>
+ <div class="cap a" data-in="0" data-fx="fade">내가 직접 하는 보험인지, 알아서 해주는 보험인지<br><em>프로필 링크</em>로 문의하세요</div>
+</div>
+
+</div>
+<div class="home"></div>
+<script>
+const scenes=[...document.querySelectorAll('.scene')];
+const clamp=x=>Math.max(0,Math.min(1,x)), eOut=x=>1-Math.pow(1-x,3), eIO=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const eBack=x=>{const c=1.6,c3=c+1;return 1+c3*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+let T=0;
+function render(si,t){
+  scenes.forEach((s,i)=>s.style.display=i===si?'block':'none');
+  const sc=scenes[si];
+  // 배경 보케 천천히 이동
+  document.querySelectorAll('.bok').forEach((b,i)=>{const g=si*3+t;b.style.transform=`translate(${Math.sin(g*0.3+i)*40}px,${Math.cos(g*0.25+i*2)*30}px)`});
+  let shake=0;
+  sc.querySelectorAll('.a').forEach(el=>{
+    const t0=+el.dataset.in||0,fx=el.dataset.fx,d=+(el.dataset.d||0.4),p=clamp((t-t0)/d);
+    if(fx==='drop'){el.style.opacity=clamp(p*2);el.style.transform=`translateY(${(1-eBack(p))*-140}px) scale(${0.94+0.06*eOut(p)})`;
+      if(el.dataset.buzz||sc.dataset.shake){const q=t-t0; if(q>0&&q<0.35) shake=Math.sin(q*90)*10*(1-q/0.35);}}
+    else if(fx==='pop'){el.style.opacity=clamp(p*3);el.style.transform=`scale(${p<=0?0.6:0.6+0.4*eBack(p)})`}
+    else if(fx==='up'){el.style.opacity=p;el.style.transform=`translateY(${(1-eOut(p))*70}px)`}
+    else if(fx==='fade'){el.style.opacity=p}
+    else if(fx==='mark'){el.style.backgroundSize=`${eIO(p)*100}% 100%`}
+    else if(fx==='draw'){el.style.strokeDasharray=1;el.style.strokeDashoffset=1-eIO(p)}
+    else if(fx==='growx'){el.setAttribute('width',Math.max(1,430*eOut(p)))}
+  });
+  sc.querySelectorAll('.slider').forEach(s=>{const q=((t-1.2)%1.8+1.8)%1.8; s.style.transform=`translateX(${q<1.2?eIO(q/1.2)*600:600*(1-(q-1.2)/0.6)}px)`});
+  document.getElementById('stage').style.transform=`translateX(${shake}px)`;
+}
+window.SCENES=scenes.map(()=>3);
+</script>
+</body></html>

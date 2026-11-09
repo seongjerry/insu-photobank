@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="node_modules/pretendard/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="node_modules/@fontsource/nanum-pen-script/index.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#FBFAF6}
+body{font-family:Pretendard,sans-serif;letter-spacing:-0.02em;color:#222;position:relative}
+#paper{position:absolute;inset:0;background-image:linear-gradient(#E7ECF3 2px,transparent 2px),linear-gradient(90deg,#E7ECF3 2px,transparent 2px);background-size:60px 60px}
+.scene{position:absolute;left:0;right:0;top:85px;bottom:-85px;display:none;transform-origin:50% 40%}
+.abs{position:absolute}
+.pen{font-family:'Nanum Pen Script',cursive;letter-spacing:0;color:#1F4FD8}
+.red{font-family:'Nanum Pen Script',cursive;letter-spacing:0;color:#E23B3B}
+.ttl{font-weight:900;letter-spacing:-0.05em;line-height:1.18}
+.mk,.mkp,.mkb{background-repeat:no-repeat;background-position:0 0;background-size:0% 100%;padding:0 6px}
+.mk{background-image:linear-gradient(transparent 55%,#FFE45C 55%,#FFE45C 92%,transparent 92%)}
+.mkp{background-image:linear-gradient(transparent 55%,#FFB3C7 55%,#FFB3C7 92%,transparent 92%)}
+.mkb{background-image:linear-gradient(transparent 55%,#BFD7FF 55%,#BFD7FF 92%,transparent 92%)}
+.note{position:absolute;background:#FFF27A;box-shadow:0 12px 26px rgba(0,0,0,.13);padding:36px 42px}
+.note:before{content:"";position:absolute;top:-22px;left:50%;width:150px;height:44px;margin-left:-75px;background:rgba(255,255,255,.55);transform:rotate(-3deg)}
+.cap{position:absolute;left:70px;right:70px;top:1360px;text-align:center;font-size:52px;font-weight:800;line-height:1.38;color:#1A1A1A;letter-spacing:-0.04em}
+svg.d{position:absolute;overflow:visible}
+svg.d path,svg.d rect{vector-effect:non-scaling-stroke}
+.lbl{font-family:'Nanum Pen Script';fill:#222}
+</style></head><body>
+<div id="paper"></div>
+
+
+<!-- S1 훅 -->
+<div class="scene" data-dur="4">
+ <div class="abs pen a" data-in="0" data-fx="write" data-d="0.5" style="left:90px;top:250px;font-size:76px;transform:rotate(-3deg);white-space:nowrap">보험회사 몰래 적어둔 노트 #1</div>
+ <div class="abs ttl a" data-in="0.2" data-fx="up" style="left:90px;top:390px;font-size:128px"><span class="mk a" data-in="0.5" data-fx="mark">현장조사</span> 나오면<br><span style="color:#E23B3B">이 서류</span>는<br>바로 서명 금지</div>
+ <div class="note a" data-in="0.8" data-fx="drop" data-rot="-2" style="left:100px;top:960px;width:640px;padding:32px 40px">
+  <div class="pen" style="font-size:64px;line-height:1.24;color:#222">☐ 의료기록 열람 동의서<br>☐ 의료자문 동의서<br>☐ 사실확인서·진술서</div>
+ </div>
+ <div class="abs red a" data-in="1.3" data-fx="pop" style="left:770px;top:1020px;font-size:80px;line-height:1.05;transform-origin:center"><div style="transform:rotate(8deg)">조사원<br>왔다고?!</div></div>
+ <div class="cap">보험금 청구했더니 조사원이 찾아왔다면?<br>이 서류 3장은 바로 서명하지 마세요.</div>
+</div>
+
+<!-- S2 원칙 -->
+<div class="scene" data-dur="4">
+ <div class="abs ttl a" data-in="0" data-fx="up" style="left:90px;top:250px;font-size:96px">무조건 거부?<br><span class="mk a" data-in="0.3" data-fx="mark">아니에요</span></div>
+ <svg class="d" style="left:70px;top:560px" width="940" height="480" viewBox="0 0 940 480">
+  <path class="a rough" data-in="0.3" data-fx="draw" data-d="0.4" pathLength="1" data-rect="20,20,420,420" fill="none" stroke="#999" stroke-width="6" stroke-dasharray="14 12"/>
+  <g class="a" data-in="0.5" data-fx="fade"><text x="230" y="150" text-anchor="middle" font-family="Pretendard" font-weight="900" font-size="64" fill="#888">무조건 거부</text>
+   <text class="lbl" x="230" y="240" text-anchor="middle" font-size="58" fill="#888">지급이 늦어질 수도</text></g>
+  <path class="a" data-in="0.8" data-fx="draw" data-d="0.35" pathLength="1" d="M140 300 L320 420 M320 300 L140 420" fill="none" stroke="#E23B3B" stroke-width="12" stroke-linecap="round"/>
+  <path class="a rough" data-in="1.0" data-fx="draw" data-d="0.4" pathLength="1" data-rect="500,20,420,420" fill="none" stroke="#222" stroke-width="6"/>
+  <g class="a" data-in="1.2" data-fx="fade"><text x="710" y="150" text-anchor="middle" font-family="Pretendard" font-weight="900" font-size="64">범위 확인 후</text><text x="710" y="230" text-anchor="middle" font-family="Pretendard" font-weight="900" font-size="64">필요한 만큼</text>
+   <circle cx="710" cy="350" r="62" fill="none" stroke="#1F4FD8" stroke-width="12"/></g>
+ </svg>
+ <div class="cap" style="font-size:46px">조사를 무조건 거부하라는 게 아니에요.<br>범위를 확인하고 필요한 만큼만 협조하세요.</div>
+</div>
+
+<!-- S3 첫째 -->
+<div class="scene" data-dur="3" data-num="1">
+ <div class="abs pen a" data-in="0" data-fx="write" data-d="0.4" style="left:90px;top:280px;font-size:90px;transform:rotate(-3deg)">서류 첫 번째</div>
+ <div class="abs ttl a" data-in="0.15" data-fx="up" style="left:90px;top:420px;font-size:118px">① <span class="mkb a" data-in="0.45" data-fx="mark">의료기록</span><br>열람 동의서</div>
+ <div class="note a" data-in="0.3" data-fx="drop" data-rot="2" style="left:180px;top:820px;width:720px"><div class="pen chk" style="font-size:66px;line-height:1.25;color:#222"></div></div>
+ <div class="cap">첫째, 의료기록 열람 동의서예요.</div>
+</div>
+
+<!-- S4 범위 지정 -->
+<div class="scene" data-dur="4">
+ <div class="abs ttl a" data-in="0" data-fx="up" style="left:90px;top:250px;font-size:96px">병원·기간을<br><span class="mkb a" data-in="0.3" data-fx="mark">꼭 정하세요</span></div>
+ <div class="note a" data-in="0.4" data-fx="drop" data-rot="-1" style="left:120px;top:580px;width:840px;padding:34px 44px;background:#fff;border:5px solid #222">
+  <div style="font-size:52px;font-weight:800;line-height:1.75">
+   <div style="color:#999;position:relative">✕ 모든 병원 · 전체 기간<svg class="d" style="left:0;top:40px" width="760" height="20"><path class="a" data-in="0.9" data-fx="draw" data-d="0.3" pathLength="1" d="M0 10 L560 10" stroke="#E23B3B" stroke-width="8" stroke-linecap="round"/></svg></div>
+   <div>✔ <span class="mk a" data-in="1.3" data-fx="mark">이번 청구 병원</span> · <span class="mk a" data-in="1.6" data-fx="mark">필요한 기간</span>만</div>
+  </div>
+ </div>
+ <div class="abs red a" data-in="1.9" data-fx="pop" style="left:150px;top:1010px;font-size:66px;line-height:1.1;transform-origin:center"><div style="transform:rotate(-3deg)">상관없는 기록까지 다 열릴 수 있어요!</div></div>
+ <div class="cap" style="font-size:46px">모든 병원·전체 기간으로 동의하지 말고<br>해당 병원과 기간만 적어서 동의하세요.</div>
+</div>
+
+<!-- S5 둘째 -->
+<div class="scene" data-dur="3" data-num="2">
+ <div class="abs pen a" data-in="0" data-fx="write" data-d="0.4" style="left:90px;top:280px;font-size:90px;transform:rotate(-3deg)">서류 두 번째</div>
+ <div class="abs ttl a" data-in="0.15" data-fx="up" style="left:90px;top:420px;font-size:118px">② <span class="mkp a" data-in="0.45" data-fx="mark">의료자문</span><br>동의서</div>
+ <div class="note a" data-in="0.3" data-fx="drop" data-rot="-2" style="left:180px;top:820px;width:720px"><div class="pen chk" style="font-size:66px;line-height:1.25;color:#222"></div></div>
+ <div class="cap">둘째, 의료자문 동의서예요.</div>
+</div>
+
+<!-- S6 의료자문 -->
+<div class="scene" data-dur="4">
+ <div class="abs ttl a" data-in="0" data-fx="up" style="left:90px;top:250px;font-size:96px">자문 거치면<br>거절률 <span class="mkp a" data-in="0.3" data-fx="mark">30%대</span></div>
+ <div class="abs a" data-in="0.5" data-fx="pop" style="left:90px;top:540px;width:900px;text-align:center;transform-origin:center">
+  <div style="font-size:200px;font-weight:900;color:#E23B3B;letter-spacing:-0.05em;line-height:1">30.84%</div>
+  <div style="font-size:38px;font-weight:700;color:#666;margin-top:10px">생명보험사 의료자문 후 부지급률 (2025년 하반기)</div>
+ </div>
+ <div class="note a" data-in="1.4" data-fx="drop" data-rot="2" style="left:120px;top:940px;width:840px;padding:28px 38px"><div class="pen" style="font-size:56px;line-height:1.25;color:#222">① 동의 전에 이유부터 묻기<br>② 결과가 다르면 제3 의료기관 자문 요청</div></div>
+ <div class="cap" style="font-size:44px">보험사 쪽 의사가 기록만 보고 판단해요.<br>동의 전에 이유를 묻고, 제3 의료기관 자문을 요청하세요.</div>
+</div>
+
+<!-- S7 셋째 -->
+<div class="scene" data-dur="3" data-num="3">
+ <div class="abs pen a" data-in="0" data-fx="write" data-d="0.4" style="left:90px;top:280px;font-size:90px;transform:rotate(-3deg)">서류 세 번째</div>
+ <div class="abs ttl a" data-in="0.15" data-fx="up" style="left:90px;top:420px;font-size:118px">③ <span class="mk a" data-in="0.45" data-fx="mark">사실확인서</span><br>·진술서</div>
+ <div class="note a" data-in="0.3" data-fx="drop" data-rot="2" style="left:180px;top:820px;width:720px"><div class="pen chk" style="font-size:66px;line-height:1.25;color:#222"></div></div>
+ <div class="cap">셋째, 사실확인서나 진술서예요.</div>
+</div>
+
+<!-- S8 진술서 -->
+<div class="scene" data-dur="4">
+ <div class="abs ttl a" data-in="0" data-fx="up" style="left:90px;top:250px;font-size:96px">남이 쓴 글에<br><span class="mk a" data-in="0.3" data-fx="mark">그냥 서명 금지</span></div>
+ <div class="note a" data-in="0.5" data-fx="drop" data-rot="-2" style="left:110px;top:600px;width:820px;padding:36px 42px"><div class="pen" style="font-size:66px;line-height:1.35;color:#222">① 한 줄씩 직접 읽기<br>② 다르면 고쳐달라고 요청<br>③ 사본은 꼭 받아두기</div></div>
+ <div class="abs red a" data-in="1.5" data-fx="pop" style="left:480px;top:1090px;font-size:76px;line-height:1.05;transform-origin:center"><div style="transform:rotate(-4deg)">나중에<br>"내 말"로 남아요!</div></div>
+ <div class="cap" style="font-size:46px">조사원이 대신 써준 내용에 서명하면<br>나중에 내가 한 말로 남아요.</div>
+</div>
+
+<!-- S9 보너스 -->
+<div class="scene" data-dur="4">
+ <div class="abs pen a" data-in="0" data-fx="write" data-d="0.4" style="left:90px;top:280px;font-size:90px;transform:rotate(-3deg)">보너스 꿀팁</div>
+ <div class="abs ttl a" data-in="0.15" data-fx="up" style="left:90px;top:420px;font-size:108px">손해사정사,<br><span class="mk a" data-in="0.45" data-fx="mark">내가 고를 수 있어요</span></div>
+ <div class="note a" data-in="0.6" data-fx="drop" data-rot="2" style="left:140px;top:820px;width:800px;padding:30px 40px"><div class="pen" style="font-size:60px;line-height:1.3;color:#222">요건이 맞으면 비용은 보험사 부담<br>보험사는 3영업일 안에 답해야 해요</div></div>
+ <div class="cap" style="font-size:46px">손해사정사는 내가 직접 선임할 수 있어요.<br>요건이 맞으면 비용은 보험사가 부담해요.</div>
+</div>
+
+<!-- S10 팔로우 CTA -->
+<div class="scene" data-dur="4.5">
+ <div class="abs pen a" data-in="0" data-fx="write" data-d="0.5" style="left:90px;top:300px;font-size:84px;transform:rotate(-3deg)">서명 전에 꼭 체크!</div>
+ <div class="note a" data-in="0.2" data-fx="drop" data-rot="-2" style="left:110px;top:440px;width:700px"><div class="pen" style="font-size:62px;line-height:1.25;color:#222">☑ 열람 범위 정하기<br>☑ 의료자문 이유 묻기<br>☑ 진술서는 읽고 사본 받기</div></div>
+ <div class="abs ttl a" data-in="0.6" data-fx="up" style="left:90px;top:870px;font-size:104px">다음 노트 #2<br><span class="mk a" data-in="0.9" data-fx="mark">병원에서 금지어</span></div>
+ <div class="abs red a" data-in="1.3" data-fx="pop" style="left:620px;top:1170px;font-size:76px;line-height:1.05;transform-origin:center"><div style="transform:rotate(-4deg)">팔로우하고<br>받아가세요!</div></div>
+ <div class="cap">다음 비밀노트는 병원에서 하면 안 되는 말!<br>놓치기 싫다면 팔로우해 두세요.</div>
+</div>
+
+<script>
+const scenes=[...document.querySelectorAll('.scene')];
+const clamp=x=>Math.max(0,Math.min(1,x));
+const eOut=x=>1-Math.pow(1-x,3);
+const eBack=x=>{const c=1.7,c3=c+1;return 1+c3*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const eIO=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+// 결정적 난수 (매 렌더 동일)
+let seed=7;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280-0.5};
+function rough(x,y,w,h){const j=()=>rnd()*7;const p=[[x+j(),y+j()],[x+w+j(),y+j()],[x+w+j(),y+h+j()],[x+j(),y+h+j()]];
+ return `M${p[0]} Q${x+w/2},${y+rnd()*8} ${p[1]} Q${x+w+rnd()*8},${y+h/2} ${p[2]} Q${x+w/2},${y+h+rnd()*8} ${p[3]} Q${x+rnd()*8},${y+h/2} ${p[0][0]+4},${p[0][1]-3}`}
+document.querySelectorAll('path[data-rect]').forEach(e=>{const [x,y,w,h]=e.dataset.rect.split(',').map(Number);e.setAttribute('d',rough(x,y,w,h))});
+document.querySelectorAll('path[data-ell]').forEach(e=>{const [cx,cy,rx,ry]=e.dataset.ell.split(',').map(Number);let d='';
+ for(let i=0;i<=60;i++){const a=(-110+i*(395/60))*Math.PI/180,k=1+0.05*Math.sin(i/9)-(i/60)*0.07;d+=(i?'L':'M')+(cx+rx*k*Math.cos(a)).toFixed(1)+' '+(cy+ry*k*Math.sin(a)).toFixed(1)}
+ e.setAttribute('d',d)});
+// 번호 장면 체크리스트
+const items=['의료기록 열람 동의서','의료자문 동의서','사실확인서·진술서'];
+document.querySelectorAll('.scene[data-num]').forEach(s=>{const n=+s.dataset.num;const box=s.querySelector('.chk');
+ box.innerHTML=items.map((t,i)=>{const done=i<n-1,cur=i===n-1;
+  return `<div style="position:relative;${done?'opacity:.45':''}">${done?'✕':'☐'} ${cur?`<span class="mk a" data-in="0.75" data-fx="mark">${t}</span>`:t}${cur?`<svg class="d" style="left:4px;top:4px" width="70" height="70"><path class="a" data-in="0.95" data-fx="draw" data-d="0.3" pathLength="1" d="M10 10 L60 60 M60 10 L10 60" fill="none" stroke="#E23B3B" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>`:''}</div>`}).join('')});
+function render(si,t){
+  scenes.forEach((s,i)=>s.style.display=i===si?'block':'none');
+  const sc=scenes[si],D=+sc.dataset.dur;
+  sc.style.transform=`scale(${1+0.025*clamp(t/D)})`;
+  sc.querySelectorAll('.a').forEach(el=>{
+    const t0=+el.dataset.in||0,fx=el.dataset.fx,d=+(el.dataset.d||0.35),p=clamp((t-t0)/d);
+    if(fx==='pop'){el.style.opacity=clamp(p*3);el.style.transform=`scale(${p<=0?0.01:eBack(p)})`}
+    else if(fx==='up'){el.style.opacity=p;el.style.transform=`translateY(${(1-eOut(p))*50}px)`}
+    else if(fx==='fade'){el.style.opacity=p}
+    else if(fx==='write'){const r=el.dataset.rot||'';el.style.clipPath=`inset(-20% ${100-eIO(p)*100}% -20% -5%)`}
+    else if(fx==='mark'){el.style.backgroundSize=`${eIO(p)*100}% 100%`}
+    else if(fx==='drop'){const r=+(el.dataset.rot||0);el.style.opacity=clamp(p*2.5);el.style.transform=`translateY(${(1-eBack(p))*-90}px) rotate(${r+(1-eOut(p))*6}deg)`}
+    else if(fx==='draw'){el.style.strokeDasharray=1;el.style.strokeDashoffset=1-eIO(p);
+      if(el.getAttribute('fill')&&el.getAttribute('fill')!=='none'){el.style.fillOpacity=clamp((p-0.6)/0.4)}}
+  });
+  const cap=sc.querySelector('.cap');if(cap){const p=clamp(t/0.2);cap.style.opacity=p}
+}
+window.SCENES=scenes.map(s=>+s.dataset.dur);
+window.setDurs=a=>a.forEach((d,i)=>scenes[i].dataset.dur=d);
+</script>
+</body></html>

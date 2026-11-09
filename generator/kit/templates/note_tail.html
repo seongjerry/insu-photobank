@@ -1,0 +1,40 @@
+<script>
+const scenes=[...document.querySelectorAll('.scene')];
+const clamp=x=>Math.max(0,Math.min(1,x));
+const eOut=x=>1-Math.pow(1-x,3);
+const eBack=x=>{const c=1.7,c3=c+1;return 1+c3*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const eIO=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+// 결정적 난수 (매 렌더 동일)
+let seed=7;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280-0.5};
+function rough(x,y,w,h){const j=()=>rnd()*7;const p=[[x+j(),y+j()],[x+w+j(),y+j()],[x+w+j(),y+h+j()],[x+j(),y+h+j()]];
+ return `M${p[0]} Q${x+w/2},${y+rnd()*8} ${p[1]} Q${x+w+rnd()*8},${y+h/2} ${p[2]} Q${x+w/2},${y+h+rnd()*8} ${p[3]} Q${x+rnd()*8},${y+h/2} ${p[0][0]+4},${p[0][1]-3}`}
+document.querySelectorAll('path[data-rect]').forEach(e=>{const [x,y,w,h]=e.dataset.rect.split(',').map(Number);e.setAttribute('d',rough(x,y,w,h))});
+document.querySelectorAll('path[data-ell]').forEach(e=>{const [cx,cy,rx,ry]=e.dataset.ell.split(',').map(Number);let d='';
+ for(let i=0;i<=60;i++){const a=(-110+i*(395/60))*Math.PI/180,k=1+0.05*Math.sin(i/9)-(i/60)*0.07;d+=(i?'L':'M')+(cx+rx*k*Math.cos(a)).toFixed(1)+' '+(cy+ry*k*Math.sin(a)).toFixed(1)}
+ e.setAttribute('d',d)});
+// 번호 장면 체크리스트
+const items=window.NOTE_ITEMS||[];  // 번호 장면 체크리스트: 본문 앞 <script>window.NOTE_ITEMS=[...]</script>
+document.querySelectorAll('.scene[data-num]').forEach(s=>{const n=+s.dataset.num;const box=s.querySelector('.chk');
+ box.innerHTML=items.map((t,i)=>{const done=i<n-1,cur=i===n-1;
+  return `<div style="position:relative;${done?'opacity:.45':''}">${done?(window.NOTE_DONE||'☑'):'☐'} ${cur?`<span class="mk a" data-in="0.75" data-fx="mark">${t}</span>`:t}${cur?`<svg class="d" style="left:4px;top:4px" width="70" height="70"><path class="a" data-in="0.95" data-fx="draw" data-d="0.3" pathLength="1" d="M12 36 L30 56 L62 12" fill="none" stroke="#1F4FD8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>`:''}</div>`}).join('')});
+function render(si,t){
+  scenes.forEach((s,i)=>s.style.display=i===si?'block':'none');
+  const sc=scenes[si],D=+sc.dataset.dur;
+  sc.style.transform=`scale(${1+0.025*clamp(t/D)})`;
+  sc.querySelectorAll('.a').forEach(el=>{
+    const t0=+el.dataset.in||0,fx=el.dataset.fx,d=+(el.dataset.d||0.35),p=clamp((t-t0)/d);
+    if(fx==='pop'){el.style.opacity=clamp(p*3);el.style.transform=`scale(${p<=0?0.01:eBack(p)})`}
+    else if(fx==='up'){el.style.opacity=p;el.style.transform=`translateY(${(1-eOut(p))*50}px)`}
+    else if(fx==='fade'){el.style.opacity=p}
+    else if(fx==='write'){const r=el.dataset.rot||'';el.style.clipPath=`inset(-20% ${100-eIO(p)*100}% -20% -5%)`}
+    else if(fx==='mark'){el.style.backgroundSize=`${eIO(p)*100}% 100%`}
+    else if(fx==='drop'){const r=+(el.dataset.rot||0);el.style.opacity=clamp(p*2.5);el.style.transform=`translateY(${(1-eBack(p))*-90}px) rotate(${r+(1-eOut(p))*6}deg)`}
+    else if(fx==='draw'){el.style.strokeDasharray=1;el.style.strokeDashoffset=1-eIO(p);
+      if(el.getAttribute('fill')&&el.getAttribute('fill')!=='none'){el.style.fillOpacity=clamp((p-0.6)/0.4)}}
+  });
+  const cap=sc.querySelector('.cap');if(cap){const p=clamp(t/0.2);cap.style.opacity=p}
+}
+window.SCENES=scenes.map(s=>+s.dataset.dur);
+window.setDurs=a=>a.forEach((d,i)=>scenes[i].dataset.dur=d);
+</script>
+</body></html>
