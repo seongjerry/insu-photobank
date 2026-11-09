@@ -1,0 +1,52 @@
+{
+ "collected_at": "2026-11-09T05:08:36.101249+00:00",
+ "days": 8,
+ "instagram": [
+  {
+   "id": "18099653411420305",
+   "caption": "보험회사 몰래 적어둔 노트 #1 🔒\n\n보험금 청구했더니\n조사원이 집으로 찾아왔다면?\n이 서류 3장은 바로 서명하지 마세요\n\n① 의료기록 열람 동의서\n모든 병원·전체 기간으로 하지 말고\n해당 병원과 기간만 적어서 동의",
+   "comments_count": 0,
+   "like_count": 0,
+   "media_product_type": "REELS",
+   "permalink": "https://www.instagram.com/reel/Dfgea_viT_m/",
+   "timestamp": "2026-11-09T04:29:57+0000",
+   "insights_error": "{\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"A_LZG_eES8Y2gwF8sqszilR\"}}"
+  },
+  {
+   "id": "18025234841707016",
+   "caption": "보험 해지,\n버튼 누르기 전에 이것부터 보세요 ✋\n\n보험료 부담돼서 해지하면\n낸 돈보다 훨씬 적게 돌려받고\n다시 가입하기도 어려워질 수 있어요\n저장해두고 해지 전에 꺼내보세요 📌\n\n① 특약 삭제\n전체를 깨지 말고\n겹",
+   "comments_count": 0,
+   "like_count": 1,
+   "media_product_type": "REELS",
+   "permalink": "https://www.instagram.com/reel/DfgGnGyTz3O/",
+   "timestamp": "2026-11-09T01:02:09+0000",
+   "insights_error": "{\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"A39GDs7NK6aJ5ojnbMO3DPS\"}}"
+  },
+  {
+   "id": "18478660579117791",
+   "caption": "_\n부모님 치매보험,\n진단비만 있으면 후회해요 😥\n\n부모님 보험 점검하다 제일 많이 본 것\n저장해두고 우리 집 보험이랑 비교해보세요 📌\n\n① 중증만 보장하는 경우\n치매는 경도부터 시작하는 경우가 많아요\n경도 단계부터",
+   "comments_count": 0,
+   "like_count": 2,
+   "media_product_type": "REELS",
+   "permalink": "https://www.instagram.com/reel/DfZAHbtOkmP/",
+   "timestamp": "2026-11-06T06:50:37+0000",
+   "insights_error": "{\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"AY7dgFLHSexi6XirWDITB2j\"}}"
+  },
+  {
+   "id": "17870833212660694",
+   "caption": "_\n간병인보험, 이렇게 가입하면 후회해요 😥\n\n상담하면서 제일 많이 본 실수 4가지\n저장해두고 내 보험이랑 비교해보세요 📌\n\n① 일반병원 특약만 가입\n요양병원은 특약이 따로인 경우가 많아요\n하나만 있으면 못 받을 수",
+   "comments_count": 0,
+   "like_count": 2,
+   "media_product_type": "REELS",
+   "permalink": "https://www.instagram.com/reel/DfY_QdaugUE/",
+   "timestamp": "2026-11-06T06:43:50+0000",
+   "insights_error": "{\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"A8djrMZv9PcUWKZMm9nMVey\"}}"
+  }
+ ],
+ "youtube": [],
+ "errors": [
+  {
+   "youtube": "{\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Request had insufficient authentication scopes.\",\n    \"errors\": [\n      {\n        \"message\": \"Insufficient Permission\",\n        \"domain\": \"global\",\n        \"reason\": \"insufficientPermissions\"\n      }\n    ],\n    \"status\": \"PERMISSION_DENIED\",\n    \"detai"
+  }
+ ]
+}
