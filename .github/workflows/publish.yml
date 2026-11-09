@@ -5,6 +5,8 @@ on:
     - cron: "*/15 * * * *"
   push:
     paths: ["publish/queue/**"]
+  repository_dispatch:
+    types: [publish_tick]
   workflow_dispatch:
     inputs:
       check:
