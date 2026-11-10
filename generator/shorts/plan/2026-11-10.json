@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "status": "approved",
+  "status": "produced",
   "proposed_at": "2026-11-10T08:30:00+09:00",
   "note": "requests.md 반영: 13:00 ep11, 15:00 ep05 확정. 18:00 1개만 새로 제안(다크노트 우선)",
   "slots": [
@@ -48,7 +48,8 @@
         "https://wikidocs.net/blog/@Insight_Lab/24531/"
       ],
       "approved": true,
-      "modify": ""
+      "modify": "",
+      "produced_at": "2026-11-10T09:20:00+09:00"
     }
   ],
   "approved_at": "2026-11-10T08:26:23+09:00",
