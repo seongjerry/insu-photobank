@@ -1,11 +1,27 @@
 {
   "date": "2026-11-10",
-  "status": "proposed",
+  "status": "approved",
   "proposed_at": "2026-11-10T08:30:00+09:00",
   "note": "requests.md 반영: 13:00 ep11, 15:00 ep05 확정. 18:00 1개만 새로 제안(다크노트 우선)",
   "slots": [
-    {"slot": "13:00", "ep": "ep11", "fixed": true, "topic": "운전자보험 가입 연도별 보장 변화", "format": "note_light", "voice": "ko-KR-InJoonNeural", "approved": true},
-    {"slot": "15:00", "ep": "ep05", "fixed": true, "topic": "산후조리원 보험 140만원", "format": "kakao", "voice": "de-DE-SeraphinaMultilingualNeural", "approved": true},
+    {
+      "slot": "13:00",
+      "ep": "ep11",
+      "fixed": true,
+      "topic": "운전자보험 가입 연도별 보장 변화",
+      "format": "note_light",
+      "voice": "ko-KR-InJoonNeural",
+      "approved": true
+    },
+    {
+      "slot": "15:00",
+      "ep": "ep05",
+      "fixed": true,
+      "topic": "산후조리원 보험 140만원",
+      "format": "kakao",
+      "voice": "de-DE-SeraphinaMultilingualNeural",
+      "approved": true
+    },
     {
       "slot": "18:00",
       "ep": "ep12",
@@ -31,8 +47,10 @@
         "https://www.heraldk.com/article/2025112900151848623",
         "https://wikidocs.net/blog/@Insight_Lab/24531/"
       ],
-      "approved": null,
+      "approved": true,
       "modify": ""
     }
-  ]
+  ],
+  "approved_at": "2026-11-10T08:26:23+09:00",
+  "approval_note": "텔레그램 \"승인\" 08:26 KST (제안 전송 08:25 직후). proposed_at 표기는 08:30이나 실제 전송은 08:25"
 }
