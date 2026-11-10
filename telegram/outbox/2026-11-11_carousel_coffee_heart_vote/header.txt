@@ -1,0 +1,7 @@
+[insu_magazine] [수 · 투표형] 커피 마시면 심장 두근? 끊는다 vs 마신다 투표
+오늘 19:00 게시 추천
+선정 이유: "심장 위해 커피 끊어라" 통념을 뒤집는 반전(커피 마신 쪽 심방세동 위험 7~11% 낮음, 2~3잔에서 가장 뚜렷) + 'A 끊는다 vs B 2~3잔' 댓글 투표가 자연스러운 주제. 최근 14일 주제와 겹치지 않음
+출처: Liang 외, Food & Nutrition Research 2026.10.31 (UK Biobank 495,269명) https://foodandnutritionresearch.net/index.php/fnr/article/download/14612/22067
+출처: News-Medical 2026.11.9 보도 https://www.news-medical.net/news/20261109/Drinking-2e280933-cups-of-coffee-a-day-A-study-of-495000-adults-links-it-to-lower-AF-risk.aspx
+출처: DECAF 임상시험, JAMA 2025 (심방세동 환자 200명, 6개월 재발 47% vs 64%)
+특이사항: 관찰연구라 인과 단정 없이 고지문에 명시. 원문 사이트는 클라우드에서 접속 불가해 논문 초록·보도 검색 결과로 수치 교차 확인

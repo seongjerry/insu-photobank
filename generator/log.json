@@ -160,6 +160,17 @@
    "saves": null,
    "comments": null,
    "follows": null
+  },
+  {
+   "date": "2026-11-11",
+   "id": "2026-11-11_carousel_coffee_heart_vote",
+   "format": "carousel",
+   "type": "vote",
+   "topic": "커피 끊을까 vs 하루 2~3잔·커피 마신 쪽 심방세동 위험 7~11% 낮음(Food & Nutrition Research 2026, UK Biobank)",
+   "shares": null,
+   "saves": null,
+   "comments": null,
+   "follows": null
   }
  ]
 }
