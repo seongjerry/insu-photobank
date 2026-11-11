@@ -7,7 +7,10 @@
 
 - 글꼴: generator/kit/fonts (페이퍼로지 제목·본문, 깍두기 숫자 포인트, 나눔펜 손글씨)
 - 비노: generator/kit/mascot/poses/bino-<포즈>.svg  (poses.json 에 포즈별 쓰임새)
-- 움직이는 장: 5초 반복 영상 + 저작권 없는 자체 BGM(bgm/) 입힘. 인스타 캐러셀은 영상 장만 소리가 난다.
+- 움직이는 장: 5초 반복 무음 영상 (배경음악은 본부장님이 모바일 업로드 때 직접 넣음)
+- 표지: 상단 시리즈 문구·쪽번호 없음. COVERS 로 시안(A 시네마틱 사진형, B 캐릭터 리액션형)을 함께 만든다
+- 비노는 표지(B)·마지막 장 + 중간 1장 정도만. 모든 장에 넣지 않는다
+- 결과물은 텔레그램 전송까지만 (자동 게시 안 함)
 """
 import importlib.util, json, os, pathlib, shutil, subprocess, sys, tempfile
 
@@ -85,9 +88,10 @@ const $=s=>document.querySelector(s);
 
 def page(ep, i, body, hint, motion_js=""):
     n = len(ep.SLIDES)
+    top = "" if i == 1 else f'<div class="top"><span class="pen">{ep.SERIES}</span><span class="pg">{ep.LABEL} · {i}/{n}</span></div>'  # 표지는 상단 문구·쪽번호 없이
     return f"""<!doctype html><html lang="ko"><head><meta charset="utf-8"><style>{CSS}</style>{HELP}</head><body>
 <div class="s">
- <div class="top"><span class="pen">{ep.SERIES}</span><span class="pg">{ep.LABEL} · {i}/{n}</span></div>
+ {top}
  {body}
  <div class="bot"><span>@insu_secretnote</span><b>{hint}</b></div>
 </div>{"<script>" + motion_js + "</script>" if motion_js else ""}</body></html>"""
@@ -110,17 +114,18 @@ def build(ep_id, preview_only=False):
     with sync_playwright() as pw:
         b = pw.chromium.launch(executable_path=CHROME, args=["--no-sandbox"]) if CHROME else pw.chromium.launch()
         pg = b.new_page(viewport={"width": 1080, "height": 1350})
-        for i, body in enumerate(ep.SLIDES, 1):
-            mo = ep.MOTION.get(i) if hasattr(ep, "MOTION") else None
-            html = work / f"s{i:02d}.html"
+        jobs = [(1, k, v) for k, v in getattr(ep, "COVERS", {}).items()] + [(i, "", b) for i, b in enumerate(ep.SLIDES, 1) if not (i == 1 and getattr(ep, "COVERS", None))]
+        for i, var, body in jobs:
+            mo = getattr(ep, "MOTION", {}).get(f"{i}{var}")
+            html = work / f"s{i:02d}{var}.html"
             html.write_text(page(ep, i, body, hints[i - 1], mo["js"] if mo else ""), encoding="utf-8")
             pg.goto(html.as_uri()); pg.evaluate("document.fonts.ready"); pg.wait_for_timeout(400)
             if mo and not preview_only:
-                out = MEDIA / f"{ep_id}-{i:02d}.mp4"; motion(pg, mo, out, work); outs.append(out)
+                out = MEDIA / f"{ep_id}-{i:02d}{var}.mp4"; motion(pg, mo, out, work); outs.append(out)
             else:
                 if mo: pg.evaluate(f"window.setT({mo.get('still_t', mo['dur'] - 1)})")
-                png = work / f"{i:02d}.png"; pg.screenshot(path=str(png))
-                out = MEDIA / f"{ep_id}-{i:02d}.jpg"
+                png = work / f"{i:02d}{var}.png"; pg.screenshot(path=str(png))
+                out = MEDIA / f"{ep_id}-{i:02d}{var}.jpg"
                 subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(png), "-q:v", "2", str(out)], check=True)
                 outs.append(out)
         b.close()
@@ -139,8 +144,11 @@ def motion(pg, mo, out, work, fps=30):
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-framerate", str(fps), "-i", str(frames / "%05d.jpg"),
                     "-c:v", "libx264", "-crf", "18", "-preset", "veryfast", "-pix_fmt", "yuv420p", str(silent)], check=True)
     shutil.rmtree(frames)
-    bgm = R / "bgm" / mo.get("bgm", "bgm_01_lofi_calm.mp3"); ofs = mo.get("bgm_offset", 0)
     tmp = out.with_suffix(".tmp.mp4")
+    if not mo.get("bgm"):
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(silent), "-c", "copy", "-movflags", "+faststart", str(tmp)], check=True)
+        tmp.rename(out); return
+    bgm = R / "bgm" / mo["bgm"]; ofs = mo.get("bgm_offset", 0)
     af = f"atrim=start={ofs}:duration={dur},asetpts=PTS-STARTPTS,afade=t=in:d=0.4,afade=t=out:st={dur - 0.7}:d=0.7,loudnorm=I=-20:TP=-2,aresample=44100"
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(silent), "-i", str(bgm), "-filter_complex", f"[1:a]{af}[a]",
                     "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", str(tmp)], check=True)

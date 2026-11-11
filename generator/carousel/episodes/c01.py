@@ -19,7 +19,6 @@ S.append(f"""
  <p id="lead" style="position:absolute;left:72px;top:1150px;font-size:34px;color:#BDBDBD">보험료는 꼬박꼬박 냈는데, 정작 못 받는 이유</p>""")
 # 2 왜 못 받나
 S.append(f"""
- {bino('sad', 190, '')}
  <h2>왜 <span class="r">못 받는</span> 걸까요?</h2>
  <p class="lead">치매보험은 대부분 가입한 본인이<br>직접 청구해야 하는 구조예요.</p>
  <div class="rows">
@@ -30,7 +29,6 @@ S.append(f"""
  <div class="src">참고: 금융감독원 치매보험 가입 시 유의사항</div>""")
 # 3 해결책 + 통계 (움직이는 장)
 S.append(f"""
- {bino('point', 190, '')}
  <h2>해결책은 딱 하나,<br><span class="y">지정대리청구인</span></h2>
  <p class="lead">내가 청구하기 어려워질 때를 대비해<br>대신 청구할 가족을 <b>미리 정해 두는</b> 제도예요.</p>
  <div class="stat">
@@ -44,7 +42,6 @@ S.append(f"""
  <div class="src">출처: 금융감독원 보도자료 (2026.6.30.)</div>""")
 # 4 기명 vs 무기명
 S.append(f"""
- {bino('cheer', 190, '')}
  <h2>2026년 7월부터<br><span class="y">훨씬 쉬워졌어요</span></h2>
  <p class="lead" style="font-size:34px">이름을 적지 않아도 되는 방식이 새로 생겼어요.</p>
  <table>
@@ -60,7 +57,6 @@ S.append(f"""
  <div class="src">출처: 금융감독원 대리청구인 지정 제도 개선 (2026.6.30.)<br>보험사별로 시행 시기가 다를 수 있어요.</div>""")
 # 5 확대
 S.append(f"""
- {bino('wow', 190, '')}
  <h2>치매보험만의<br>이야기가 <span class="r">아니에요</span></h2>
  <p class="lead">갑자기 쓰러져 의식이 없을 때도<br>본인은 청구할 수 없어요.</p>
  <div class="rows">
@@ -84,7 +80,6 @@ S.append(f"""
  <div class="src">내보험찾아줌: cont.insure.or.kr (생명·손해보험협회 운영, 무료)</div>""")
 # 7 Q&A
 S.append(f"""
- {bino('think', 150, 'top:112px')}
  <h2>많이 <span class="b">헷갈리는</span> 것들</h2>
  <div class="qa">
   <div class="box"><div class="q">오래전에 가입한 보험도 되나요?</div><div class="a">네. 기존 가입자도 보험사에 신청하면 지정할 수 있어요.</div></div>
@@ -96,7 +91,6 @@ S.append(f"""
  <div class="src">세부 절차와 서류는 보험사·상품에 따라 다를 수 있어요.</div>""")
 # 8 보너스
 S.append(f"""
- {bino('money', 190, '')}
  <h2>확인하는 김에<br><span class="y">이것도</span> 같이 보세요</h2>
  <p class="lead">주인이 안 찾아간 '숨은 보험금'이<br>이만큼 쌓여 있어요.</p>
  <div class="stat">
@@ -122,22 +116,36 @@ S.append(f"""
  <p style="font-size:32px;margin-top:34px;color:#BDBDBD">주제별 보험 노트 더 보기<br><b class="y" style="font-size:42px;font-weight:900">insusecretnote.com</b></p>
  <div class="src">보장 내용과 절차는 보험사·상품·가입 시점에 따라 다를 수 있습니다.</div>""")
 
+import pathlib as _p
+_PH = (_p.Path(__file__).resolve().parents[3] / "photos/dementia/pixabay_3723548.jpg").as_uri()
+COVERS = {
+ "a": f"""
+ <div style="position:absolute;inset:0;background:url('{_PH}') center 40%/cover;filter:grayscale(1) brightness(.62) contrast(1.15)"></div>
+ <div style="position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.35),transparent 30%,transparent 45%,rgba(0,0,0,.92) 78%)"></div>
+ <div style="position:absolute;left:72px;right:72px;top:860px;border-top:2px solid rgba(255,255,255,.45);padding-top:34px">
+  <h1 style="font-size:84px;line-height:1.2">보험회사는 알고<br>자식들만 모르는 <span style="color:#FFB020">'이것'</span></h1>
+  <p style="font-size:32px;color:#CFCFCF;margin-top:20px">부모님 치매보험, 이거 안 하면 못 받아요</p>
+ </div>""",
+ "b": f"""
+ {bino('wow', 700, 'position:absolute;left:190px;top:90px')}
+ <div style="position:absolute;left:72px;right:72px;top:840px">
+  <span class="chip" style="font-size:28px;padding:8px 20px">부모님 보험 있는 분 필독</span>
+  <h1 style="font-size:96px;margin-top:22px;line-height:1.14">치매보험 있는데<br><span class="r">청구를 못 한다고?</span></h1>
+ </div>""",
+}
+
 # 작은 비노는 제목 오른쪽 위에 둔다
 S = [s.replace('<div class="bino" style="width:190px;">', '<div class="bino mini" style="width:190px;">')
       .replace('<div class="bino" style="width:150px;top:112px">', '<div class="bino mini" style="width:150px;top:112px">') for s in S]
 SLIDES = S
 
 MOTION = {
-    1: {"dur": 5, "bgm": "bgm_03_warm_piano.mp3", "bgm_offset": 0, "still_t": 3.2, "js": """
+    "1b": {"dur": 5, "still_t": 0, "js": """
 window.setT=function(t){
- const out=c((t-4.5)/0.5), bn=document.querySelector('.bino');
- const pop=eb(c((t-0.05)/0.55));
- bn.style.transform='translateY('+(Math.sin(t*2*Math.PI/2.5)*10)+'px) rotate('+(Math.sin(t*2*Math.PI/5)*3)+'deg) scale('+(0.94+0.06*pop)+')';
- const u=eo(c((t-0.5)/0.7))*(1-out); $('#ul').style.transform='scaleX('+u+')';
- const l=eo(c((t-1.0)/0.5))*(1-out); $('#lead').style.opacity=0.35+0.65*l;
- const n=c((t-1.5)/0.45); $('#note').style.opacity=c(n*3)*(1-out); $('#note').style.transform='rotate(-4deg) scale('+(0.55+0.45*eb(n))+')';
+ const bn=document.querySelector('.bino');
+ bn.style.transform='translateY('+(Math.sin(t*2*Math.PI/2.5)*14)+'px) rotate('+(Math.sin(t*2*Math.PI/5)*3)+'deg)';
 };"""},
-    3: {"dur": 5, "bgm": "bgm_03_warm_piano.mp3", "bgm_offset": 8, "still_t": 4.5, "js": """
+    "3": {"dur": 5, "still_t": 4.5, "js": """
 window.setT=function(t){
  const a=eo(c((t-0.3)/1.4)), b=eo(c((t-0.6)/1.4));
  $('#v1').textContent=(a*23.1).toFixed(1)+'%';

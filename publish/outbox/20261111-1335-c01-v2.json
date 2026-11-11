@@ -1,0 +1,15 @@
+{
+ "text": "📒 캐러셀 c01 수정본\n몰라서 못 받는 보험금 ① 지정대리청구인\n\n표지 2개 중 하나만 골라 올리세요\n· 1번째 사진: A 사진형\n· 2번째 영상: B 비노형\n그다음 3~10번째가 2~9장 (4번째는 움직이는 장)\n배경음악은 업로드 때 직접 넣어 주세요",
+ "album": [
+  "publish/media/c01-01a.jpg",
+  "publish/media/c01-01b.mp4",
+  "publish/media/c01-02.jpg",
+  "publish/media/c01-03.mp4",
+  "publish/media/c01-04.jpg",
+  "publish/media/c01-05.jpg",
+  "publish/media/c01-06.jpg",
+  "publish/media/c01-07.jpg",
+  "publish/media/c01-08.jpg",
+  "publish/media/c01-09.jpg"
+ ]
+}
