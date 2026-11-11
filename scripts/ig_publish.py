@@ -107,6 +107,8 @@ def main():
             try: return req(f"{G}/{path}?" + urllib.parse.urlencode(prm))
             except Exception as e: return {"error": str(e)[:300]}
         print("ig account:", q(IGID, "username,media_count"))
+        recent = q(f"{IGID}/media", "timestamp,caption")
+        print("recent:", [(m.get("timestamp"), (m.get("caption") or "")[:20]) for m in recent.get("data", [])[:3]] or recent)
         print("token owner:", q("me", "name"))
         print("pages & linked ig:", q("me/accounts", "name,instagram_business_account{id,username}"))
         perms = q("me/permissions")
