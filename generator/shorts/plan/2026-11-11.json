@@ -1,6 +1,6 @@
 {
   "date": "2026-11-11",
-  "status": "proposed",
+  "status": "partial",
   "proposed_at": "2026-11-11T08:25:00+09:00",
   "note": "requests.md 반영: '진짜 몰랐는데?' 시리즈 2개. 13:00은 이미 제작된 ep13(queue pending) 승인 요청, 18:00은 목록의 본인부담상한제 환급. ep13이 note_dark라 연속 규칙상 다음날 선택지를 남기도록 18:00은 lock",
   "slots": [
@@ -21,7 +21,7 @@
       "voice": "ko-KR-InJoonNeural",
       "yt_title": "보험 해지 전 꼭 확인! 낸 보험료 전액 돌려받는 2가지 방법 #Shorts",
       "queue": "publish/queue/ep13.json",
-      "approved": null,
+      "approved": true,
       "modify": ""
     },
     {
@@ -52,8 +52,9 @@
         "https://www.segye.com/newsView/20260804509006",
         "https://www.law.go.kr/법령/국민건강보험법 (제44조 본인부담상한액, 제91조 소멸시효)"
       ],
-      "approved": null,
+      "approved": true,
       "modify": ""
     }
-  ]
+  ],
+  "approved_at": "2026-11-11T08:26:45+09:00"
 }
