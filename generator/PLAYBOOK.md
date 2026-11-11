@@ -2,6 +2,8 @@
 
 예약 작업(새 작업 공간)이 매번 이 문서를 처음부터 읽고 그대로 따른다. 본부장님(전성재)은 개발 초보이고, 결과물과 알림은 텔레그램(@Jerryblogbot)으로만 받는다.
 
+계정 구분·브랜드 규칙·캐러셀 규칙·광고 현황은 `generator/INSTAGRAM.md` 에 모아 두었다. 이 문서보다 먼저 읽는다.
+
 ## 0. 작업 공간 준비 (모든 예약 작업 공통)
 1. 저장소 `seongjerry/insu-photobank` 가 `/home/claude/insu-photobank` 에 없으면 add_repo(owner=seongjerry, repo=insu-photobank, access=push) 후 안내대로 clone. 있으면 `git pull`.
 2. 영상 제작이 필요한 작업만: 비공개 폰트 저장소도 받는다. add_repo(owner=seongjerry, repo=insu-assets, access=read) 후 안내대로 `/home/claude/insu-assets` 에 clone. 그다음 `bash generator/kit/setup.sh` (작업 폴더 /home/claude/build). insu-assets 의 파일은 절대 이 공개 저장소에 복사·커밋하지 않는다.
