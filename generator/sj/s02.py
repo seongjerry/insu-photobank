@@ -61,7 +61,7 @@ S.append(f"""<div class="s" style="background:linear-gradient(180deg,#0B1830 0%,
  <div id="moon2" style="position:absolute;left:130px;top:80px;width:110px;height:110px;border-radius:50%;background:#0D1D38"></div>
  {stars}
  <div style="position:absolute;left:80px;right:80px;top:290px;font-size:112px;font-weight:900;line-height:1.14;color:#fff;letter-spacing:-.055em">
-  <div data-in="0.1">자는 동안</div><div data-in="0.35">클로드가</div><div data-in="0.6"><span style="color:#FFE27A">해 놓는 일 3가지</span></div></div>
+  <div>자는 동안</div><div>클로드가</div><div><span style="color:#FFE27A">해 놓는 일 3가지</span></div></div>
  <div style="position:absolute;left:80px;right:80px;top:770px;display:flex;flex-direction:column;gap:20px">
   {noti("오늘 보험 뉴스 브리핑","금감원 발표 포함 · 요약 완료","오전 6:10",1.3)}
   {noti("월요일 고객 안부 메시지","초안 3가지 준비됨","오전 6:30",1.9)}
@@ -84,7 +84,7 @@ S.append(f"""<div class="s">{BLOBS}
  </div></div>""")
 def item(no, when, title, hd, rows, say, note):
     lis = "".join(f'<div class="li" data-in="{0.9+i*0.45}"><div>{a}<small>{b}</small></div></div>' for i, (a, b) in enumerate(rows))
-    return f"""<div class="s">{BLOBS}<div class="no" data-pop="0.1" data-tf="" style="transform-origin:left center">{no}</div><div class="when" data-pop="0.3">{when}</div>
+    return f"""<div class="s">{BLOBS}<div class="no">{no}</div><div class="when">{when}</div>
  <h1>{title}</h1>
  <div class="card" style="top:500px" data-in="0.6"><div class="hd"><span>{hd}</span><span class="chip">자동 완료</span></div>{lis}</div>
  <div class="say" style="top:1000px" data-pop="2.6" data-pulse="3.3"><div class="t">이렇게 말해 두세요</div><div class="q">{say}</div></div>
