@@ -76,8 +76,17 @@ def publish(item):
 def main():
     now = datetime.datetime.now(datetime.timezone.utc); done = 0
     if os.environ.get("IG_CHECK"):  # 연결 확인만
-        me = req(f"{G}/{IGID}?" + urllib.parse.urlencode({"fields": "username,media_count", "access_token": TOKEN}))
-        print("connected:", me.get("username"), "posts:", me.get("media_count")); return
+        def q(path, fields=None):
+            prm = {"access_token": TOKEN}
+            if fields: prm["fields"] = fields
+            try: return req(f"{G}/{path}?" + urllib.parse.urlencode(prm))
+            except Exception as e: return {"error": str(e)[:300]}
+        print("ig account:", q(IGID, "username,media_count"))
+        print("token owner:", q("me", "name"))
+        print("pages & linked ig:", q("me/accounts", "name,instagram_business_account{id,username}"))
+        perms = q("me/permissions")
+        print("permissions:", [f"{x.get('permission')}={x.get('status')}" for x in perms.get("data", [])] or perms)
+        return
     for f in sorted(Q.glob("*.json")):
         item = json.loads(f.read_text())
         if item.get("status") != "approved": continue
