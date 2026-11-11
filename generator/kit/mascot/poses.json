@@ -1,0 +1,62 @@
+{
+ "base": {
+  "name": "기본",
+  "use": "소개·일반 설명",
+  "file": "poses/bino-base.svg"
+ },
+ "shh": {
+  "name": "쉿",
+  "use": "비밀 공개 직전·표지",
+  "file": "poses/bino-shh.svg"
+ },
+ "wow": {
+  "name": "헉",
+  "use": "손해 보는 순간·경고",
+  "file": "poses/bino-wow.svg"
+ },
+ "check": {
+  "name": "체크",
+  "use": "마무리·저장 유도",
+  "file": "poses/bino-check.svg"
+ },
+ "think": {
+  "name": "고민",
+  "use": "질문 던지기·헷갈리는 내용",
+  "file": "poses/bino-think.svg"
+ },
+ "angry": {
+  "name": "버럭",
+  "use": "팩폭·하면 안 되는 행동",
+  "file": "poses/bino-angry.svg"
+ },
+ "sad": {
+  "name": "시무룩",
+  "use": "못 받은 사례·손해",
+  "file": "poses/bino-sad.svg"
+ },
+ "cheer": {
+  "name": "만세",
+  "use": "돌려받음·해결·좋은 소식",
+  "file": "poses/bino-cheer.svg"
+ },
+ "search": {
+  "name": "돋보기",
+  "use": "점검·조회·확인 방법",
+  "file": "poses/bino-search.svg"
+ },
+ "money": {
+  "name": "돈",
+  "use": "환급·보험금·금액 이야기",
+  "file": "poses/bino-money.svg"
+ },
+ "point": {
+  "name": "콕",
+  "use": "핵심 짚기·순서 설명",
+  "file": "poses/bino-point.svg"
+ },
+ "stop": {
+  "name": "멈춰",
+  "use": "서명 금지·해지 금지 같은 경고",
+  "file": "poses/bino-stop.svg"
+ }
+}

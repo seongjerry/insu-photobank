@@ -15,3 +15,5 @@
 /* 차이 라이징체(Rising CHAI): 영상 사용 허락. 파일은 비공개 저장소 insu-assets 에만 둔다 */
 @font-face{font-family:'RisingCHAI';src:url('Rising_CHAI_Light.ttf');font-weight:300}
 @font-face{font-family:'RisingCHAI';src:url('Rising_CHAI_Extra_Bold.ttf');font-weight:800}
+/* 나눔펜(Nanum Pen Script): SIL OFL 1.1 → 저장소에 포함. 손글씨 라벨·메모지용 */
+@font-face{font-family:'NanumPen';src:url('NanumPenScript-Regular.ttf')}

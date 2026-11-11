@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """텔레그램(@Jerryblogbot) 보고·승인 도구 (GitHub Actions에서 실행, 토큰은 Secrets)
-MODE=send  : publish/outbox/*.json 중 sent 아닌 것 전송 → {"text":"...", "video":"경로(선택)", "photo":"경로(선택)"}
+MODE=send  : publish/outbox/*.json 중 sent 아닌 것 전송 → {"text":"...", "video":"경로(선택)", "photo":"경로(선택)", "album":["경로",..](선택, 최대 10장)}
 MODE=poll  : 본부장님 채팅의 최근 메시지를 publish/inbox/latest.json 에 기록 (getUpdates, offset 확정 안 함)
 """
 import json, os, pathlib, time, uuid, urllib.request, urllib.parse
@@ -30,10 +30,18 @@ def send():
         m = json.loads(f.read_text())
         if m.get("sent"): continue
         text = m.get("text", "")
-        if m.get("video"): r = call("sendVideo", {"chat_id": C, "caption": text[:1000], "supports_streaming": "true"}, {"video": m["video"]})
+        if m.get("album"):  # 캐러셀 미리보기: 사진·영상 여러 장을 개별 파일로 (압축 없음, 최대 10장)
+            paths = m["album"][:10]; media = []; files = {}
+            for i, p in enumerate(paths):
+                k = f"f{i}"; files[k] = p
+                it = {"type": "video" if p.lower().endswith(".mp4") else "photo", "media": f"attach://{k}"}
+                if i == 0 and len(text) <= 1000: it["caption"] = text
+                media.append(it)
+            r = call("sendMediaGroup", {"chat_id": C, "media": json.dumps(media, ensure_ascii=False)}, files)
+        elif m.get("video"): r = call("sendVideo", {"chat_id": C, "caption": text[:1000], "supports_streaming": "true"}, {"video": m["video"]})
         elif m.get("photo"): r = call("sendPhoto", {"chat_id": C, "caption": text[:1000]}, {"photo": m["photo"]})
         else: r = None
-        if not m.get("video") and not m.get("photo") or (text and len(text) > 1000):
+        if not (m.get("video") or m.get("photo") or m.get("album")) or (text and len(text) > 1000):
             for i in range(0, len(text), 3900): r = call("sendMessage", {"chat_id": C, "text": text[i:i + 3900]})
         m["sent"] = bool(r and r.get("ok")); m["sent_at"] = time.strftime("%Y-%m-%dT%H:%M:%S%z")
         if not m["sent"]: m["error"] = str(r)[:300]

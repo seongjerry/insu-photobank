@@ -55,19 +55,44 @@ def tg(msg):
         except Exception: pass
 
 
-def publish(item):
-    ensure_bucket()
-    vurl = upload(item["video"], "video/mp4")
-    p = {"media_type": "REELS", "video_url": vurl, "caption": item.get("caption", ""), "share_to_feed": "true", "access_token": TOKEN}
-    if item.get("cover"): p["cover_url"] = upload(item["cover"], "image/jpeg")
-    cid = req(f"{G}/{IGID}/media", p)["id"]
+def wait(cid):
     for _ in range(60):  # 최대 10분 대기
         st = req(f"{G}/{cid}?" + urllib.parse.urlencode({"fields": "status_code,status", "access_token": TOKEN}))
-        if st.get("status_code") == "FINISHED": break
+        if st.get("status_code") == "FINISHED": return
         if st.get("status_code") == "ERROR": raise RuntimeError("인스타 처리 실패: " + str(st.get("status"))[:200])
         time.sleep(10)
+    raise RuntimeError("인스타 처리 시간 초과")
+
+
+def carousel(item):
+    """캐러셀: item["media"] = ["publish/media/x-01.mp4", "publish/media/x-02.jpg", ...] (2~10장, 사진은 JPEG)"""
+    paths = item["media"]
+    if not 2 <= len(paths) <= 10: raise RuntimeError(f"캐러셀은 2~10장이어야 함 (지금 {len(paths)}장)")
+    kids = []
+    for p in paths:
+        if p.lower().endswith(".mp4"):
+            c = {"media_type": "VIDEO", "video_url": upload(p, "video/mp4")}
+        else:
+            c = {"image_url": upload(p, "image/jpeg")}
+        c.update(is_carousel_item="true", access_token=TOKEN)
+        kids.append(req(f"{G}/{IGID}/media", c)["id"])
+    for k in kids: wait(k)
+    cid = req(f"{G}/{IGID}/media", {"media_type": "CAROUSEL", "children": ",".join(kids),
+                                    "caption": item.get("caption", ""), "access_token": TOKEN})["id"]
+    wait(cid)
+    return cid
+
+
+def publish(item):
+    ensure_bucket()
+    if item.get("type") == "carousel":
+        cid = carousel(item)
     else:
-        raise RuntimeError("인스타 처리 시간 초과")
+        vurl = upload(item["video"], "video/mp4")
+        p = {"media_type": "REELS", "video_url": vurl, "caption": item.get("caption", ""), "share_to_feed": "true", "access_token": TOKEN}
+        if item.get("cover"): p["cover_url"] = upload(item["cover"], "image/jpeg")
+        cid = req(f"{G}/{IGID}/media", p)["id"]
+        wait(cid)
     mid = req(f"{G}/{IGID}/media_publish", {"creation_id": cid, "access_token": TOKEN})["id"]
     link = req(f"{G}/{mid}?" + urllib.parse.urlencode({"fields": "permalink", "access_token": TOKEN})).get("permalink", "")
     return mid, link
@@ -95,7 +120,8 @@ def main():
         try:
             mid, link = publish(item)
             item.update(status="posted", media_id=mid, permalink=link, posted_at=now.isoformat())
-            tg(f"✅ 인스타 릴스 게시 완료: {item['id']}\n{link}"); done += 1
+            kind = "캐러셀" if item.get("type") == "carousel" else "릴스"
+            tg(f"✅ 인스타 {kind} 게시 완료: {item['id']}\n{link}"); done += 1
         except Exception as e:
             item.update(status="error", error=str(e)[:300]); tg(f"⚠️ 인스타 게시 실패: {item['id']}\n{str(e)[:200]}")
         f.write_text(json.dumps(item, ensure_ascii=False, indent=1))
