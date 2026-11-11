@@ -1,6 +1,6 @@
 {
   "date": "2026-11-11",
-  "status": "partial",
+  "status": "produced",
   "proposed_at": "2026-11-11T08:25:00+09:00",
   "note": "requests.md 반영: '진짜 몰랐는데?' 시리즈 2개. 13:00은 이미 제작된 ep13(queue pending) 승인 요청, 18:00은 목록의 본인부담상한제 환급. ep13이 note_dark라 연속 규칙상 다음날 선택지를 남기도록 18:00은 lock",
   "slots": [
@@ -56,5 +56,6 @@
       "modify": ""
     }
   ],
-  "approved_at": "2026-11-11T08:26:45+09:00"
+  "approved_at": "2026-11-11T08:26:45+09:00",
+  "produced_at": "2026-11-11T09:15:00+09:00"
 }
