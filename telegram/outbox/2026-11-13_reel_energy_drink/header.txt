@@ -1,0 +1,8 @@
+[insu_magazine] [금 · 웃김 릴스] 피곤하면 일단 한 캔, 이게 내 연료라는 사람
+오늘 19:00 게시 추천
+주제 선정 이유: 11월 초 미국심장협회 학술대회 발표. 직장인 '한 캔' 자기합리화에 심정지 신고 비율 11배, 18~34세 45%라는 반전 숫자
+출처: https://newsroom.heart.org/news/energy-drinks-stimulant-products-linked-to-cardiac-arrest-heart-attack-in-young-adults
+출처: https://www.medicalnewstoday.com/articles/fda-reports-raise-concerns-about-energy-drinks-heart-problems-young-adults
+업로드 때 트렌딩 오디오 선택
+나레이션 미적용: edge-tts 서버(speech.platform.bing.com) 연결을 클라우드 프록시가 거부함(connect_rejected). 효과음만 들어감
+주의: 11배는 FDA 신고 비율(위험 11배 아님), 학회 초록 단계 예비 결과라 캡션에 고지함
