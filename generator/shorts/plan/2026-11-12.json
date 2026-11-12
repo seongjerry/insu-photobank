@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "status": "proposed",
+  "status": "approved",
   "proposed_at": "2026-11-12T08:26:29+09:00",
   "note": "requests.md 반영: '진짜 몰랐는데?' 목록에서 2개(누수 일상생활배상책임, 상속포기 사망보험금). 갈래 4(저장용 체크)·2(노트 #4)로 분리. 이번 주 갈래5(설계사 꿀팁)가 아직 없어 내일 이후 우선 배치 권장. 포맷: 최근 note_dark→note_dark→lock 이라 kakao 후 note_dark. 목소리: 최근 여·남·여, 여성 5/14(36%)라 13:00 여성, 18:00 남성.",
   "slots": [
@@ -30,7 +30,7 @@
         "https://www.banksalad.com/articles/%EB%B3%B4%ED%97%98-%EC%95%84%ED%8C%8C%ED%8A%B8%EB%88%84%EC%88%98%EB%B3%B4%ED%97%98-%EC%95%84%ED%8C%8C%ED%8A%B8%EC%B2%9C%EC%9E%A5%EB%88%84%EC%88%98-%EC%95%84%EB%9E%AB%EC%A7%91%EB%88%84%EC%88%98",
         "https://wikidocs.net/blog/@knarchive/25739/"
       ],
-      "approved": null,
+      "approved": true,
       "modify": ""
     },
     {
@@ -59,8 +59,9 @@
         "https://www.shinhangroup.com/kr/archive/insight/extend/detail/33333",
         "https://www.law.go.kr/법령/상속세및증여세법 (제8조 상속재산으로 보는 보험금)"
       ],
-      "approved": null,
+      "approved": true,
       "modify": ""
     }
-  ]
+  ],
+  "approved_at": "2026-11-12T08:55:40+09:00"
 }
