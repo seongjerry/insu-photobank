@@ -2,7 +2,7 @@
 
 예약 작업(새 작업 공간)이 매번 이 문서를 처음부터 읽고 그대로 따른다. 본부장님(전성재)은 개발 초보이고, 결과물과 알림은 텔레그램(@Jerryblogbot)으로만 받는다.
 
-계정 구분·브랜드 규칙·캐러셀 규칙·광고 현황은 `generator/INSTAGRAM.md` 에 모아 두었다. 이 문서보다 먼저 읽는다.
+계정 구분·브랜드 규칙·캐러셀 규칙·광고 현황은 `generator/INSTAGRAM.md` 에 모아 두었다. 이 문서보다 먼저 읽는다. 주제 선정 기준은 `generator/carousel/RESEARCH.md`, 후보 목록은 `generator/carousel/topic_pool.md` 다.
 
 ## 0. 작업 공간 준비 (모든 예약 작업 공통)
 1. 저장소 `seongjerry/insu-photobank` 가 `/home/claude/insu-photobank` 에 없으면 add_repo(owner=seongjerry, repo=insu-photobank, access=push) 후 안내대로 clone. 있으면 `git pull`.
@@ -20,7 +20,27 @@
   3. 속 시원한 팩폭 ("이건 좋다 / 이건 별로다"를 분명하게. 단 특정 보험사·상품명 비방 금지, 구조와 행동을 비판)
   4. 저장·공유용 체크리스트 (부모님께 공유, 병원 갈 때 꺼내보기)
   5. 설계사가 알아둬야 할 꿀팁 (설계사 대상, 리크루팅 관심층 유입)
-- **주제 리서치:** 매번 WebSearch로 블로그·카페·지식iN·커뮤니티(맘카페, 보배드림, 더쿠, 네이트판, 블라인드, 클리앙, 뽐뿌 등)에서 지금 사람들이 많이 묻는 보험 키워드를 먼저 잡고(사람이 가장 많이 몰리는 곳), 최근 유튜브 쇼츠·인스타 릴스에서 조회수 높았던 보험 주제도 함께 본다. 그대로 베끼지 말고 각색하며, 사람들이 쓰는 말투를 훅에 살린다. 자세한 방법은 `generator/carousel/RESEARCH.md` 4장. 숫자·제도는 공식 출처(금감원·금융위·보험협회·법령) 또는 언론 2곳 이상으로 확인. 출처는 plan 파일에 남긴다.
+- **주제 선정 (캐러셀과 같은 기준, 2026-11-12 본부장님 지시):** 자세한 방법은 `generator/carousel/RESEARCH.md` 를 따른다.
+  1. 먼저 `generator/carousel/topic_pool.md` 의 미사용 후보를 본다. 릴스로 쓴 후보는 줄 끝에 `→ epNN` 을 붙인다. 캐러셀로 이미 나온 주제(`→ cNN`)는 같은 주에 릴스로 다시 내지 않는다.
+  2. 블로그·카페·지식iN·커뮤니티(맘카페, 보배드림, 더쿠, 네이트판, 블라인드, 클리앙, 뽐뿌)에서 지금 많이 묻는 보험 키워드를 WebSearch 로 먼저 잡는다. 최근 조회수 높았던 보험 쇼츠·릴스 주제도 함께 본다. 그대로 베끼지 않고 각색한다.
+  3. 후보마다 다섯 질문으로 점수를 매긴다(각 0~2점, 7점 이상만): 모르면 돈을 잃거나 못 받는가 / 처음 듣거나 지금 많이 묻는 내용인가 / 보낼 사람이 바로 떠오르는가 / 공식 출처가 있는가 / 30~50초 안에 "이유 → 해결 → 지금 할 일"이 다 들어가는가.
+  4. 우선순위: 최근 바뀐 제도 > 모르면 못 받는 돈 > 보험사와 부딪히는 순간의 대처 > 가입·해지 직전 확인 > 가족 단위 점검. 데이터상 "받는 법"보다 "못 받는 이유·반전"이 반응이 좋다(현장조사 약 1300뷰, 간병인 약 2000뷰).
+  5. 발표만 있고 세부 조건이 확정되지 않은 제도는 만들지 않는다. "예상", "검토 중"인 숫자로 채우지 않는다.
+  6. 커뮤니티 글은 주제 발굴용이다. 숫자·제도는 공식 출처(금감원·금융위·보험협회·법령) 또는 언론 2곳 이상으로 확인하고 출처를 plan 파일에 남긴다. 개인 사연은 그대로 옮기지 않고 상황만 각색한다.
+  7. 아침 주제 제안 메시지에 "주제를 잡은 키워드"와 점수를 한 줄로 적는다.
+- **후킹 (첫 2초):**
+  - 첫 장면 문장은 커뮤니티에서 잡은 사람들 말투 그대로 쓴다. 예: "현장조사 나와서 인증번호 불러달래요?", "보험료 다 냈는데 보험금은 0원?"
+  - 훅 유형 네 가지를 돌려 쓴다(같은 유형 연속 2회까지): 비밀형("보험회사는 알고 ○○만 모르는"), 반전형("○○했는데 0원?"), 질문형("○○하면 누가 청구하죠?"), 숫자형("4명 중 3명이 안 해 둔").
+  - 첫 화면에 제목 글자가 바로 떠 있어야 한다(빈 화면·로고·인사로 시작 금지). 나레이션 첫 문장은 8초 안에 "왜 내 일인지"까지 말한다.
+  - 숫자 훅은 공식 출처가 있는 숫자만. 계산한 숫자는 원래 숫자를 화면에 함께 보여 준다.
+  - 마지막 장면은 "누구에게 보내라"를 구체적으로 말한다(부모님, 형제 단톡방, 배우자). 다음 편 예고가 있으면 한 줄 넣는다.
+- **비노(마스코트) 사용:** 스프링노트 캐릭터 비노를 릴스에도 쓴다. 파일은 `generator/kit/mascot/poses/bino-<포즈>.svg`, 포즈별 쓰임새는 `generator/kit/mascot/poses.json`.
+  - 포즈 12종: base 기본 · shh 쉿 · wow 헉 · check 체크 · think 고민 · angry 버럭 · sad 시무룩 · cheer 만세 · search 돋보기 · money 돈 · point 콕 · stop 멈춰.
+  - 모든 장면에 넣지 않는다. 로고처럼 구석에 계속 띄우지 않는다. 한 영상에 1~2장면만: 훅 장면(wow·stop·shh)이나 마무리 장면(check·point·cheer) 중 내용에 맞는 곳.
+  - 내용과 포즈를 맞춘다: 경고는 stop, 놀라운 숫자는 wow, 비밀형은 shh, 확인 순서는 search, 돈 이야기는 money, 마무리 체크는 check.
+  - 같은 포즈는 직전 7일 영상·캐러셀에서 쓴 것을 피한다(experiments.csv 비고에 사용 포즈를 적는다).
+  - 넣는 법: 페이지 HTML 에 svg 파일 내용을 그대로 inline 으로 넣고 폭 260~420px, 자막·오른쪽 아이콘 자리와 겹치지 않게 둔다. 카톡형·잠금화면형은 실제 앱 화면 느낌이 깨지므로 마지막 정리 장면에만 쓴다.
+- **실제 사연 캡처:** 커뮤니티 글 캡처가 저장소 `photos/capture/` 에 있으면 훅 다음 장면에 넣을 수 있다. 댓글·작성자 정보·보험사 이름이 보이는 부분은 넣지 않는다. 캡처는 클라우드에서 새로 찍을 수 없으니 없으면 사연을 글로 각색한다.
 - **중복 금지:** `generator/shorts/experiments.csv` 의 지난 주제와 겹치지 않게.
 - **포맷 로테이션 (같은 포맷은 연속 최대 3개):** note_light(흰 노트), note_dark(다크노트), kakao(카톡 대화), lock(잠금화면 알림). experiments.csv 최근 3개가 모두 같은 포맷이면 다음은 반드시 다른 포맷.
 - **목소리 섞기 (남성만 연속 3개 이상 금지, 여성 비율 약 40%):**
@@ -56,7 +76,7 @@
 1. 오늘 plan 파일이 이미 있으면 중단.
    - `generator/shorts/requests.md` 의 본부장님 요청을 먼저 읽고 반영한다.
    - `publish/queue` 에 오늘 13:00 또는 18:00 으로 이미 approved 된 영상이 있으면 그 슬롯은 새로 제안하지 않는다(plan 의 해당 슬롯에 ep 와 "fixed": true 로 기록하고 보고에 "확정"으로 표시). 포맷·목소리 로테이션 계산에도 그 영상을 포함한다.
-2. 리서치 → 2개 주제 확정 (규칙 1 전부 적용). 다음 ep 번호는 experiments.csv 마지막 번호 +1.
+2. 리서치 → 2개 주제 확정 (규칙 1 전부 적용: 후보 풀 확인 → 커뮤니티 키워드 → 점수 7점 이상 → 훅 유형·비노 포즈 결정). plan 슬롯에 "hook_type", "bino"(쓸 포즈와 장면, 안 쓰면 ""), "keyword", "score" 를 함께 적는다. 다음 ep 번호는 experiments.csv 마지막 번호 +1.
 3. plan 파일 저장(status=proposed, proposed_at) 후 텔레그램 전송. 형식:
 ```
 📋 오늘 업로드 주제 (11/10 화)
@@ -87,7 +107,7 @@
 4. 승인된 슬롯 제작:
    1. 대본(장면별 나레이션) 작성 → `tts/requests/<날짜>_bsn_<ep>.json` push → tts 워크플로 완료까지 대기(`tts/out/<id>/done.json`, 15초 간격 최대 6분).
    2. 템플릿으로 페이지 작성: 노트형은 `/home/claude/build/note_head.html` + 장면들 + `note_tail.html` (번호 장면 체크리스트는 본문 앞 `<script>window.NOTE_ITEMS=[...]</script>`), 다크노트는 head 에 `<link rel="stylesheet" href="dark_note.css">` 추가. 예시: `generator/kit/examples/`. 카톡형 `kakao.html`, 잠금화면형 `lock.html` 을 고쳐서 사용.
-   3. 미리보기(`python3 generator/kit/render_any.py page.html durs.json prev preview`)로 몇 장 확인: 글자 겹침·넘침·빈 화면 없을 것.
+   3. 미리보기(`python3 generator/kit/render_any.py page.html durs.json prev preview`)로 몇 장 확인: 글자 겹침·넘침·빈 화면 없을 것. 첫 화면에 훅 문장이 떠 있는지, 비노가 자막·아이콘 자리와 겹치지 않는지, 비노가 2장면을 넘지 않는지도 본다.
    4. `BUILD=/home/claude/build python3 /home/claude/insu-photobank/generator/kit/fast_build.py page.html <tts_out_dir> <접두어> /home/claude/insu-photobank/publish/media/<ep>.mp4 [bgm] /home/claude/insu-photobank/publish/media/<ep>.jpg`
    5. `publish/queue/<ep>.json`: video, cover, caption, publish_at(오늘 13:00 또는 18:00 +09:00), status=approved, yt_status=approved, yt_title(훅 + " #Shorts").
    6. experiments.csv 한 줄 추가, plan status 갱신(produced 또는 partial).
