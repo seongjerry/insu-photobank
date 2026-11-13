@@ -17,3 +17,4 @@ date,id,topic,format,voice,edit,hook,bgm,length_s,utm_content,ig_3s_retention,ig
 2026-11-12,ep16,상속포기해도 사망보험금 (노트 #4),note_dark,injoon,fast(공백제거),insider+loss,upbeat_pluck,30,ep16,,,,,,,'진짜 몰랐는데?' 시리즈 3편 · CTA 저장·팔로우
 2026-11-12,ep17,코 수술 J33 vs D14 양성신생물 수술비 (노트 #5),note_dark,sunhi(여),fast(공백제거),reversal+number(자극),upbeat_pluck,43,ep17,,,,,,,자극 훅 테스트 · 소스폴더 자료 첫 사용 · 비노 wow/check
 2026-11-12,ep18,코 수술 천만원 vs 0원 (오픈루프·댓글CTA),note_dark,hyunsu(+15%),fast(공백제거),reversal+openloop,upbeat_pluck,43,ep18,,,,,,,10장면 3~5초 컷 · 2차/3차 후킹 · 댓글 키워드 '코'
+2026-11-13,ep19,혈압약과 보험 (포기·숨김 손해),note_light,sunhi(여),fast(공백제거),loss+reversal+openloop,upbeat_pluck,40,ep19,,,,,,,새 이탈방지 구조 · 댓글 키워드 '혈압'
