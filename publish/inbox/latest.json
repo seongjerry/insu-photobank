@@ -1,31 +1,5 @@
 {
- "checked_at": 1794442237,
+ "checked_at": 1794528617,
  "ok": true,
- "messages": [
-  {
-   "date": 1794358949,
-   "text": "",
-   "reply_to": ""
-  },
-  {
-   "date": 1794358949,
-   "text": "",
-   "reply_to": ""
-  },
-  {
-   "date": 1794358949,
-   "text": "",
-   "reply_to": ""
-  },
-  {
-   "date": 1794358950,
-   "text": "",
-   "reply_to": ""
-  },
-  {
-   "date": 1794441340,
-   "text": "승인",
-   "reply_to": ""
-  }
- ]
+ "messages": []
 }
