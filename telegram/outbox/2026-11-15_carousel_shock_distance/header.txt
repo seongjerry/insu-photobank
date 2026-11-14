@@ -1,0 +1,6 @@
+[insu_magazine] [일 · 진지] 부모님 댁, 큰 병원까지 차로 몇 분 걸리세요?
+오늘 19:00 게시 추천
+주제 선정 이유: 국내 심장성 쇼크 8만263명 전국 분석, 병원까지 60분 초과 지역 원내 사망률 38.8% vs 10분 미만 29.6%(보정 1.51배). 한파 시작 시기 + 부모님 거주지라는 '나 얘기' 프레임
+출처: https://pubmed.ncbi.nlm.nih.gov/42565652/ (Critical Care Medicine, Geographic Access to Care and Mortality in Cardiogenic Shock)
+출처: https://www.kdca.go.kr/bbs/kdca/42/240081/download.do (질병관리청 심뇌혈관질환 조기증상·119 대응 수칙)
+참고: 관찰연구(지역 평균 이동시간 기준)라 인과 단정 없이 고지문 포함
