@@ -47920,8 +47920,427 @@
    "page": "https://pixabay.com/photos/massage-therapy-essential-oils-1612308/",
    "provider": "pixabay",
    "added": "2026-11-08"
+  },
+  {
+   "id": "pixabay_5021084",
+   "slug": "sleep",
+   "ko": [
+    "수면",
+    "불면",
+    "잠",
+    "침대",
+    "밤"
+   ],
+   "query": "asian woman sleeping bed",
+   "path": "photos/sleep/pixabay_5021084.jpg",
+   "w": 1280,
+   "h": 848,
+   "alt": "dogs, animals, dog, animal, pets, nature, pet, mammals",
+   "credit": "falellorente",
+   "page": "https://pixabay.com/photos/dogs-animals-dog-pets-mammals-5021084/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_10283015",
+   "slug": "hospital",
+   "ko": [
+    "병원",
+    "진료",
+    "의사",
+    "검진"
+   ],
+   "query": "asian doctor patient consultation",
+   "path": "photos/hospital/pixabay_10283015.jpg",
+   "w": 1280,
+   "h": 715,
+   "alt": "ai generated, psychologist, woman, therapy, office, session, counseling, client, notes, bookshelf, doctor, interior, professional, comfortable, personal, treatment, psychology, meeting, analysis, license",
+   "credit": "Norman_Gil",
+   "page": "https://pixabay.com/photos/ai-generated-psychologist-woman-10283015/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_10566839",
+   "slug": "hospital",
+   "ko": [
+    "병원",
+    "진료",
+    "의사",
+    "검진"
+   ],
+   "query": "hospital corridor",
+   "path": "photos/hospital/pixabay_10566839.jpg",
+   "w": 1280,
+   "h": 714,
+   "alt": "wheelchair, hand, hospital, hallway, healthcare, mobility, patient, medical, recovery, tire, wheel, grip, indoors, support, rehab, independence, transport, strength, access, blurred",
+   "credit": "AminRajput21",
+   "page": "https://pixabay.com/photos/wheelchair-hand-hospital-hallway-10566839/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_818378",
+   "slug": "hospital",
+   "ko": [
+    "병원",
+    "진료",
+    "의사",
+    "검진"
+   ],
+   "query": "medical checkup asian",
+   "path": "photos/hospital/pixabay_818378.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "pulse, hand, health care workers, doctor, medical care, medicine, medical intern, close, up, zoom, white coat, white, skin color, asia, japanese, multiple, at hand, pulse, pulse, pulse, doctor, doctor, doctor, doctor, doctor",
+   "credit": "backy3723",
+   "page": "https://pixabay.com/photos/pulse-hand-health-care-workers-818378/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_3358873",
+   "slug": "exercise",
+   "ko": [
+    "헬스",
+    "근력",
+    "스트레칭",
+    "요가"
+   ],
+   "query": "asian senior stretching",
+   "path": "photos/exercise/pixabay_3358873.jpg",
+   "w": 1280,
+   "h": 897,
+   "alt": "skin, eye, iris, blue, older, folds, wrinkled skin, man, face, portrait, human, old, green, eyebrow, lid, people, character, view, focus, focused, pupil, eyesight, lens, visually, watch, look at, see, vision, visionary, skin, eye, eye, eye, eye, eye, man, man, human, old, people, people, people",
+   "credit": "analogicus",
+   "page": "https://pixabay.com/photos/skin-eye-iris-blue-older-folds-3358873/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_7392271",
+   "slug": "exercise",
+   "ko": [
+    "헬스",
+    "근력",
+    "스트레칭",
+    "요가"
+   ],
+   "query": "dumbbell home workout",
+   "path": "photos/exercise/pixabay_7392271.jpg",
+   "w": 1280,
+   "h": 854,
+   "alt": "sports, dumbbell, training, fitness, power, exercises, strength",
+   "credit": "Bna55",
+   "page": "https://pixabay.com/photos/sports-dumbbell-training-fitness-7392271/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_2743994",
+   "slug": "stress",
+   "ko": [
+    "스트레스",
+    "우울",
+    "피로",
+    "번아웃"
+   ],
+   "query": "stressed asian man",
+   "path": "photos/stress/pixabay_2743994.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "clock, jump, hurry, alarm clock, time, hop, man, stumble, time scarcity, running out, haste, hustle and bustle, time conversion, timeskip, clock, clock, clock, clock, clock, jump, hurry, hurry, alarm clock, time, time",
+   "credit": "Myriams-Fotos",
+   "page": "https://pixabay.com/photos/clock-jump-hurry-alarm-clock-time-2743994/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_3008031",
+   "slug": "dementia",
+   "ko": [
+    "치매",
+    "기억",
+    "간병",
+    "요양"
+   ],
+   "query": "elderly confused window",
+   "path": "photos/dementia/pixabay_3008031.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "artist, pen, painting, man, elderly, glasses, craftsman, traditional, tradition, artistic, culture, painter, drawing, asian, laos, asia, artist, artist, artist, artist, artist, pen, painting, painting, culture, culture, painter, painter, drawing, drawing, drawing",
+   "credit": "duongtoan",
+   "page": "https://pixabay.com/photos/artist-pen-painting-man-elderly-3008031/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_5096377",
+   "slug": "cleaning",
+   "ko": [
+    "청소",
+    "살림",
+    "세탁",
+    "정리",
+    "곰팡이"
+   ],
+   "query": "cleaning home spray cloth",
+   "path": "photos/cleaning/pixabay_5096377.jpg",
+   "w": 1280,
+   "h": 851,
+   "alt": "chore, clean, cleaner, cleaning, cleanliness, cleanness, cleanser, clear, dirt, dirty, disinfect, disinfectant, domestic, house, household, housework, rubber, sanitary, sanitize, scrubbing, shine, soap, sponge, supplies, supply, cleaner, cleaner, sponge, sponge, sponge, sponge, sponge",
+   "credit": "ds_30",
+   "page": "https://pixabay.com/photos/chore-clean-cleaner-cleaning-5096377/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_9812424",
+   "slug": "cleaning",
+   "ko": [
+    "청소",
+    "살림",
+    "세탁",
+    "정리",
+    "곰팡이"
+   ],
+   "query": "vacuum cleaner floor",
+   "path": "photos/cleaning/pixabay_9812424.jpg",
+   "w": 1280,
+   "h": 1265,
+   "alt": "vacuum cleaner, appliance, home, cleaning, electrical appliance, modern, dust, soil, aspire, suction, clean home",
+   "credit": "IdeaTivas-TLM",
+   "page": "https://pixabay.com/photos/vacuum-cleaner-appliance-home-9812424/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_9812423",
+   "slug": "cleaning",
+   "ko": [
+    "청소",
+    "살림",
+    "세탁",
+    "정리",
+    "곰팡이"
+   ],
+   "query": "vacuum cleaner floor",
+   "path": "photos/cleaning/pixabay_9812423.jpg",
+   "w": 1280,
+   "h": 1265,
+   "alt": "vacuum cleaner, appliance, home, cleaning, electrical appliance, modern, dust, soil, aspire, suction, clean home",
+   "credit": "IdeaTivas-TLM",
+   "page": "https://pixabay.com/photos/vacuum-cleaner-appliance-home-9812423/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_344231",
+   "slug": "appliance",
+   "ko": [
+    "가전",
+    "가습기",
+    "공기청정기",
+    "전기",
+    "제품"
+   ],
+   "query": "electric heater room",
+   "path": "photos/appliance/pixabay_344231.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "power plant, conducting, electronic, old, means, inspector, power plant, power plant, power plant, power plant, power plant, electronic, electronic, electronic",
+   "credit": "Bergadder",
+   "page": "https://pixabay.com/photos/power-plant-conducting-electronic-344231/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_2139278",
+   "slug": "energy",
+   "ko": [
+    "전기요금",
+    "가스요금",
+    "에너지",
+    "절약",
+    "계량기"
+   ],
+   "query": "energy bill paper",
+   "path": "photos/energy/pixabay_2139278.jpg",
+   "w": 1280,
+   "h": 890,
+   "alt": "hummingbird, bird, trochilidae, flying, plumage, colorful, iridescent, bill, wings, flight, flying bird, ave, avian, ornithology, birdwatching, nature, animal, animal world",
+   "credit": "Nicman",
+   "page": "https://pixabay.com/photos/hummingbird-bird-trochilidae-flying-2139278/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_1112920",
+   "slug": "saving",
+   "ko": [
+    "생활비",
+    "절약",
+    "가계부",
+    "장보기",
+    "할인"
+   ],
+   "query": "receipt calculator household",
+   "path": "photos/saving/pixabay_1112920.jpg",
+   "w": 1280,
+   "h": 851,
+   "alt": "accounting, flash drive, keyboard, mouse, office, paperwork, calculator, desk, business, stapler, bookkeeper, bookkeeping, work, workspace, blue business, blue office, blue work, blue desk, blue company, blue keyboard, blue accounting, accounting, accounting, bookkeeper, bookkeeping, bookkeeping, bookkeeping, bookkeeping, bookkeeping",
+   "credit": "cloudhoreca",
+   "page": "https://pixabay.com/photos/accounting-flash-drive-keyboard-1112920/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_10380240",
+   "slug": "car",
+   "ko": [
+    "자동차",
+    "운전",
+    "겨울철운전",
+    "주차",
+    "연비"
+   ],
+   "query": "gas station fuel",
+   "path": "photos/car/pixabay_10380240.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "gas station, red car, fuel nozzle, person, hand, transportation, gasoline, energy, fueling, driver, vehicle, economy, cost, gas pump nozzle, full tank, mobility, insertion, pump handle, automobile",
+   "credit": "erwinbosman",
+   "page": "https://pixabay.com/photos/gas-station-red-car-fuel-nozzle-10380240/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_9865142",
+   "slug": "holiday",
+   "ko": [
+    "명절",
+    "크리스마스",
+    "연말",
+    "선물",
+    "새해"
+   ],
+   "query": "new year calendar",
+   "path": "photos/holiday/pixabay_9865142.jpg",
+   "w": 1280,
+   "h": 880,
+   "alt": "sylvester, new year's eve, new beginning, change, resolutions, new year's day, the end, greeting, year, 2025, 2026, future, map, congratulations, happy, new, signpost",
+   "credit": "hkama",
+   "page": "https://pixabay.com/photos/sylvester-new-years-eve-9865142/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_10381601",
+   "slug": "kids_school",
+   "ko": [
+    "아이",
+    "학교",
+    "수능",
+    "육아",
+    "공부"
+   ],
+   "query": "exam pencil paper",
+   "path": "photos/kids_school/pixabay_10381601.jpg",
+   "w": 1280,
+   "h": 1280,
+   "alt": "computer, education, assignment, paper, pencil, desk, study, keyboard, mouse, office, learning, exam, office supplies, teacher, icon, reading, programming, workspace, analysis, checking",
+   "credit": "blink_exam",
+   "page": "https://pixabay.com/photos/computer-education-assignment-paper-10381601/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_7817318",
+   "slug": "japan_travel",
+   "ko": [
+    "일본",
+    "일본여행",
+    "도쿄",
+    "오사카",
+    "교토",
+    "후쿠오카",
+    "삿포로"
+   ],
+   "query": "japan train station",
+   "path": "photos/japan_travel/pixabay_7817318.jpg",
+   "w": 1280,
+   "h": 871,
+   "alt": "train, local railway, diesel train, nature, winter, snow, early morning, cold, mist, tohoku japan",
+   "credit": "Kanenori",
+   "page": "https://pixabay.com/photos/train-local-railway-diesel-train-7817318/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_10164319",
+   "slug": "japan_travel",
+   "ko": [
+    "일본",
+    "일본여행",
+    "도쿄",
+    "오사카",
+    "교토",
+    "후쿠오카",
+    "삿포로"
+   ],
+   "query": "japanese ramen shop",
+   "path": "photos/japan_travel/pixabay_10164319.jpg",
+   "w": 1280,
+   "h": 1280,
+   "alt": "ramen, noodles, soup, food, chopsticks, pork, spring onions, hot, wooden table, steam, delicious, asian, lunch, traditional, delicious noodles, large bowl, unique, serving style, food decoration, ai generated",
+   "credit": "FNur99",
+   "page": "https://pixabay.com/photos/ramen-noodles-soup-food-chopsticks-10164319/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_1050828",
+   "slug": "overseas_travel",
+   "ko": [
+    "해외여행",
+    "동남아",
+    "유럽",
+    "휴양지",
+    "베트남",
+    "태국"
+   ],
+   "query": "vietnam beach",
+   "path": "photos/overseas_travel/pixabay_1050828.jpg",
+   "w": 1280,
+   "h": 854,
+   "alt": "ham ninh, vietnam, jetty, sunrise, phu quoc, morning, seascape, landscape, nature, beach, travel, sea, holiday, colorful, scenic, tourism, ocean, outdoor, vacation, summer, pier, vietnam, vietnam, vietnam, vietnam, vietnam, sunrise, phu quoc, morning, nature, beach, pier",
+   "credit": "quangle",
+   "page": "https://pixabay.com/photos/ham-ninh-vietnam-jetty-sunrise-1050828/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_1400082",
+   "slug": "overseas_travel",
+   "ko": [
+    "해외여행",
+    "동남아",
+    "유럽",
+    "휴양지",
+    "베트남",
+    "태국"
+   ],
+   "query": "tropical resort pool",
+   "path": "photos/overseas_travel/pixabay_1400082.jpg",
+   "w": 1280,
+   "h": 717,
+   "alt": "resort, pool, tropical, architecture, gazebo, summer, water, swimming, vacation, blue, swimming pool, pool water, leisure, travel, palm trees, sky, clouds, outdoors, relax, poolside, holiday, fun, nature, blue sky, lifestyle",
+   "credit": "Michelle-Maria",
+   "page": "https://pixabay.com/photos/resort-pool-tropical-architecture-1400082/",
+   "provider": "pixabay",
+   "added": "2026-11-15"
   }
  ],
- "updated": "2026-11-08 23:27",
- "count": 2396
+ "updated": "2026-11-15 23:44",
+ "count": 2417
 }
