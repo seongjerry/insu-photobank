@@ -7,6 +7,10 @@
 ## 0. 작업 공간 준비 (모든 예약 작업 공통)
 1. 저장소 `seongjerry/insu-photobank` 가 `/home/claude/insu-photobank` 에 없으면 add_repo(owner=seongjerry, repo=insu-photobank, access=push) 후 안내대로 clone. 있으면 `git pull`.
 2. 영상 제작이 필요한 작업만: 비공개 폰트 저장소도 받는다. add_repo(owner=seongjerry, repo=insu-assets, access=read) 후 안내대로 `/home/claude/insu-assets` 에 clone. 그다음 `bash generator/kit/setup.sh` (작업 폴더 /home/claude/build). insu-assets 의 파일은 절대 이 공개 저장소에 복사·커밋하지 않는다.
+   - **add_repo 도구가 없거나 clone 이 막힐 때 (2026-11-17 확인: 예약 작업 세션에는 add_repo 가 없다):** Google Drive 도구로 폰트를 받는다.
+     - 오이냉체: Drive 검색 `title contains 'CUCUMBER SALAD'` (EARLYFONT_CUCUMBER SALAD.zip, 본부장님 드라이브에 공유된 파일) → download_file_content → 스크래치 폴더에 unzip → `EF_cucumbersalad(ttf).ttf` 를 `/home/claude/build/fonts/EF_cucumbersalad.ttf` 로 복사.
+     - 차이 라이징체: Drive 검색 `title contains 'Rising'` → 있으면 `Rising_CHAI_Light.ttf`, `Rising_CHAI_Extra_Bold.ttf` 를 같은 폴더로. 없으면 Paperlogy 900 대체(자동).
+     - 받은 폰트 파일은 스크래치·build 폴더에만 두고 저장소에는 절대 커밋하지 않는다.
 3. 커밋은 `git -c user.name=Claude -c user.email=noreply@anthropic.com commit` 으로, 메시지 끝에 시스템이 안내한 Co-Authored-By 줄을 붙인다.
 4. GitHub API는 `gh api` REST만 사용 (GraphQL 불가). 워크플로 실행: `gh api -X POST repos/seongjerry/insu-photobank/actions/workflows/<파일>/dispatches -f ref=main [-f 'inputs[x]=y']`.
 5. 공개 저장소다. 개인정보·비밀값을 파일이나 로그에 남기지 않는다.
@@ -145,5 +149,6 @@
 ## 6. 알려진 제한 (리포트에 반영)
 - 인스타 조회·도달·저장·공유: 메타 앱에 instagram_manage_insights 권한이 없어 지금은 좋아요·댓글만 수집됨.
 - 유튜브 통계: 업로드 토큰에 youtube.readonly 범위가 없어 수집 안 됨 (OAuth Playground에서 youtube.upload + youtube.readonly 로 토큰 재발급하면 해결).
+- 유튜브 업로드 토큰 만료 (2026-11-16 17:20 KST부터 invalid_grant): 토큰을 받은 11/9 무렵부터 정확히 7일 만에 끊겼다. Google Cloud 의 OAuth 동의 화면이 "테스트" 상태면 refresh token 이 7일마다 만료된다. 해결은 본부장님만 가능: ① console.cloud.google.com → API 및 서비스 → OAuth 동의 화면(Google 인증 플랫폼 → 대상) → "앱 게시"로 "프로덕션" 전환(미인증 경고가 떠도 본인 계정은 "고급 → 이동"으로 진행 가능) ② 그다음 OAuth Playground 로 youtube.upload + youtube.readonly 토큰 재발급 ③ GitHub Secrets YT_REFRESH_TOKEN 교체. 프로덕션 전환 없이 재발급만 하면 7일 뒤 또 끊긴다. Claude 는 GitHub Secrets 와 Google 로그인에 접근할 수 없다. 토큰이 끊긴 동안 인스타는 정상 게시되고 유튜브만 실패한다.
 - 유튜브 API 미심사: 업로드 영상이 비공개로 고정될 수 있음 → 스튜디오에서 공개 전환 필요.
 - 게시 정시성: Supabase `bsn_publish_tick` 크론(publish/supabase_cron.sql)이 없으면 GitHub 예약 실행이 늦어질 수 있음.
