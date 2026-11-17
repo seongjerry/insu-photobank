@@ -1,6 +1,6 @@
 {
  "date": "2026-11-17",
- "status": "proposed",
+ "status": "approved",
  "proposed_at": "2026-11-17T08:35:00+09:00",
  "note": "소스폴더(Drive)에 11/15 이후 새 자료 없음. 11/14~16 사흘 연속 승인 없이 쉬어서 13:00은 시기성 있는 새 주제(11월 연말정산 미리보기 시즌, topic_pool 시기 메모의 '연말정산 보장성 보험료 세액공제')로 교체. 18:00은 requests.md 마지막 남은 '알릴의무 위반 해지 통보 대응'(노트 #6) 유지. 간병인사용일당 기준 차이는 수정 요청 시 대체 후보. 포맷: 최근 제작 ep17·ep18 note_dark, ep19 note_light, 이번 주 카톡·잠금 0편 → 13:00 lock, 18:00 note_dark. 목소리: 직전 hyunsu·sunhi → 13:00 sunhi(여), 18:00 hyunsu(남). 훅: 직전 ep18·ep19 반전형 2연속 → 13:00 숫자형(손실 톤), 18:00 비밀형(금지 톤). 비노: 최근 7일 wow·check 피해 13:00 money(마지막 정리 장면, 잠금화면형이라 마지막만), 18:00 stop. CTA는 주간 리포트 방향대로 '가족에게 보내기·저장'. c08(청약철회)과 주제 겹치지 않음.",
  "slots": [
@@ -33,7 +33,7 @@
     "https://www.taxwatch.co.kr/article/tax/2025/11/05/0001 (국세청 연말정산 미리보기 서비스, 매년 11월 초 개통)"
    ],
    "note": "제작 당일 소득세법 제59조의4·국세청 연말정산 안내 원문으로 한도·공제율과 계약자 요건 재확인. 직계존속 나이는 만 60세 이상(공식 기준)만 사용. 올해 미리보기 개통일은 홈택스 공지로 확인 후 표기",
-   "approved": null,
+   "approved": true,
    "modify": ""
   },
   {
@@ -66,8 +66,13 @@
     "https://www.lawtimes.co.kr/news/articleViewAmp.html?idxno=219558",
     "https://wikidocs.net/blog/@Insight_Lab/24704/"
    ],
-   "approved": null,
+   "approved": true,
    "modify": ""
   }
- ]
+ ],
+ "approval": {
+  "text": "승인",
+  "at": "2026-11-17T08:27:25+09:00",
+  "note": "주제 제안 메시지가 실제로 08:26에 전송되어 1분 뒤 답장. 두 슬롯 승인으로 처리"
+ }
 }
