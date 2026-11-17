@@ -150,5 +150,6 @@
 - 인스타 조회·도달·저장·공유: 메타 앱에 instagram_manage_insights 권한이 없어 지금은 좋아요·댓글만 수집됨.
 - 유튜브 통계: 업로드 토큰에 youtube.readonly 범위가 없어 수집 안 됨 (OAuth Playground에서 youtube.upload + youtube.readonly 로 토큰 재발급하면 해결).
 - 유튜브 업로드 토큰 만료 (2026-11-16 17:20 KST부터 invalid_grant): 토큰을 받은 11/9 무렵부터 정확히 7일 만에 끊겼다. Google Cloud 의 OAuth 동의 화면이 "테스트" 상태면 refresh token 이 7일마다 만료된다. 해결은 본부장님만 가능: ① console.cloud.google.com → API 및 서비스 → OAuth 동의 화면(Google 인증 플랫폼 → 대상) → "앱 게시"로 "프로덕션" 전환(미인증 경고가 떠도 본인 계정은 "고급 → 이동"으로 진행 가능) ② 그다음 OAuth Playground 로 youtube.upload + youtube.readonly 토큰 재발급 ③ GitHub Secrets YT_REFRESH_TOKEN 교체. 프로덕션 전환 없이 재발급만 하면 7일 뒤 또 끊긴다. Claude 는 GitHub Secrets 와 Google 로그인에 접근할 수 없다. 토큰이 끊긴 동안 인스타는 정상 게시되고 유튜브만 실패한다.
+  - **대체 경로 (2026-11-17 사용):** vidIQ 도구에 @보험비밀노트 채널이 연결돼 있다. vidiq_video_upload(url=raw.githubusercontent.com 의 publish/media/epNN.mp4) → vidiq_social_post_draft_create(YOUTUBE, title=yt_title, text=caption, privacyStatus=public, publishAt=게시 시각) → 본부장님 확인 후 vidiq_social_post_publish. 올린 뒤 queue 의 yt_status 를 posted 로 바꾸고 yt_id 를 적어 GitHub 워크플로가 다시 올리지 않게 한다.
 - 유튜브 API 미심사: 업로드 영상이 비공개로 고정될 수 있음 → 스튜디오에서 공개 전환 필요.
 - 게시 정시성: Supabase `bsn_publish_tick` 크론(publish/supabase_cron.sql)이 없으면 GitHub 예약 실행이 늦어질 수 있음.
