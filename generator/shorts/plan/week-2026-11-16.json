@@ -1,0 +1,451 @@
+{
+ "week_start": "2026-11-16",
+ "status": "proposed",
+ "proposed_at": "2026-11-17T14:40:00+09:00",
+ "deadline": "2026-11-18T12:00:00+09:00",
+ "need_reels": 5,
+ "need_carousels": 2,
+ "note": "11월 17일(화) 수동 실행. 남은 날이 수~일이라 릴스 5편, 캐러셀 2편(수·금)만 고른다. 바닥선 254(11/9~13 게시 12편 중간값).",
+ "reels": [
+  {
+   "no": 1,
+   "territory": "자동차 사고·합의금",
+   "new_territory": true,
+   "concept": "비교형(같은 사고 다른 결과)",
+   "topic": "교통사고 경상환자 8주 초과 치료 검토 절차(9월 10일 시행)",
+   "hook": "똑같이 뒤에서 받혔는데, 한 사람은 8주가 지나자 치료를 계속 받을지 심사를 받았습니다",
+   "why_now": "9월 10일 시행된 지 두 달이라 실제로 심사 안내를 받는 사람이 나오는 시기입니다",
+   "score": 9,
+   "product": false,
+   "format": "note_dark",
+   "voice": "ko-KR-HyunsuMultilingualNeural",
+   "outline": [
+    "0초: 좌우 분할 화면에 '8주 전 끝' 과 '8주 뒤 심사' 두 결과",
+    "훅 다음 질문: 내 사고는 어느 쪽일까요",
+    "대상: 상해 12~14급(염좌·타박상) 경상환자",
+    "8주를 넘기면 자동차손해배상진흥원이 치료 필요성 검토, 진단서 등 서류 제출",
+    "서류 발급비와 검토가 끝날 때까지의 치료비는 보험사 부담",
+    "예외: 임산부, 만 7세 이하. 결과에 이의 제기 가능",
+    "마무리: 사고 난 가족에게 보내기"
+   ],
+   "sources": [
+    "https://www.dailymedi.com/news/news_view.php?wr_id=939072",
+    "https://biz.sbs.co.kr/amp/article/20000326547"
+   ]
+  },
+  {
+   "no": 2,
+   "territory": "자동차 사고·합의금",
+   "new_territory": true,
+   "concept": "판결 읽어주기",
+   "topic": "쌍방과실 사고 자차 자기부담금, 상대 과실만큼 청구 가능 (대법원 2022다287284)",
+   "hook": "자차 수리하면서 낸 자기부담금 50만원, 대법원이 상대 과실만큼은 돌려받을 수 있다고 했습니다",
+   "why_now": "올해 1월 대법원 판결인데 사고 처리 때 여전히 안내받지 못하는 내용입니다",
+   "score": 9,
+   "product": false,
+   "format": "note_dark",
+   "voice": "ko-KR-HyunsuMultilingualNeural",
+   "outline": [
+    "0초: 판결문 화면과 '자기부담금 50만원'",
+    "쌍방과실 사고, 내 보험으로 먼저 수리(선처리)",
+    "1·2심은 내가 부담, 대법원이 뒤집음",
+    "내 과실만큼은 내가, 상대 과실만큼은 상대와 상대 보험사에 따로 청구",
+    "지금 할 일: 과실비율 확정서와 자기부담금 영수증 챙기기",
+    "마무리: 올해 사고 났던 사람에게 보내기"
+   ],
+   "sources": [
+    "https://www.lawtimes.co.kr/news/articleView.html?idxno=215447",
+    "https://www.heraldk.com/article/2026070520051393094"
+   ]
+  },
+  {
+   "no": 3,
+   "territory": "사회초년생 첫 차·가족 운전",
+   "new_territory": true,
+   "concept": "영수증 두 장 비교",
+   "topic": "자동차보험 운전경력 인정제도(부모 보험 종피보험자 최대 3년)",
+   "hook": "28살 첫 차 보험료 133만원이 71만6천원이 됐습니다. 엄마 보험에 이름이 올라가 있었거든요",
+   "why_now": "금융당국이 이달부터 가입 화면에 경력 인정 안내를 띄우기 시작했고, 수능 뒤 면허 시즌입니다",
+   "score": 9,
+   "product": false,
+   "format": "receipt",
+   "voice": "ko-KR-SunHiNeural",
+   "outline": [
+    "0초: 영수증 두 장 133만원과 71만6천원",
+    "부모 보험에 운전자로 등록돼 있던 기간을 최대 3년 인정",
+    "무사고 경력은 등록된 모두가 사고 없을 때",
+    "군 운전병, 장기렌터카, 법인 운전직, 해외 가입 경력도 인정",
+    "이미 가입했어도 나중에 신청하면 환급",
+    "마무리: 첫 차 사는 자녀에게 보내기"
+   ],
+   "sources": [
+    "https://news.bizwatch.co.kr/article/finance/2026/11/06/0020",
+    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1433339",
+    "https://biz.sbs.co.kr/amp/article/20000343562"
+   ]
+  },
+  {
+   "no": 4,
+   "territory": "사회초년생 첫 차·가족 운전",
+   "new_territory": true,
+   "concept": "질문 판정형(되나요 안 되나요)",
+   "topic": "운전자 범위·연령 한정 특약 밖의 가족이 운전했을 때",
+   "hook": "면허 딴 아들이 아빠 차를 몰다 사고를 냈습니다. 보험 처리, 될까요 안 될까요",
+   "why_now": "수능이 끝나면 면허를 따고 부모 차를 처음 모는 시기입니다",
+   "score": 8,
+   "product": false,
+   "format": "quiz",
+   "voice": "ko-KR-InJoonNeural",
+   "outline": [
+    "0초: 사고 장면과 '된다 / 안 된다'",
+    "증권의 운전자 범위(1인·부부·가족)와 연령 한정 확인",
+    "조건 밖 사람이 운전하면 보상을 못 받을 수 있음",
+    "운전 전에 범위를 넓히거나 단기 운전자 확대 특약을 넣는 방법",
+    "지금 할 일: 보험사 앱에서 운전자 범위 두 줄 확인",
+    "마무리: 자녀 있는 집에 보내기"
+   ],
+   "sources": [
+    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1433339",
+    "https://news.bizwatch.co.kr/article/finance/2026/11/06/0020"
+   ]
+  },
+  {
+   "no": 5,
+   "territory": "실손 세대 전환",
+   "new_territory": true,
+   "concept": "A와 B 계산 비교",
+   "topic": "1·2세대 실손 선택형 할인특약과 5세대 전환 할인(11월 시행)",
+   "hook": "2013년 3월 전에 든 실손보험, 11월부터 보험료를 줄이는 길이 두 가지 생겼습니다",
+   "why_now": "11월 시행이라 지금 안내 문자와 전화를 받는 사람이 많습니다. 제작 전 보험사별 개시 여부를 다시 확인합니다",
+   "score": 9,
+   "product": false,
+   "format": "note_dark",
+   "voice": "ko-KR-HyunsuMultilingualNeural",
+   "outline": [
+    "0초: 좌우 분할 'A 보장 일부 빼기' 와 'B 5세대로 갈아타기'",
+    "대상: 재가입 조건 없는 1·2세대 약 1,700만 명",
+    "A: 도수·체외충격파·비급여 주사·비급여 MRI 중 뺄 것을 고르고 할인",
+    "B: 5세대로 바꾸면 새 보험료를 3년간 50% 할인, 비급여 자기부담 중증 30% 비중증 50%",
+    "B는 3개월 안 조건 없이 철회, 6개월 안은 보험금 받은 적 없을 때 철회",
+    "마무리: 병원을 얼마나 가는지에 따라 답이 다르다, 부모님께 보내기"
+   ],
+   "sources": [
+    "https://marketin.edaily.co.kr/News/ReadE?newsId=03503046645616856",
+    "https://news.jkn.co.kr/post/1096861"
+   ]
+  },
+  {
+   "no": 6,
+   "territory": "지자체 시민안전보험",
+   "new_territory": true,
+   "concept": "속보형(이번 달 금감원 안내 풀이)",
+   "topic": "지자체 시민안전보험 자동 가입과 직접 청구",
+   "hook": "보험료를 한 번도 안 냈는데 가입돼 있는 보험이 있습니다. 금감원이 이번 달에 따로 안내했습니다",
+   "why_now": "금감원이 11월 1일에 청구 방법을 안내했습니다",
+   "score": 9,
+   "product": false,
+   "format": "lock",
+   "voice": "ko-KR-SunHiNeural",
+   "outline": [
+    "0초: 알림 화면 '보험료 0원, 가입 완료'",
+    "주민등록만 돼 있으면 지자체가 보험료를 내고 자동 가입",
+    "재난·화재·폭발·붕괴·대중교통 사고의 사망·후유장해",
+    "가만히 있으면 안 나옴, 사고일부터 3년 안에 직접 청구",
+    "재난보험24에서 우리 동네 조회, 시·도와 시·군·구 둘 다 확인",
+    "마무리: 가족 단톡방에 보내기"
+   ],
+   "sources": [
+    "https://khan.co.kr/article/202611011555001",
+    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1432916"
+   ]
+  },
+  {
+   "no": 7,
+   "territory": "겨울 감염병 진료비",
+   "new_territory": true,
+   "concept": "영수증형",
+   "topic": "독감 진료비가 병원마다 다른 이유와 비급여 수액",
+   "hook": "같은 독감인데 영수증은 3만9천원과 27만5천원이었습니다",
+   "why_now": "독감 철이고, 11월 실손 할인특약에서 빼는 항목에 비급여 주사가 들어 있습니다",
+   "score": 8,
+   "product": false,
+   "format": "receipt",
+   "voice": "ko-KR-HyunsuMultilingualNeural",
+   "outline": [
+    "0초: 영수증 두 장",
+    "차이는 먹는 약이냐 비급여 수액 주사냐",
+    "독감 비급여 주사 실손 지급이 3년 새 38억에서 1,253억으로",
+    "내 실손이 몇 세대인지에 따라 돌려받는 돈이 다름",
+    "지금 할 일: 수납 전에 급여·비급여를 묻기",
+    "마무리: 아이 키우는 집에 보내기"
+   ],
+   "sources": [
+    "https://www.heraldk.com/article/2026020418141116112",
+    "https://v.daum.net/v/20251116153649501"
+   ]
+  },
+  {
+   "no": 8,
+   "territory": "뉴스·사건 해설(집 화재)",
+   "new_territory": true,
+   "concept": "화제 사건에 계산 얹기",
+   "topic": "아파트 화재가 윗집으로 번졌을 때 수리비와 배상",
+   "hook": "일요일 밤 15층 아파트 10층에서 난 불이 윗집까지 태웠습니다. 수리비는 누가 낼까요",
+   "why_now": "11월 15일 경산 아파트 화재가 이번 주 뉴스에 나왔습니다. 제작 전 원인 조사 결과와 법 조문을 다시 확인합니다",
+   "score": 8,
+   "product": false,
+   "format": "note_dark",
+   "voice": "ko-KR-HyunsuMultilingualNeural",
+   "outline": [
+    "0초: 뉴스 자막 형태의 사실 한 줄(지역명과 숫자만, 당사자 특정 없음)",
+    "불이 난 집, 번진 집, 대피한 집의 비용을 나눠 보기",
+    "실수로 낸 불도 이웃 피해를 물어 줘야 할 수 있음(실화책임법)",
+    "아파트 단체 화재보험과 우리 집 화재보험의 역할 차이",
+    "지금 할 일: 관리비 고지서의 화재보험 항목 확인",
+    "마무리: 저장"
+   ],
+   "sources": [
+    "https://segye.com/newsView/20261116503549"
+   ]
+  },
+  {
+   "no": 9,
+   "territory": "노후·치매 재산",
+   "new_territory": true,
+   "concept": "사연형(각색)",
+   "topic": "치매안심재산관리서비스(치매 공공신탁) 시범사업",
+   "hook": "부모님이 치매 진단을 받으면 통장은 누가 관리할까요. 4월부터 나라가 맡아 주는 길이 생겼습니다",
+   "why_now": "4월 22일 시범사업 시작 뒤 신청이 늘고 있고, 연말 가족 모임 전에 이야기할 주제입니다",
+   "score": 8,
+   "product": false,
+   "format": "note_light",
+   "voice": "ko-KR-InJoonNeural",
+   "outline": [
+    "0초: 통장과 '누가 관리하죠?'",
+    "치매 환자 재산은 약 154조원으로 추정",
+    "국민연금공단이 맡아 관리, 현금성 자산 최대 10억원",
+    "기초연금 받는 65세 이상은 무료, 그 밖에는 연 0.5%",
+    "보험은 따로: 지정대리청구인을 미리 정해 둬야 청구 가능",
+    "마무리: 형제 단톡방에 보내기"
+   ],
+   "sources": [
+    "https://m.seoul.co.kr/news/2026/04/21/20260421500113",
+    "https://www.heraldk.com/article/2026042020424751943",
+    "https://www.newsis.com/view/NISX20260707_0003698526?pc_view=1"
+   ]
+  },
+  {
+   "no": 10,
+   "territory": "노후·치매 재산",
+   "new_territory": true,
+   "concept": "계산형",
+   "topic": "사망보험금 유동화 전 생명보험사 확대(2026년 1월)",
+   "hook": "종신보험 사망보험금, 살아 있을 때 나눠 받는 길이 올해 1월부터 모든 생명보험사로 넓어졌습니다",
+   "why_now": "연말에 노후 자금을 점검하는 시기입니다. 신청 조건 숫자는 제작 전 금융위 자료로 확인합니다",
+   "score": 7,
+   "product": false,
+   "format": "lock",
+   "voice": "ko-KR-InJoonNeural",
+   "outline": [
+    "0초: '사망보험금을 생전에'",
+    "작년 10월 일부 회사에서 시작, 올해 1월 전 생명보험사로",
+    "받는 만큼 남는 사망보험금은 줄어듦",
+    "신청 조건과 비율(제작 전 확인한 숫자만)",
+    "지금 할 일: 부모님 종신보험 증권 꺼내 보기",
+    "마무리: 저장"
+   ],
+   "sources": [
+    "https://news.bizwatch.co.kr/article/finance/2025/12/30/0005",
+    "https://fsc.go.kr/no040000?cnId=3530&curPage=73"
+   ]
+  },
+  {
+   "no": 11,
+   "territory": "직장인의 돈",
+   "new_territory": true,
+   "concept": "OX 퀴즈형",
+   "topic": "출퇴근길 사고와 산재",
+   "hook": "출근길에 사고가 났습니다. 산재 신청, 될까요 안 될까요",
+   "why_now": "빙판길 출퇴근 사고가 늘어나는 계절입니다. 제작 전 근로복지공단 안내로 조건을 확인합니다",
+   "score": 7,
+   "product": false,
+   "format": "quiz",
+   "voice": "ko-KR-SunHiNeural",
+   "outline": [
+    "0초: O와 X",
+    "통상적인 경로의 출퇴근 사고는 산재 대상",
+    "경로를 벗어났을 때의 예외",
+    "자동차보험과 산재를 함께 볼 때 달라지는 점",
+    "지금 할 일: 회사가 아니라 공단에 직접 신청 가능",
+    "마무리: 동료에게 보내기"
+   ],
+   "sources": []
+  },
+  {
+   "no": 12,
+   "territory": "직장인의 돈",
+   "new_territory": true,
+   "concept": "6~9초 한 장 목록형",
+   "topic": "퇴사 뒤 멈춰 둔 개인 실손 재개 기한",
+   "hook": "사직서 내기 전에 하나만. 멈춰 둔 개인 실손보험은 퇴사 후 한 달 안에 되살려야 합니다",
+   "why_now": "연말 퇴사·이직 철입니다. 다른 분야에서 6~9초 목록형이 평소의 84배까지 나왔습니다",
+   "score": 8,
+   "product": false,
+   "format": "note_light",
+   "voice": "ko-KR-HyunsuMultilingualNeural",
+   "outline": [
+    "한 장 화면: 제목 한 줄과 3줄 목록",
+    "① 회사 단체 실손이 끝나는 날 확인",
+    "② 멈춰 둔 개인 실손은 1개월 안에 재개 신청",
+    "③ 기한을 넘기면 다시 심사",
+    "캡션에서 풀이, 저장 유도"
+   ],
+   "sources": [
+    "https://biz.sbs.co.kr/amp/article/20000203638",
+    "https://fsc.go.kr/no010103/24652?curPage=3"
+   ]
+  },
+  {
+   "no": 13,
+   "territory": "보험사와 부딪히는 순간",
+   "new_territory": false,
+   "concept": "숫자 훅 + 다크노트(기존 강점)",
+   "topic": "의료자문 뒤 보험금 부지급률",
+   "hook": "의료자문을 받은 청구 10건 중 3건은 보험금이 나오지 않았습니다",
+   "why_now": "바닥선의 6.1배가 나온 영역입니다. 생명보험사 평균 30.84%(2025년 하반기 공시)",
+   "score": 8,
+   "product": false,
+   "format": "note_dark",
+   "voice": "ko-KR-HyunsuMultilingualNeural",
+   "outline": [
+    "0초: 큰 숫자 30.84%",
+    "의료자문이 무엇인지 한 줄",
+    "1년 전 27.84%에서 올랐음",
+    "동의서에 서명하기 전에 물을 것",
+    "결과가 불리할 때: 다른 병원 자문 요청",
+    "마무리: 저장"
+   ],
+   "sources": [
+    "https://ceoscoredaily.com/page/view/2026071316470852516",
+    "https://sateconomy.co.kr/news/view/1065574628210101"
+   ]
+  },
+  {
+   "no": 14,
+   "territory": "보험사와 부딪히는 순간",
+   "new_territory": false,
+   "concept": "판결 읽어주기",
+   "topic": "직업이 바뀌면 보험사에 알려야 하는 이유 (대법원 2025다219379)",
+   "hook": "경비원으로 가입하고 8년 뒤 배에서 사고가 났습니다. 보험사는 해지를 통보했습니다",
+   "why_now": "올해 3월 대법원 판결. 오늘 올린 해지 통보 편과 소재가 가까워 하루 이상 띄웁니다",
+   "score": 7,
+   "product": false,
+   "format": "note_dark",
+   "voice": "ko-KR-InJoonNeural",
+   "outline": [
+    "0초: 연표 2014년 가입, 2022년 사고",
+    "직업을 바꾸고 알리지 않았음",
+    "2심은 보험사 패소, 대법원이 다시 보라고 돌려보냄",
+    "쟁점: 해지할 수 있는 1개월을 언제부터 세는지",
+    "지금 할 일: 직업·직무가 바뀌었으면 보험사에 알리기",
+    "마무리: 이직한 가족에게 보내기"
+   ],
+   "sources": [
+    "https://www.lawtimes.co.kr/news/articleView.html?idxno=219558",
+    "https://www.mt.co.kr/society/2026/04/19/2026041717254381212"
+   ]
+  },
+  {
+   "no": 15,
+   "territory": "수술·질병 사례의 반전",
+   "new_territory": false,
+   "concept": "랭킹형",
+   "topic": "한국인이 가장 많이 받는 수술과 보험",
+   "hook": "작년 한국인이 가장 많이 받은 수술 1위는 69만 건이었습니다. 무엇일까요",
+   "why_now": "바닥선의 2.8배가 나온 영역을 랭킹 형식으로. 2·3위 건수는 제작 전 통계연보 원문으로 확인합니다",
+   "score": 7,
+   "product": false,
+   "format": "note_light",
+   "voice": "ko-KR-SunHiNeural",
+   "outline": [
+    "0초: 3위, 2위, 1위 가림막",
+    "1위 백내장 69만 2,126건(2025년 주요수술 통계연보)",
+    "65세 이상 열 명 중 아홉 명이 겪는 질환",
+    "수술비 특약과 실손에서 다르게 보는 점",
+    "지금 할 일: 부모님 증권에서 수술비 항목 찾기",
+    "마무리: 부모님께 보내기"
+   ],
+   "sources": [
+    "https://www.ddaily.co.kr/page/view/2026083111432177458",
+    "https://www.dailymedi.com/news/news_view.php?wr_id=939978"
+   ]
+  }
+ ],
+ "carousels": [
+  {
+   "no": 1,
+   "topic": "교통사고 경상환자, 8주 뒤에 달라진 것: 대상 등급, 검토 기관, 낼 서류, 비용 부담, 예외, 이의 제기",
+   "hook": "가벼운 교통사고, 8주가 지나면 치료를 계속 받을지 심사를 받습니다",
+   "score": 9,
+   "sources": [
+    "https://www.dailymedi.com/news/news_view.php?wr_id=939072",
+    "https://biz.sbs.co.kr/amp/article/20000326547"
+   ]
+  },
+  {
+   "no": 2,
+   "topic": "우리 동네 시민안전보험 찾기: 조회 방법, 보장 항목, 청구 순서, 3년 기한, 광역·기초 중복",
+   "hook": "보험료 0원, 그런데 나도 모르게 가입된 보험",
+   "score": 9,
+   "sources": [
+    "https://khan.co.kr/article/202611011555001",
+    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1432916"
+   ]
+  },
+  {
+   "no": 3,
+   "topic": "첫 차 보험료 줄이는 경력 인정 5가지(부모 보험·군 운전병·장기렌터카·법인 운전직·해외)와 뒤늦은 환급 신청",
+   "hook": "133만원이 71만6천원으로, 자녀 첫 차 보험 들기 전에",
+   "score": 9,
+   "sources": [
+    "https://news.bizwatch.co.kr/article/finance/2026/11/06/0020",
+    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1433339"
+   ]
+  },
+  {
+   "no": 4,
+   "topic": "1·2세대 실손 11월 선택지 비교표: 선택형 할인특약과 5세대 전환, 자기부담률, 철회 3개월·6개월",
+   "hook": "옛날 실손, 11월에 생긴 두 가지 선택",
+   "score": 9,
+   "sources": [
+    "https://marketin.edaily.co.kr/News/ReadE?newsId=03503046645616856",
+    "https://news.jkn.co.kr/post/1096861"
+   ]
+  },
+  {
+   "no": 5,
+   "topic": "부모님 치매 진단 뒤 돈 문제 순서: 공공신탁 대상·한도·이용료·신청, 보험 지정대리청구",
+   "hook": "치매 진단 뒤 부모님 통장은 누가 관리하죠?",
+   "score": 8,
+   "sources": [
+    "https://m.seoul.co.kr/news/2026/04/21/20260421500113",
+    "https://www.heraldk.com/article/2026042020424751943"
+   ]
+  },
+  {
+   "no": 6,
+   "topic": "올해 연말정산에서 달라진 것: 미리보기 12월 18일까지, 자녀 교육비 소득요건 폐지, 초2 이하 예체능 학원비, 카드 공제 한도, 보장성 보험료 공제",
+   "hook": "연말정산 미리보기, 12월 18일에 닫힙니다",
+   "score": 8,
+   "sources": [
+    "https://www.korea.kr/news/policyNewsView.do?newsId=148974171"
+   ]
+  }
+ ],
+ "experiments": {
+  "design": "첫 화면을 좌우로 나눠 두 결과 숫자를 나란히 띄운다(지금은 제목 한 줄과 큰 숫자 하나)",
+  "flow": "훅 다음 문장을 '끝에서 공개' 대신 시청자에게 묻는 한 문장으로 바꾼다"
+ },
+ "selected": null,
+ "schedule": null
+}
