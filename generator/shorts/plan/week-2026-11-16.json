@@ -1,6 +1,6 @@
 {
  "week_start": "2026-11-16",
- "status": "proposed",
+ "status": "selected",
  "proposed_at": "2026-11-17T14:10:00+09:00",
  "deadline": "2026-11-18T12:00:00+09:00",
  "need_reels": 5,
@@ -446,6 +446,97 @@
   "design": "첫 화면을 좌우로 나눠 두 결과 숫자를 나란히 띄운다(지금은 제목 한 줄과 큰 숫자 하나)",
   "flow": "훅 다음 문장을 '끝에서 공개' 대신 시청자에게 묻는 한 문장으로 바꾼다"
  },
- "selected": null,
- "schedule": null
+ "selected": {
+  "reels": [
+   2,
+   6,
+   8,
+   9,
+   11
+  ],
+  "carousels": [
+   2,
+   3
+  ],
+  "reply": "릴스 2,6,8,9,11,15 캐러셀 2,3,5,6",
+  "reply_at": "2026-11-17T16:03:30+09:00",
+  "selected_at": "2026-11-18T09:15:00+09:00",
+  "note": "답장 번호가 need 보다 많아 앞에서부터 사용. 릴스 15, 캐러셀 5·6 은 예비(본부장님이 고른 것). 새 컨셉 5편 모두 총괄 지침 5장 목록에 해당."
+ },
+ "schedule": [
+  {
+   "date": "2026-11-18",
+   "day": "수",
+   "time": "13:00",
+   "reel": 8,
+   "title": "아파트 화재가 윗집으로 번졌을 때 수리비와 배상",
+   "format": "note_dark",
+   "experiment": "flow",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-19",
+   "day": "목",
+   "time": "13:00",
+   "reel": 2,
+   "title": "쌍방과실 자차 자기부담금, 상대 과실만큼 청구",
+   "format": "note_dark",
+   "experiment": "design",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-20",
+   "day": "금",
+   "time": "13:00",
+   "reel": 11,
+   "title": "출퇴근길 사고와 산재 OX",
+   "format": "quiz",
+   "experiment": "",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-21",
+   "day": "토",
+   "time": "13:00",
+   "reel": 6,
+   "title": "보험료 0원 시민안전보험 자동 가입과 직접 청구",
+   "format": "lock",
+   "experiment": "",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-22",
+   "day": "일",
+   "time": "13:00",
+   "reel": 9,
+   "title": "치매 진단 뒤 부모님 통장, 공공신탁",
+   "format": "note_light",
+   "experiment": "",
+   "status": "planned"
+  }
+ ],
+ "reserve": {
+  "reels": [
+   15
+  ],
+  "carousels": [
+   5,
+   6
+  ]
+ },
+ "carousel_schedule": [
+  {
+   "date": "2026-11-18",
+   "day": "수",
+   "carousel": 2,
+   "status": "produced",
+   "id": "c09"
+  },
+  {
+   "date": "2026-11-20",
+   "day": "금",
+   "carousel": 3,
+   "status": "planned"
+  }
+ ]
 }
