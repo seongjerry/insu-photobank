@@ -472,7 +472,10 @@
    "title": "아파트 화재가 윗집으로 번졌을 때 수리비와 배상",
    "format": "note_dark",
    "experiment": "flow",
-   "status": "planned"
+   "status": "produced",
+   "ep": "ep22",
+   "produced_at": "2026-11-18T09:35:00+09:00",
+   "timely_check": "09시 WebSearch 2회: 더 나은 시의성 주제 없음"
   },
   {
    "date": "2026-11-19",

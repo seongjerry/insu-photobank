@@ -20,3 +20,4 @@ date,id,topic,format,voice,edit,hook,bgm,length_s,utm_content,ig_3s_retention,ig
 2026-11-13,ep19,혈압약과 보험 (포기·숨김 손해),note_light,sunhi(여),fast(공백제거),loss+reversal+openloop,upbeat_pluck,40,ep19,,,,,,,새 이탈방지 구조 · 댓글 키워드 '혈압'
 2026-11-17,ep20,맞벌이 아이 보험료 계약자 명의 연말정산 공제 0원,lock,sunhi(여),fast(공백제거),number+loss+openloop,warm_piano,43,ep20,,,,,,,갈래1 · 비노 money(마지막 장면) · 댓글 키워드 '공제' · 시기성(연말정산 미리보기)
 2026-11-17,ep21,알릴의무 위반 해지 통보 대응 (노트 #6),note_dark,hyunsu(+15%),fast(공백제거),insider+ban+openloop,upbeat_pluck,51,ep21,,,,,,,갈래2 · 비노 stop(훅 장면) · 댓글 키워드 '해지' · requests.md 마지막 항목
+2026-11-18,ep22,아파트 화재 윗집 번짐 수리비·배상 (뉴스 해설),note_dark,hyunsu(+15%),fast(공백제거),news+question,upbeat_pluck,43,ep22,,,,,,,영역 뉴스·사건 해설(집 화재) · 컨셉 화제 사건에 계산 얹기 · 실험 문장 흐름(훅 다음 시청자 질문) · 비노 search(지금 할 일 장면)
