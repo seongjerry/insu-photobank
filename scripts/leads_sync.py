@@ -57,7 +57,8 @@ sent = []
 if TG_TOKEN and TG_CHAT:
     for x in rows("notified_at=is.null"):
         src = " / ".join(v for v in [x.get("utm_source"), x.get("utm_campaign"), x.get("page_topic")] if v)
-        msg = (f"📒 보험비밀노트 새 상담 신청\n"
+        head = "📗 보험위키 새 상담 신청" if x.get("page_topic") == "wiki" else "📒 보험비밀노트 새 상담 신청"
+        msg = (f"{head}\n"
                f"이름: {x.get('name','')}\n연락처: {x.get('phone','')}\n"
                f"주제: {x.get('topic','')}\n연락 시간: {x.get('call_time','')}\n"
                f"마케팅 동의: {x.get('marketing_agree','')}\n"
