@@ -485,7 +485,12 @@
    "title": "쌍방과실 자차 자기부담금, 상대 과실만큼 청구",
    "format": "note_dark",
    "experiment": "design",
-   "status": "planned"
+   "status": "produced",
+   "ep": "ep23",
+   "produced_at": "2026-11-19T09:26:30+09:00",
+   "voice": "ko-KR-SunHiNeural",
+   "timely_check": "09시 WebSearch 2회: 더 나은 시의성 주제 없음",
+   "fact_check": "대법원 2022다287284(2026.1.29, 법률신문) + 대법원 2부 7월 판결(헤럴드경제 2026.7.5, 수리비 270만·자기부담금 50만 사례). 20만원은 상대 과실 40% 가정 예시로 화면 표기"
   },
   {
    "date": "2026-11-20",
