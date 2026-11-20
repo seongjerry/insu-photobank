@@ -498,9 +498,15 @@
    "time": "13:00",
    "reel": 11,
    "title": "출퇴근길 사고와 산재 OX",
-   "format": "quiz",
+   "format": "note_light",
    "experiment": "",
-   "status": "planned"
+   "status": "produced",
+   "ep": "ep24",
+   "produced_at": "2026-11-20T09:17:33+09:00",
+   "voice": "ko-KR-SunHiNeural",
+   "timely_check": "09시 WebSearch 2회: 더 나은 시의성 주제 없음",
+   "fact_check": "서울신문 2018.2.2(고용부: 과실 무관 지급, 자동차보험 수령 뒤에도 산재 신청·차액 수령), 아주경제 2018.3.12(일상생활 필요행위 예외, 사업주 날인 없이 신청), 뉴시스 2022.10.8(교통수단 무관, 개인 약속 불인정, 중대 과실 불인정, 사업주 동의 불필요)",
+   "note": "포맷 quiz 를 note_light 위 OX 퀴즈로 구현(다크노트 3연속 뒤 로테이션)"
   },
   {
    "date": "2026-11-21",
