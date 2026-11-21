@@ -516,7 +516,13 @@
    "title": "보험료 0원 시민안전보험 자동 가입과 직접 청구",
    "format": "lock",
    "experiment": "",
-   "status": "planned"
+   "status": "produced",
+   "ep": "ep25",
+   "produced_at": "2026-11-21T09:16:19+09:00",
+   "voice": "ko-KR-HyunsuMultilingualNeural",
+   "timely_check": "09시 WebSearch 2회: 더 나은 시의성 주제 없음",
+   "fact_check": "경향신문 2026.11.1(금감원 안내: 주민등록 자동 가입, 사고일 3년 내 청구, 재난보험24 조회, 광역·기초 일부 담보 중복), 금융위·금감원 보도자료(KDI 경제정보센터 2026.11.2), 서울시 안전누리집 2026 보장표(화재·폭발·붕괴 후유장해 2,500만원). 날짜(1일·2일)가 갈려 화면엔 날짜 대신 이번 달로 표기",
+   "note": "오이냉체 미사용(Drive 다운로드 생략), 라벨은 Paperlogy"
   },
   {
    "date": "2026-11-22",
