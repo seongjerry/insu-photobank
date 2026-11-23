@@ -48339,8 +48339,822 @@
    "page": "https://pixabay.com/photos/resort-pool-tropical-architecture-1400082/",
    "provider": "pixabay",
    "added": "2026-11-15"
+  },
+  {
+   "id": "pixabay_869392",
+   "slug": "flu",
+   "ko": [
+    "독감",
+    "감기",
+    "열",
+    "기침",
+    "마스크"
+   ],
+   "query": "thermometer fever",
+   "path": "photos/flu/pixabay_869392.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "thermometer, temperature, measurement, health, device, bulb, mercury, measure, fever, scale, celsius, thermometer, thermometer, thermometer, thermometer, thermometer, temperature, mercury, fever",
+   "credit": "Gadini",
+   "page": "https://pixabay.com/photos/thermometer-temperature-measurement-869392/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10222177",
+   "slug": "elderly",
+   "ko": [
+    "노인",
+    "어르신",
+    "부모님",
+    "할머니",
+    "시니어"
+   ],
+   "query": "senior man hospital",
+   "path": "photos/elderly/pixabay_10222177.jpg",
+   "w": 1280,
+   "h": 714,
+   "alt": "hospital, patient, visit, support, comfort, illness, recovery, elderly, bedside, care, love, health, medical, holding, hands, ward, senior, empathy, family, companion, ai generated",
+   "credit": "geralt",
+   "page": "https://pixabay.com/photos/hospital-patient-visit-support-10222177/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10526464",
+   "slug": "hospital",
+   "ko": [
+    "병원",
+    "진료",
+    "의사",
+    "검진"
+   ],
+   "query": "asian doctor patient consultation",
+   "path": "photos/hospital/pixabay_10526464.jpg",
+   "w": 1280,
+   "h": 719,
+   "alt": "doctor, patient, medical consultation, healthcare, patient care, doctor appointment, communication, medical office, stethoscope, smiling, Telangana, India, Hyderabad",
+   "credit": "u_6j0y5cxpd7",
+   "page": "https://pixabay.com/photos/doctor-patient-medical-consultation-10526464/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10562969",
+   "slug": "hospital",
+   "ko": [
+    "병원",
+    "진료",
+    "의사",
+    "검진"
+   ],
+   "query": "hospital corridor",
+   "path": "photos/hospital/pixabay_10562969.jpg",
+   "w": 1280,
+   "h": 956,
+   "alt": "nurse, hospital corridor, hospital, medical professional, healthcare, stethoscope, medical staff, medical scrubs, nursing, woman, back view, walking, clinician, healthcare facility, modern hospital, medical environment, professionalism, hospital floor",
+   "credit": "Sohidullah007",
+   "page": "https://pixabay.com/photos/nurse-hospital-corridor-hospital-10562969/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10172896",
+   "slug": "hospital",
+   "ko": [
+    "병원",
+    "진료",
+    "의사",
+    "검진"
+   ],
+   "query": "doctor stethoscope",
+   "path": "photos/hospital/pixabay_10172896.jpg",
+   "w": 1280,
+   "h": 714,
+   "alt": "baby, pediatrician, doctor, medical, healthcare, checkup, infant, examination, clinic clinic, health, medicine, stethoscope, nursing, professional, newborn, childhood, care, wellness, physician, hospital, treatment treatment, safety, development, specialist specialist, ai generated",
+   "credit": "TungArt7",
+   "page": "https://pixabay.com/photos/baby-pediatrician-doctor-medical-10172896/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10297676",
+   "slug": "hospital",
+   "ko": [
+    "병원",
+    "진료",
+    "의사",
+    "검진"
+   ],
+   "query": "doctor stethoscope",
+   "path": "photos/hospital/pixabay_10297676.jpg",
+   "w": 1280,
+   "h": 875,
+   "alt": "ai generated, doctor, hospital, stethoscope, healthcare, clinic, laboratory, woman, nurse, uniform, treatment, medical center, checkup, doctor's office, medicine, friendly, health, care, workplace, health worker",
+   "credit": "Johan_Benitez99co",
+   "page": "https://pixabay.com/photos/ai-generated-doctor-hospital-10297676/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_5716753",
+   "slug": "cancer",
+   "ko": [
+    "암",
+    "항암",
+    "종양",
+    "검사"
+   ],
+   "query": "doctor explaining xray asian",
+   "path": "photos/cancer/pixabay_5716753.jpg",
+   "w": 1280,
+   "h": 852,
+   "alt": "protective suit, face mask, face shield, medical professional, healthcare professional, profession, paramedic, coronavirus, covid-19, pandemic, covid, hygiene, protection, safety, covid, covid, covid, covid, covid, safety",
+   "credit": "HelenJank",
+   "page": "https://pixabay.com/photos/protective-suit-face-mask-5716753/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_3100702",
+   "slug": "food",
+   "ko": [
+    "식단",
+    "음식",
+    "채소",
+    "다이어트"
+   ],
+   "query": "vegetables bowl",
+   "path": "photos/food/pixabay_3100702.jpg",
+   "w": 1280,
+   "h": 727,
+   "alt": "brussels sprouts, free background, green, beautiful wallpaper, 4k wallpaper, round, wallpaper hd, desktop backgrounds, raw, wallpaper 4k, winter vegetables, laptop wallpaper, windows wallpaper, cabbage, plate, meal, food, hd wallpaper, vitamins, 4k wallpaper 1920x1080, free wallpaper, cleaned, healthy, cool backgrounds, background, full hd wallpaper, vegetables, mac wallpaper, isolated",
+   "credit": "ulleo",
+   "page": "https://pixabay.com/photos/brussels-sprouts-green-round-raw-3100702/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_4732209",
+   "slug": "exercise",
+   "ko": [
+    "헬스",
+    "근력",
+    "스트레칭",
+    "요가"
+   ],
+   "query": "yoga mat morning",
+   "path": "photos/exercise/pixabay_4732209.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "yoga, girl, beautiful, stretch, exercise, yoga, yoga, yoga, yoga, yoga, exercise",
+   "credit": "Caoha",
+   "page": "https://pixabay.com/photos/yoga-girl-beautiful-stretch-4732209/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_1850926",
+   "slug": "exercise",
+   "ko": [
+    "헬스",
+    "근력",
+    "스트레칭",
+    "요가"
+   ],
+   "query": "gym asian woman",
+   "path": "photos/exercise/pixabay_1850926.jpg",
+   "w": 1280,
+   "h": 850,
+   "alt": "abs, athlete, biceps, blonde, body, fit, fitness, gym, healthy, muscles, person, strength, strong, trainer, training, woman, workout, workout gear",
+   "credit": "Pexels",
+   "page": "https://pixabay.com/photos/abs-athlete-biceps-blonde-body-1850926/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10577770",
+   "slug": "dementia",
+   "ko": [
+    "치매",
+    "기억",
+    "간병",
+    "요양"
+   ],
+   "query": "caregiver elderly asian",
+   "path": "photos/dementia/pixabay_10577770.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "holding hands, hands, family, love, tenderness, trust, family bond, human connection, unconditional love, gentle hold, grip, finger, care, emotions, warm light, support",
+   "credit": "photos_galary",
+   "page": "https://pixabay.com/photos/holding-hands-hands-family-love-10577770/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10184897",
+   "slug": "dementia",
+   "ko": [
+    "치매",
+    "기억",
+    "간병",
+    "요양"
+   ],
+   "query": "caregiver elderly asian",
+   "path": "photos/dementia/pixabay_10184897.jpg",
+   "w": 1280,
+   "h": 714,
+   "alt": "elderly, care, nursing, senior, smile, meal, assistance, compassion, health, help, indoor, kitchen, connection, aging, support, patience, kindness, nutrition, service, empathy, ai generated",
+   "credit": "geralt",
+   "page": "https://pixabay.com/photos/elderly-care-nursing-senior-smile-10184897/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10167485",
+   "slug": "dementia",
+   "ko": [
+    "치매",
+    "기억",
+    "간병",
+    "요양"
+   ],
+   "query": "caregiver elderly asian",
+   "path": "photos/dementia/pixabay_10167485.jpg",
+   "w": 1280,
+   "h": 859,
+   "alt": "concern, support, empathy, comfort, connection, hands, elderly, young, senior, generations, friendliness, love, to touch, help out, soft, diversity, multicultural, health, welfare, human, ai generated",
+   "credit": "erwinbosman",
+   "page": "https://pixabay.com/photos/concern-support-empathy-comfort-10167485/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10215165",
+   "slug": "dementia",
+   "ko": [
+    "치매",
+    "기억",
+    "간병",
+    "요양"
+   ],
+   "query": "caregiver elderly asian",
+   "path": "photos/dementia/pixabay_10215165.jpg",
+   "w": 1280,
+   "h": 1280,
+   "alt": "doctor, nurse, patient, medical consultation, healthcare, kindness, senior, caregiver, wheelchair, hospital, medicine, nursing, conversation, care, smile, interaction, support, comfort, help, medical staff, ai generated",
+   "credit": "Ayajiw",
+   "page": "https://pixabay.com/photos/doctor-nurse-patient-10215165/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10577925",
+   "slug": "cleaning",
+   "ko": [
+    "청소",
+    "살림",
+    "세탁",
+    "정리",
+    "곰팡이"
+   ],
+   "query": "cleaning home spray cloth",
+   "path": "photos/cleaning/pixabay_10577925.jpg",
+   "w": 1280,
+   "h": 714,
+   "alt": "washing machine, laundry, housework, household, clothes, appliance, cleaning, laundry room, living at home, textiles, garment care, daily life, clean, household habits, domestic, chores",
+   "credit": "flutie8211",
+   "page": "https://pixabay.com/photos/washing-machine-laundry-housework-10577925/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_3167485",
+   "slug": "cleaning",
+   "ko": [
+    "청소",
+    "살림",
+    "세탁",
+    "정리",
+    "곰팡이"
+   ],
+   "query": "kitchen sink cleaning",
+   "path": "photos/cleaning/pixabay_3167485.jpg",
+   "w": 1280,
+   "h": 844,
+   "alt": "danbo, figure, kitchen, house work, fun, danbo, danbo, danbo, house work, house work, house work, house work, house work",
+   "credit": "Alexas_Fotos",
+   "page": "https://pixabay.com/photos/danbo-figure-kitchen-house-work-3167485/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10558697",
+   "slug": "cooking",
+   "ko": [
+    "요리",
+    "레시피",
+    "주방",
+    "반찬",
+    "밥상"
+   ],
+   "query": "cooking pan kitchen",
+   "path": "photos/cooking/pixabay_10558697.jpg",
+   "w": 1280,
+   "h": 720,
+   "alt": "cast iron skillet, walnuts, wooden table, rustic style, kitchen decor, sage, natural light, country kitchen, cookware, copy space, plaster wall, still life, minimalist design, warm atmosphere, homemade, traditional cooking, natural materials",
+   "credit": "u_uiv44oi92w",
+   "page": "https://pixabay.com/photos/cast-iron-skillet-walnuts-10558697/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10195834",
+   "slug": "energy",
+   "ko": [
+    "전기요금",
+    "가스요금",
+    "에너지",
+    "절약",
+    "계량기"
+   ],
+   "query": "light bulb energy saving",
+   "path": "photos/energy/pixabay_10195834.jpg",
+   "w": 1280,
+   "h": 960,
+   "alt": "light bulb, led bulb, electric bulb, lighting device, idea symbol, bulb icon, energy bulb, illumination, glass bulb, light source, modern bulb, electricity, bulb design, lighting object, bright bulb, innovation symbol, lamp bulb, white bulb, bulb close up, lighting equipment, ai generated",
+   "credit": "Digital_Expert",
+   "page": "https://pixabay.com/photos/light-bulb-led-bulb-electric-bulb-10195834/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_2903830",
+   "slug": "energy",
+   "ko": [
+    "전기요금",
+    "가스요금",
+    "에너지",
+    "절약",
+    "계량기"
+   ],
+   "query": "led lamp switch",
+   "path": "photos/energy/pixabay_2903830.jpg",
+   "w": 1280,
+   "h": 856,
+   "alt": "lamp, oil lamp, nostalgia, old, historical, antiquity, night, mystical, dark, black, petroleum, kerosene lamp, ornate, fire, quaint, lamp, lamp, lamp, lamp, lamp, night, night, night, dark, black, fire, fire, fire, fire",
+   "credit": "Quark-Dose",
+   "page": "https://pixabay.com/photos/lamp-oil-lamp-nostalgia-old-2903830/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_1867741",
+   "slug": "saving",
+   "ko": [
+    "생활비",
+    "절약",
+    "가계부",
+    "장보기",
+    "할인"
+   ],
+   "query": "household budget notebook",
+   "path": "photos/saving/pixabay_1867741.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "computer, desk, electronics, keyboard, laptop, papers, receipts, desk, receipts, receipts, receipts, receipts, receipts",
+   "credit": "Pexels",
+   "page": "https://pixabay.com/photos/computer-desk-electronics-keyboard-1867741/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10563357",
+   "slug": "documents",
+   "ko": [
+    "서류",
+    "신청",
+    "지원금",
+    "제도",
+    "행정"
+   ],
+   "query": "calendar planner schedule",
+   "path": "photos/documents/pixabay_10563357.jpg",
+   "w": 1280,
+   "h": 714,
+   "alt": "planning, calendar, planner, woman, workspace, notebook, organization, productivity, new year, january, tasks, desk, nature, coffee, writing, journal, laptop, plants, motivation",
+   "credit": "haruudu",
+   "page": "https://pixabay.com/photos/planning-calendar-planner-woman-10563357/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10570499",
+   "slug": "digital",
+   "ko": [
+    "스마트폰",
+    "앱",
+    "온라인",
+    "보안",
+    "결제"
+   ],
+   "query": "video call laptop",
+   "path": "photos/digital/pixabay_10570499.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "video call, woman, laptop, work from home, man, remote work, ring light, webcam, communication, home office, technology, conference, portrait, smile, blue eyes, houseplant",
+   "credit": "Sdbtyyy",
+   "page": "https://pixabay.com/photos/video-call-woman-laptop-10570499/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10559549",
+   "slug": "digital",
+   "ko": [
+    "스마트폰",
+    "앱",
+    "온라인",
+    "보안",
+    "결제"
+   ],
+   "query": "video call laptop",
+   "path": "photos/digital/pixabay_10559549.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "woman, smiling, braces, portrait, long hair, laptop, professional, office, happy, joy, positive, smile, face, orthodontics, healthcare professional, computer, blue background, work, cheerful, Bolivar, Cartagena, Colombia",
+   "credit": "jump1987",
+   "page": "https://pixabay.com/photos/woman-smiling-braces-portrait-10559549/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10379289",
+   "slug": "office",
+   "ko": [
+    "직장인",
+    "출근",
+    "사무실",
+    "재택",
+    "커피"
+   ],
+   "query": "office worker laptop",
+   "path": "photos/office/pixabay_10379289.jpg",
+   "w": 1280,
+   "h": 859,
+   "alt": "man, office, computer, work, business, working, company, career, suit, young, corporate, professional, marketing, office worker, desk, computer screen, multitasking, time management, focus, meeting room",
+   "credit": "flutie8211",
+   "page": "https://pixabay.com/photos/man-office-computer-work-business-10379289/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10562971",
+   "slug": "office",
+   "ko": [
+    "직장인",
+    "출근",
+    "사무실",
+    "재택",
+    "커피"
+   ],
+   "query": "office worker laptop",
+   "path": "photos/office/pixabay_10562971.jpg",
+   "w": 1280,
+   "h": 956,
+   "alt": "office worker, office employee, open plan office, computer desk, working on computer, nature, modern office interior, professional workspace, work environment, corporate environment, desk job, businessman, city skyline, urban architecture, career, employment, work tasks, office chair, plants",
+   "credit": "Sohidullah007",
+   "page": "https://pixabay.com/photos/office-worker-office-employee-10562971/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10413659",
+   "slug": "office",
+   "ko": [
+    "직장인",
+    "출근",
+    "사무실",
+    "재택",
+    "커피"
+   ],
+   "query": "meeting room team",
+   "path": "photos/office/pixabay_10413659.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "business, meeting, discussion, office, conference, professional, diverse, teamwork, collaboration, presentation, woman, man, speaking, listening, communication, modern, workplace, cooperation, office furniture",
+   "credit": "erwinbosman",
+   "page": "https://pixabay.com/photos/business-meeting-discussion-office-10413659/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_2437110",
+   "slug": "office",
+   "ko": [
+    "직장인",
+    "출근",
+    "사무실",
+    "재택",
+    "커피"
+   ],
+   "query": "tired worker evening",
+   "path": "photos/office/pixabay_2437110.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "continental bulldog, dog, animal, pet, animal portrait, lazy, tired, bored, nature, boredom, brown dog, fur, animal world, dog portrait, dog breed, purebred",
+   "credit": "Pitsch",
+   "page": "https://pixabay.com/photos/continental-bulldog-dog-animal-pet-2437110/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10392533",
+   "slug": "holiday",
+   "ko": [
+    "명절",
+    "크리스마스",
+    "연말",
+    "선물",
+    "새해"
+   ],
+   "query": "family dinner table",
+   "path": "photos/holiday/pixabay_10392533.jpg",
+   "w": 1280,
+   "h": 714,
+   "alt": "tumpeng, traditional food, family gathering, shared meal, smile, birthday celebration, family, traditional clothing, rice, indonesian cuisine, cultural celebration, cone rice, social event, enjoy, diversity, traditional holiday, household, food festival, help, socially significant",
+   "credit": "FernandoZ",
+   "page": "https://pixabay.com/photos/tumpeng-traditional-food-10392533/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_4577578",
+   "slug": "housing",
+   "ko": [
+    "집",
+    "아파트",
+    "이사",
+    "인테리어",
+    "전세"
+   ],
+   "query": "home renovation paint",
+   "path": "photos/housing/pixabay_4577578.jpg",
+   "w": 1280,
+   "h": 854,
+   "alt": "paintbrush, paint, diy, brush, tool, renovation, construction, work, handyman, repair, fix, improvement, house, home, equipment, bucket, tin, paintbrush, paintbrush, diy, diy, diy, diy, diy, renovation, renovation, renovation, renovation, handyman, handyman, handyman, improvement",
+   "credit": "ClickerHappy",
+   "page": "https://pixabay.com/photos/paintbrush-paint-diy-brush-tool-4577578/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10565714",
+   "slug": "pet",
+   "ko": [
+    "반려동물",
+    "강아지",
+    "고양이"
+   ],
+   "query": "dog home sofa",
+   "path": "photos/pet/pixabay_10565714.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "dog, cat, golden retriever, tabby cat, pets, sleeping, pet, cuddle, friendship, couch, sofa, cozy, home, animal, companionship, calm, cute, relaxing",
+   "credit": "erwinbosman",
+   "page": "https://pixabay.com/photos/dog-cat-golden-retriever-tabby-cat-10565714/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10571182",
+   "slug": "pet",
+   "ko": [
+    "반려동물",
+    "강아지",
+    "고양이"
+   ],
+   "query": "cat window home",
+   "path": "photos/pet/pixabay_10571182.jpg",
+   "w": 1280,
+   "h": 714,
+   "alt": "tabby cat, cat, sleeping, sofa, boucle, cozy, nap, relaxation, pet, living room, cream, animal, furniture, comfort, home, cute",
+   "credit": "FernandoZ",
+   "page": "https://pixabay.com/photos/tabby-cat-cat-sleeping-sofa-boucle-10571182/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_1647136",
+   "slug": "kids_school",
+   "ko": [
+    "아이",
+    "학교",
+    "수능",
+    "육아",
+    "공부"
+   ],
+   "query": "school backpack",
+   "path": "photos/kids_school/pixabay_1647136.jpg",
+   "w": 1280,
+   "h": 914,
+   "alt": "student, school, back to school, schoolyard, education, male, high school student, teenager, student, student, school, school, school, schoolyard, schoolyard, schoolyard, schoolyard, schoolyard, teenager",
+   "credit": "WOKANDAPIX",
+   "page": "https://pixabay.com/photos/student-school-back-to-school-1647136/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10182290",
+   "slug": "kids_school",
+   "ko": [
+    "아이",
+    "학교",
+    "수능",
+    "육아",
+    "공부"
+   ],
+   "query": "parent child reading",
+   "path": "photos/kids_school/pixabay_10182290.jpg",
+   "w": 1280,
+   "h": 720,
+   "alt": "indian parents, indian baby, indian family, family india, india, family, children, people",
+   "credit": "u_19vkjakt7c",
+   "page": "https://pixabay.com/photos/indian-parents-indian-baby-10182290/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_9826320",
+   "slug": "japan_travel",
+   "ko": [
+    "일본",
+    "일본여행",
+    "도쿄",
+    "오사카",
+    "교토",
+    "후쿠오카",
+    "삿포로"
+   ],
+   "query": "tokyo street shibuya",
+   "path": "photos/japan_travel/pixabay_9826320.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "japan, urban, architecture, building, tokyo, city, skyline, cityscapes, shibuya",
+   "credit": "strohmi",
+   "page": "https://pixabay.com/photos/japan-urban-architecture-building-9826320/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_5084602",
+   "slug": "japan_shopping",
+   "ko": [
+    "일본쇼핑",
+    "돈키호테",
+    "드럭스토어",
+    "일본과자",
+    "기념품",
+    "편의점"
+   ],
+   "query": "drugstore shelves products",
+   "path": "photos/japan_shopping/pixabay_5084602.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "old fashioned drug store, country pharmacy, soda fountain, corner drug, pharmacy, prescriptions, prescription drive through, medicine, medical, health, healthcare, pharmaceutical, doctor, treatment, brown health, brown medical, brown doctors, brown medicine, brown healthcare",
+   "credit": "16081684",
+   "page": "https://pixabay.com/photos/old-fashioned-drug-store-5084602/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_716432",
+   "slug": "japan_shopping",
+   "ko": [
+    "일본쇼핑",
+    "돈키호테",
+    "드럭스토어",
+    "일본과자",
+    "기념품",
+    "편의점"
+   ],
+   "query": "japanese snacks",
+   "path": "photos/japan_shopping/pixabay_716432.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "maki, sushi, rice, avocado, roll, sushi, sushi, sushi, sushi, sushi",
+   "credit": "milivigerova",
+   "page": "https://pixabay.com/photos/maki-sushi-rice-avocado-roll-716432/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_2642172",
+   "slug": "airport",
+   "ko": [
+    "공항",
+    "출국",
+    "입국",
+    "탑승",
+    "인천공항",
+    "비행기",
+    "항공권"
+   ],
+   "query": "luggage airport",
+   "path": "photos/airport/pixabay_2642172.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "passport, flag, travel, visa, identification, usa, american, united, blue, country, national, vacation, holiday, document, suitcase, departure, passenger, luggage, transportation, trip, traveler, visa, visa, visa, visa, visa, luggage, luggage",
+   "credit": "cytis",
+   "page": "https://pixabay.com/photos/passport-flag-travel-visa-2642172/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10563359",
+   "slug": "shopping",
+   "ko": [
+    "쇼핑",
+    "쇼핑몰",
+    "백화점",
+    "세일",
+    "구매",
+    "블랙프라이데이"
+   ],
+   "query": "shopping bags woman",
+   "path": "photos/shopping/pixabay_10563359.jpg",
+   "w": 1280,
+   "h": 714,
+   "alt": "shopping, woman, shopping bags, boutique, store, fashion, department store, smiling, walking, colorful, confetti, celebration, glass door, nature, window display, spring, floral pattern, weekday, design",
+   "credit": "haruudu",
+   "page": "https://pixabay.com/photos/shopping-woman-shopping-bags-10563359/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_1179807",
+   "slug": "overseas_travel",
+   "ko": [
+    "해외여행",
+    "동남아",
+    "유럽",
+    "휴양지",
+    "베트남",
+    "태국"
+   ],
+   "query": "bangkok temple",
+   "path": "photos/overseas_travel/pixabay_1179807.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "bangkok, buddha, gold, meditation, buddhism, thailand, asia, temple, asian, southeast, wat, thai buddha, old, religion, buddha purnima, figure, buddhist, palace, altar, statue, shrine, faith",
+   "credit": "Peggy_Marco",
+   "page": "https://pixabay.com/photos/bangkok-buddha-gold-meditation-1179807/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_8030325",
+   "slug": "overseas_travel",
+   "ko": [
+    "해외여행",
+    "동남아",
+    "유럽",
+    "휴양지",
+    "베트남",
+    "태국"
+   ],
+   "query": "vietnam beach",
+   "path": "photos/overseas_travel/pixabay_8030325.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "beach, sand, coast, fishermen, nature, black and white, vietnam",
+   "credit": "sdg_Rai",
+   "page": "https://pixabay.com/photos/beach-sand-coast-fishermen-8030325/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "pixabay_10467567",
+   "slug": "overseas_travel",
+   "ko": [
+    "해외여행",
+    "동남아",
+    "유럽",
+    "휴양지",
+    "베트남",
+    "태국"
+   ],
+   "query": "da nang beach",
+   "path": "photos/overseas_travel/pixabay_10467567.jpg",
+   "w": 1280,
+   "h": 853,
+   "alt": "sunrise, boat, dawn, morning, sea, sky, coast, landscape, nature, travel, silence, sunset, twilight, horizon, romantic, relaxation, happy, sense of calm, summer, fishing",
+   "credit": "datn",
+   "page": "https://pixabay.com/photos/sunrise-boat-dawn-morning-sea-sky-10467567/",
+   "provider": "pixabay",
+   "added": "2026-11-23"
   }
  ],
- "updated": "2026-11-15 23:44",
- "count": 2417
+ "updated": "2026-11-23 00:38",
+ "count": 2458
 }
