@@ -1,6 +1,6 @@
 {
  "week_start": "2026-11-23",
- "status": "proposed",
+ "status": "selected",
  "proposed_at": "2026-11-23T08:00:00+09:00",
  "deadline": "2026-11-23T12:00:00+09:00",
  "need_reels": 7,
@@ -483,6 +483,115 @@
   "design": "첫 화면을 실사 사진 전면에 큰 글자 한 줄로 바꿉니다(지금은 노트·잠금화면 그림 위에 제목). 지난주 좌우 분할 화면은 한 번 넘겨(1.4배) 한 편에 더 써서 판정합니다",
   "flow": "마무리 문장을 \"가족에게 보내기\" 권유 대신, 첫 화면 숫자의 답을 한 문장으로 다시 말하고 끝냅니다"
  },
- "selected": null,
- "schedule": null
+ "selected": {
+  "reels": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "carousels": [
+   1,
+   2,
+   3
+  ],
+  "reply": null,
+  "auto": true,
+  "selected_at": "2026-11-23T12:12:00+09:00",
+  "note": "12시 마감까지 답장 없음(12:09 poll, 메시지 0건). 점수 순 자동 선택: 같은 영역 2편 이하, 새 영역 6편(1,3,4,5,6,7), 새 컨셉 3편(2,3,5), product 후보 없음. 점수 8 동점은 번호 순. 예비 릴스는 8번(점수 8, 랭킹형).",
+  "carousel_days": [
+   {
+    "date": "2026-11-25",
+    "day": "수",
+    "carousel": 1
+   },
+   {
+    "date": "2026-11-27",
+    "day": "금",
+    "carousel": 2
+   },
+   {
+    "date": null,
+    "day": "예비",
+    "carousel": 3,
+    "note": "월요일 자리는 07:13에 c11 발송으로 사용됨. 3번은 예비"
+   }
+  ]
+ },
+ "schedule": [
+  {
+   "date": "2026-11-23",
+   "day": "월",
+   "time": "13:00",
+   "reel": 1,
+   "title": "옛날 실손 보험료를 줄이는 두 가지 길(오늘 시행)",
+   "format": "note_dark",
+   "experiment": "split",
+   "status": "planned",
+   "note": "실험 split = 지난주 첫 화면 좌우 분할 재판정(한 편 더). design = 첫 화면 실사 사진 전면에 큰 글자 한 줄. flow = 마무리를 첫 화면 숫자의 답으로 다시 말하고 끝냄"
+  },
+  {
+   "date": "2026-11-24",
+   "day": "화",
+   "time": "13:00",
+   "reel": 4,
+   "title": "독감 4주 연속 증가와 진료비·실손",
+   "format": "lock",
+   "experiment": "design",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-25",
+   "day": "수",
+   "time": "13:00",
+   "reel": 2,
+   "title": "추적관찰을 추가검사로 보고 해지한 사건, 금감원 결정",
+   "format": "note_dark",
+   "experiment": "flow",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-26",
+   "day": "목",
+   "time": "13:00",
+   "reel": 5,
+   "title": "경증으로 큰 병원 응급실, 본인부담 90%와 실손",
+   "format": "receipt",
+   "experiment": "",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-27",
+   "day": "금",
+   "time": "13:00",
+   "reel": 3,
+   "title": "사망보험금 1억원, 보험료 낸 사람에 따라 갈리는 세금",
+   "format": "note_light",
+   "experiment": "design",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-28",
+   "day": "토",
+   "time": "13:00",
+   "reel": 7,
+   "title": "보이스피싱 은행권 자율배상, 신청과 실제 실적",
+   "format": "note_dark",
+   "experiment": "flow",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-29",
+   "day": "일",
+   "time": "13:00",
+   "reel": 6,
+   "title": "학교에서 다친 아이, 안전공제회와 실손",
+   "format": "kakao",
+   "experiment": "",
+   "status": "planned"
+  }
+ ]
 }
