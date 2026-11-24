@@ -71,6 +71,14 @@ def run_edge(r, d):
     return {"segments": len(r["segments"])}
 
 
+def run_fetch(r, d):
+    """이미 만들어 둔 음성(예: ElevenLabs)을 URL로 받아 저장. {"engine": "fetch", "url": "...", "name": "narration.mp3"}"""
+    req = urllib.request.Request(r["url"], headers={"User-Agent": "insu-photobank-tts"})
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        (d / r.get("name", "narration.mp3")).write_bytes(resp.read())
+    return {"fetched": r.get("name", "narration.mp3")}
+
+
 def run_ttsmaker(r, d):
     if r.get("action") == "sample_all":
         vl = tm_voices(r.get("language", "ko"))
@@ -99,7 +107,8 @@ for f in sorted(REQ.glob("*.json")):
         continue
     d.mkdir(parents=True, exist_ok=True)
     try:
-        info = run_ttsmaker(r, d) if r.get("engine") == "ttsmaker" else run_edge(r, d)
+        eng = r.get("engine")
+        info = run_ttsmaker(r, d) if eng == "ttsmaker" else run_fetch(r, d) if eng == "fetch" else run_edge(r, d)
         info["ok"] = True
     except Exception as e:
         info = {"ok": False, "error": str(e)[:1000]}
