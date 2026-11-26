@@ -593,8 +593,10 @@
    "reel": 3,
    "title": "사망보험금 1억원, 보험료 낸 사람에 따라 갈리는 세금",
    "format": "note_light",
-   "experiment": "design",
-   "status": "planned"
+   "experiment": "ab:visual_real",
+   "status": "planned",
+   "ab_test": "visual_real",
+   "ab_note": "화면만 변경: 전 장면 실사 사진 전면 + 하단 큰 자막, 슬라이드 그래픽·비노 없음. 음성·길이는 기존대로"
   },
   {
    "date": "2026-11-28",
@@ -603,8 +605,10 @@
    "reel": 7,
    "title": "보이스피싱 은행권 자율배상, 신청과 실제 실적",
    "format": "note_dark",
-   "experiment": "flow",
-   "status": "planned"
+   "experiment": "ab:control",
+   "status": "planned",
+   "ab_test": "control",
+   "ab_note": "대조편: 기존 다크노트 방식 그대로, 다른 실험 넣지 않음"
   },
   {
    "date": "2026-11-29",
@@ -613,8 +617,15 @@
    "reel": 6,
    "title": "학교에서 다친 아이, 안전공제회와 실손",
    "format": "kakao",
-   "experiment": "",
-   "status": "planned"
+   "experiment": "ab:length_short",
+   "status": "planned",
+   "ab_test": "length_short",
+   "ab_note": "길이만 변경: 8~10초 한 장 목록형, 끝과 처음이 이어지게"
   }
- ]
+ ],
+ "ab_test": {
+  "doc": "generator/hq/ab-test.md",
+  "started": "2026-11-26",
+  "rule": "금·토·일 편은 이 문서의 표대로 만든다. 주간 디자인·문장 흐름 실험은 이 세 편에 넣지 않는다"
+ }
 }
