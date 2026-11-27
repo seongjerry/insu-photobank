@@ -38,7 +38,11 @@ def send():
                 if i == 0 and len(text) <= 1000: it["caption"] = text
                 media.append(it)
             r = call("sendMediaGroup", {"chat_id": C, "media": json.dumps(media, ensure_ascii=False)}, files)
-        elif m.get("video"): r = call("sendVideo", {"chat_id": C, "caption": text[:1000], "supports_streaming": "true"}, {"video": m["video"]})
+        elif m.get("video"):  # 세로 영상이 가로로 보이지 않게 크기·길이를 함께 보낸다 (기본 1080x1920)
+            d = {"chat_id": C, "caption": text[:1000], "supports_streaming": "true",
+                 "width": m.get("width", 1080), "height": m.get("height", 1920)}
+            if m.get("duration"): d["duration"] = int(round(m["duration"]))
+            r = call("sendVideo", d, {"video": m["video"]})
         elif m.get("photo"): r = call("sendPhoto", {"chat_id": C, "caption": text[:1000]}, {"photo": m["photo"]})
         else: r = None
         if not (m.get("video") or m.get("photo") or m.get("album")) or (text and len(text) > 1000):
