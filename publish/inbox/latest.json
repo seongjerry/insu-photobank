@@ -1,5 +1,11 @@
 {
- "checked_at": 1795738128,
+ "checked_at": 1795824560,
  "ok": true,
- "messages": []
+ "messages": [
+  {
+   "date": 1795738878,
+   "text": "대기",
+   "reply_to": ""
+  }
+ ]
 }
